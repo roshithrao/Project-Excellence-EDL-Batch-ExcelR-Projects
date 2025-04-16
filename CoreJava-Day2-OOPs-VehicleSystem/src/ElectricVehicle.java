@@ -1,7 +1,7 @@
 
 public interface ElectricVehicle {
 
-   void chargingVehicle();
+  public abstract void chargingVehicle();
 	
    void displayBatteryLevel(String value);
 }
