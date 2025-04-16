@@ -1,0 +1,9 @@
+
+public interface ElectricVehicle {
+
+    void chargingVehicle();
+	
+	void displayBatteryLevel();
+	
+	
+}

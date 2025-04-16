@@ -1,0 +1,9 @@
+
+public interface ElectricVehicle {
+
+   public void chargingVehicle();
+	
+	void displayBatteryLevel(String value);
+	
+	
+}

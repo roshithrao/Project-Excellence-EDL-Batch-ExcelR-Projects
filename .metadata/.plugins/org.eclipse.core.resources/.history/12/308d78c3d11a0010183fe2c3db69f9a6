@@ -1,0 +1,21 @@
+
+public class Main {
+
+	int abc = 90; //instance variable //heap area
+    int bcd = 901;	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("Good evening ALL! Day-2");
+		Main obj = new Main();
+		//obj ref
+		System.out.println(obj.abc);
+		obj.abc=9000;
+		System.out.println(obj.abc);
+		//object
+		System.out.println(new Main().abc);
+		
+	}
+
+}

@@ -1,0 +1,29 @@
+
+public class Main {
+
+	int abc = 90; //instance variable //heap area
+    static int bcd = 901;	//Method area
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int marks = 780; //stack area
+		
+		System.out.println("Good evening ALL! Day-2");
+		Main obj = new Main(); //1
+		//obj ref
+		System.out.println(obj.abc);
+		obj.abc=9000;
+		System.out.println(obj.abc);
+		//object
+		System.out.println(new Main().abc); //90
+		//1. directly, className, objref, object -> static
+		System.out.println(bcd);
+		System.out.println(Main.bcd);
+		System.out.println(obj.bcd);
+		System.out.println(new Main().bcd);
+		
+		System.out.println(marks); //directly -> local
+	}
+
+}
