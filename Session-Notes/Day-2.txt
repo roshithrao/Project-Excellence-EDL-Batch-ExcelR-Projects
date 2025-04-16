@@ -1,0 +1,2120 @@
+
+Day-2- Project Excellence - ExcelR
+====================================
+Backend Development in java
+============================
+1.	Datatypes and variables in java, hands on coding
+2.	OOPs in java, hands on coding
+3.	Exception handling, multithreading and collections in java, hands on coding
+4.	File handling, hands on coding
+
+After JDK 21 Installation
+
+Eclipse
+
+Github signup
+
+Path Setting in Windows:
+=========================
+1. Search in Windows search for environmental variables
+2. Click environmental variables button
+3. Now, copy bin of jdk from your local system
+4. Go to system variables section and double click on path, then paste the path there.
+5. Click on ok button for 3 times.
+
+Setting up path in mac :
+================
+1.In terminal, type pwd
+2. then, type ls -al
+3. If .zshrc file is not there, go ahead and create by this command: touch .zshrc
+4. If it is there, open it by typing this command: open .zshrc
+5. Then, paste these lines in that file :
+ export JAVA_HOME=$(/usr/libexec/java_home -v 21.0.1)
+export PATH=$JAVA_HOME/bin:$PATH 
+and save it
+6. After this type source .zshrc in terminal if not reopen the terminal again.
+7. Then verify it by typing echo $JAVA_HOME and java -version
+
+---------Project creation and Execution in Eclipse----------
+
+     Data Types:
+   ---------------------
+
+       A data type is that which determines 
+what value(literal) a variable can        
+hold and what are the operations that can be performed on variables.
+
+         In Java, data types are divided into 2 categories:
+
+        1) Primitive Data Types:
+        2) Reference Data Types:
+
+       Primitive Data Types:
+       ------------------------------
+
+       All primitive data types are 
+predefined data types. These datatypes are         
+defined by the java language itself
+
+       There are 8 primitive data types and these are 
+named by keywords(they        are having specific meaning by language itself)
+
+                1) byte 
+                2) short
+                 3)int
+                 4) long
+                 5) float
+                6) double
+                 7) char
+                 8) boolean
+
+            Referenced Data Types or user-defined datatypes :
+------------------------------------------------------------------
+
+          These datatypes are not defined by the language.
+ They are defined by            the user or programmer.
+
+           Arrays,
+           Strings,
+            Classes,
+            Interfaces, .. etc.,
+
+String word = "ExcelR";
+
+         Syntax : datatype variableName = literal/value;
+
+
+    int a = 345;
+
+
+        So what are the primitive datatypes that are there in java :
+
+    Type	        Size in Bytes	Range (until which value datatype can accept)
+
+byte	 1 byte	            -128 to 127
+short	2 bytes	          -32,768 to 32,767
+int	4 bytes	         -2,147,483,648 to 2,147,483, 647
+long	8 bytes	         -9,223,372,036,854,775,808 to
+                                                9,223,372,036,854,775,807
+float 	4 bytes	         approximately ±3.40282347E+38F    6.7989                         
+                                               (6-7 significant decimal digits)
+double 	8 bytes	        approximately ±1.79769313486231570E+308
+                                               (15 significant decimal digits)
+char    	2 byte	          0 to 65,536 (unsigned) => only positive values       
+                                                                            
+boolean 	 not precisely defined*	true or false
+
+So java is a object oriented programming language :
+
+What is a 
+object oriented programming language ?
+
+A language that supports 
+all principles of an object oriented
+ programming is known as an 
+object oriented programming language.
+
+Object Oriented Principles:
+1) Encapsulation
+2) Abstraction
+3) Inheritance
+4) Polymorphism
+
+To use the above principles 
+in a Java programming, 
+we need the following language constructs:
+1) Class
+2) Object
+
+Class: 
+---------
+
+It is a 
+template or blueprint from 
+which objects are created. 
+It is a logical entity. It can't be physical.
+                               (or)
+It is collection of variables and methods.
+
+class Abc==> For every word, first letter should be capital. 
+{
+
+
+}
+
+Abc obj = new Abc();
+Abc obj1 = new Abc();
+new Abc(); //unreferenced object
+
+
+A class in Java can contain:
+
+Fields
+Methods
+Constructors
+Blocks
+Nested class and interface
+
+
+
+Object :
+-----------
+
+
+An entity that has 
+state and behavior
+ is known as an object e.g., chair, bike, marker, pen, table, car, etc. It can be physical or logical.
+
+                           (or)
+
+Object is also called as instance of a class.
+
+Syntax :
+=====
+
+ClassName objectref = new Constructor();
+
+  HelloWorld hw = new HelloWorld();
+
+
+      HelloWorld -> Class Name
+      hw -> object reference
+      new -> dynamic memory allocation operator -> it will allocate memory to instance variables and instance methods at runtime.
+      HelloWorld() -> Constructor
+
+
+HelloWorld hf = new HelloWorld();
+
+HelloWorld hf1 = new HelloWorld();
+ 
+i can create multiples objects at the same time for the same class.
+
+new -> dynamic memory allocation operator
+
+An object has three characteristics:
+-----------------------------------------------
+
+State: represents the data (value) of an object. (variables)
+
+Behavior: represents the behavior (functionality) of an object such as deposit, withdraw, etc. (methods)
+
+Identity: An object identity 
+is typically implemented via a unique ID. 
+The value of the ID is not visible to the
+ external user. However, 
+it is used internally by the JVM to
+ identify each object uniquely.
+
+Variables:
+----------------------
+
+A variable is a container that contains data.
+                               (or)
+A variable is also called as name 
+given to a storage location.    class => HelloWorld
+                                                                                                              variable => firstSecondThird
+  Syntax :  datatype variableName = value/literal;
+                     
+                        int abc; //declaration
+
+                         int abc = 20; //initialisation
+                        
+                          int ABC = 20;
+                          int firstSecondThird = 30; //notation
+                           
+                          int bcd;
+                          bcd = 95; //assignment
+
+
+There are three types of variables in Java:
+
+1) Instance Variables (or) Non-static variables                        
+                                                                                                                  
+2) Class Variables (or) Static variables
+
+3) Local Variables
+
+
+
+1) Instance Variables:
+--------------------------------
+
+-->A variable that defined as a 
+member of a class is called as an instance variable.
+
+ --->Memory allocated to 
+instance variables whenever an object is created.
+
+
+ 
+    A obj = new A();
+
+      A -> className
+      obj -> object reference
+      new A() -> object
+       A() -> constructor
+
+  class A
+  {
+
+     int abc =120;
+
+   public static void main(String[] args)
+  {
+
+         A obj = new A();
+         System.out.println(obj.a);
+         System.out.println(new A().a);
+
+  }
+
+
+-->Instance variables are stored in heap area.
+
+There are  5 types of memory blocks in Ram :
+
+Heap Area => instance variables and all objects
+Method Area
+Stack Area
+PC Registers(Program counter registers)
+Native Stack
+
+There are two ways to access an instance variable.
+ 1) By using object
+ 2) By using object reference
+
+                A obj = new A();
+
+      A -> className
+      obj -> object reference
+      new A() -> object
+       A() -> constructor
+    
+
+Example Program :
+=============
+package com.helloworld;
+
+public class Demo {
+	
+                   int a= 10;
+	static int b = 12;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+                                    int d = 345;
+	                  Demo obj = new Demo();
+		obj.a = 25; //by using object reference
+		new Demo().b = 35; //by using object
+		new Demo().a = 75;
+                                       new Demo().b = 35;
+                                   System.out.println(obj.a);//25	
+		System.out.println(new Demo().b);//12	
+                                   System.out.println(new Demo().a);//10	
+                                   System.out.println(e);
+                                   System.out.println(d);
+	}
+
+}
+
+class B
+{
+    static int e =200;
+}
+
+
+2) Class Variables or Static Variables :
+------------------------------------------
+-->A variable that is defined 
+as a static member of a class is called as class variable. 
+-->Memory allocated to class variables 
+whenever class is loaded. 
+-->Class variables are stored in method area. 
+There are four ways to access class variable.
+ 1) Directly 
+//When the class variable is declared in the same class
+ 2) By using class name 
+//When the class variable is declared in the other class
+ 3) By using object
+ 4) By using object reference
+
+class A
+{
+   static int c = 25;
+   main()
+   {
+       A obj = new A();
+        System.out.println(c); //25
+        System.out.println(A.c); //25
+       System.out.println(obj.c); //25
+       System.out.println(new A().c);//25
+       c = 100;
+       A.c = 125;
+       obj.c = 200;
+       new Demo().c = 225;
+       System.out.println(new A().c); //225
+       
+
+    }
+}
+
+
+
+Note :
+====
+The 3rd and 4th ways are not suggested for class variables
+
+package com.helloworld;
+
+public class Presentation {
+                  static int a= 10;
+	int b = 12;
+	public static void main(String[] args) {
+               		// TODO Auto-generated method stub
+     
+		Presentation obj = new Presentation(); //25 12     10 12  25 100
+		a = 25;
+		Presentation.a = 35;
+		obj.a = 75;
+		new Presentation().a = 100;
+                     	System.out.println(a);//obj ref
+		System.out.println(new Presentation().b); 
+	}
+
+}
+
+
+
+class A
+{
+
+   static int e = 89;
+
+}
+
+class B
+{
+
+    public static vood main(String args[])   
+    {
+
+        System.out.println(A.e);
+    }
+}
+
+
+3) Local Variables:
+---------------------------------
+-->  A variable that is defined 
+inside a method is called as local variable.
+---> Memory allocated to
+ local variables whenever method is called.
+---> Local variables are stored in stack area. 
+
+---> There is a only one way to 
+access local variable. i.e. directly 
+that too only inside the method.
+
+---> If i wanted to access local variable value , 
+outside a method, 
+it is possible only through return statement.
+
+class Presentation
+{
+                     int A()
+	{
+		static int f = 16;
+		
+		System.out.println(f);
+		
+		return f;
+	}
+
+    psvm(String[] args)
+    {
+       Presentation obj = new Presentation();
+       int a = obj.A();
+       S.o.p(a);
+     }
+}
+
+Note1: Local variables cannot be static in Java.
+Note2: No global variables in Java (Outside the class)
+
+Separate copy of instance variable exist for every object. 
+Only one copy of class variable exist for all objects.
+
+
+<Main points> :
+
+Usage point of view :
+----------------------------
+
+Use instance variable 
+if the value is different for object.( roll no of the student)
+Use class variable
+ if the value is same for all objects. (branch)
+Use local variable
+ to perform the task. (calculation of marks )
+
+Methods :
+-------
+
+A Group of statements in to 
+single logical unit is called as method. 
+
+Methods are used to perform the task.
+
+
+    main()
+   {
+
+           ------------
+-------------------------
+
+
+    abc();
+    abc();
+    abc();
+    abc();
+    abc();
+
+}
+
+
+  void abc()
+   {
+
+       System.out.println("Hello!");
+       System.out.println("Welcome!");
+       System.out.println("To Java!");
+
+    }
+
+
+-> To perform the task or business logic
+
+-> If set of statements are gathered into one block and that block of statements will perform same task is nothing but a method
+
+
+   Syntax :
+==========
+
+            Access Modifier  Returntype
+                   methodName(Method Arguments or Parameters)
+            {
+
+               int c = a+b;
+               return; (optional when it is void)        
+            }
+
+     main()
+    {
+           int a = 10;
+           int b = 12;
+            int d  = abc(a,b);
+            System.out.println(d);
+     }
+
+-> Return type can be of primitive or referenced datatype.
+
+-> methodName -> From second word onwards, 1st letter should be capital and it cannot be a keyword.
+
+-> return statement is optional, if the return type is there than only you should use return statement
+
+-> void is also called as return type but it returns nothing, so when the method returns nothing, then i will use void.
+
+Benefits of methods :
+
+1.)Modularity. ==> dividing into parts
+
+2.)Reusability.==> specific method i will use it again and again.
+
+
+In java , there exists 
+Two types of methods same like variables :
+
+1.) Instance methods (i can call it through by using object or object reference)
+
+2.) Class Methods or static methods (i can call it through by using directly,classname,object,and objref)
+
+================================================
+
+    class A
+    {
+          int a = 234;
+          static float b = 3455678.90;
+           void a(String[] a, int b)
+          {
+                  float b = a;
+                  System.out.println(b);
+                  System.out.println("A");
+
+         }
+
+          static void abc()
+          {
+                  int b = 234;
+                System.out.println(b);
+
+             }          
+       
+
+         psvm(String[] args)
+         {
+            
+             static int d = 235;
+             A obj = new A();
+             Sysout(d);
+             Sysout(new A().b);
+             Sysout(obj.a);
+             Sysout(b);
+             Sysout(new A().b);
+            
+  
+
+        }
+
+
+    }
+
+ In java, Methods are divided into 4 categories :
+
+1.Methods with arguments and with return value
+
+     class Demo
+     {
+         int add()
+        {
+                   int a = 13;
+                   int b = 12;
+                  int c = a+b;
+                 System.out.println(c);
+                 return c;
+                 
+          }
+             public static void main(String[] args)
+            {
+               int d= new Demo().add();
+          }
+}
+
+
+2.Methods with arguments and without return value
+
+ class Demo
+ {
+                             12       28
+                int add(int a, int b)
+              {
+
+                      int c = a+b;
+                     System.out.println(c);
+               }
+             public static void main(String[] args)
+            {
+                    new Demo().add(12,28);
+            
+            }
+  }
+
+
+3.Methods without arguements and with return value
+
+
+4.Methods without arguments and without return value
+--------------------------------------------------------------------
+
+
+class Demo
+{
+                           
+                void add()
+              {
+
+                  int c = 12+28;
+                  System.out.println(c);
+                   
+              }
+            public static void main(String[] args)
+            {
+                    new Demo().add();
+              
+          }
+ }
+
+Working with conditions in java :(Conditional Stataements)
+--------------------------------------------
+
+      main()
+     {
+
+
+           =====
+=================
+}
+
+
+
+
+
+
+There are 5 categories of conditional statements:
+
+1.If - then Statement
+
+if(abc>90){
+   if(){
+
+
+   }else{
+
+
+
+  }
+ 
+
+}
+else if(bcd>9000){
+
+
+
+}
+else{
+
+
+}
+
+2.If-then Else Statement
+
+3. Else-If Ladder
+
+4.Nested If-else Statement
+
+5. Switch Statement.
+
+age=20;
+switch(age)
+{
+    case 16: Sysout("child);
+    break;
+    case 20: Sysout("Adult");
+   break;
+  default: Sysout("invalid")
+}
+
+Loops in Java
+================
+The Java loop is used to iterate a part of the program several times. 
+
+There are three types of loops in Java :
+
+1.) while loop
+
+while(condition){
+   
+  to be repeated code;
+
+  incr/decr;
+
+
+}
+
+2.) for loop
+for(int i=0;i<10;i++)
+{
+
+ 
+  break;
+}
+
+
+3.) do while loop
+
+do{
+//code
+
+}while(i<10);
+
+break and continue statements
+
+What is OOPs ?
+==================
+
+Procedural programming is about writing procedures or methods that perform operations on the data, while object-oriented programming is about creating objects that contain both data and methods.
+
+Object-oriented programming has several advantages over procedural programming:
+
+OOP is faster and easier to execute
+OOP provides a clear structure for the programs
+OOP helps to keep the Java code DRY "Don't Repeat Yourself", and makes the code easier to maintain, modify and debug
+OOP makes it possible to create full reusable applications with less code and shorter development time
+
+
+ The "Don't Repeat Yourself" (DRY) principle is about reducing the repetition of code. You should extract out the codes that are common for the application, and place them at a single place and reuse them instead of repeating it.
+
+
+
+What is a object-oriented programming language ?
+
+A language that supports object oriented programming principles is nothing but a object oriented programming language.
+
+Object-oriented Principles :
+=====================
+
+1. Inheritance
+
+2. Polymorphism
+
+3. Abstarction
+
+4. Encapsulation
+
+
+   Inheritance :
+  ---------------------
+  Creating a new class(with already existed properties along with new properties)
+ from the existing class is called as inheritance.
+
+In Inheritance, existed class is called super class or parent class
+ and new class is called sub class or child class.
+
+Adding new functionality to the already existed application is the use of inheritance.
+
+using extends keyword we can acquire the properties from one class to another class.
+
+
+
+class CollegeApp1.0
+{
+  int sRollno;
+  String sName;
+  String sAddress;
+  int sPhoneno;
+}
+
+class CollegeApp2.0 extends CollegeApp1.0
+{
+
+   String sEmailId;
+}
+
+
+
+
+There are types of inheritance in java :
+---------------------------------------------
+
+1.Single Inheritance
+
+2.Multiple inheritance
+
+3.Multilevel inheritance
+
+4.Heirarchical Inheritance
+
+5.Multipath inheitance
+
+6.Hybrid inheriance
+
+
+1.Single Inheritance
+-----------------------------
+
+Derivation of a class from only one super class is called as single inheritance.
+
+ class A
+{
+
+   -----
+}
+
+  class B extends A
+{
+  -------
+}
+
+2.Muliple inheritance :
+-----------------------------
+
+Derivation of a class from more than one super class is called as multiple inheritance.
+
+  class A
+  {
+
+  }
+
+  class B
+ {
+
+  }
+
+  class C extends A,B
+  {
+
+  }
+
+3.Multilevel inheritance:
+--------------------------------
+
+Derivation of a class from subclass is called as multilevel inheritance.
+
+    class A 
+{
+
+}
+  class B extends A
+{
+
+}
+
+  class C extends B
+{
+
+}
+
+  class D extends C
+{
+
+}
+ 
+4.Heirarchical inheritance:
+-----------------------------------
+
+Derivation of several classes from only one super class 
+                                                                    is called as heirarchical inheritance.
+
+  class A
+  {
+
+  }
+
+  class B extends A
+{
+
+}
+
+  class C extends A
+{
+
+}
+
+  class D extends A
+{
+
+}
+
+5.Multipath inheritance :(Multiple inheritance + Heirarchical inheritance)
+--------------------------------
+
+Derivation of a class from more than one sub class,
+ those subclasses get inherited from the same super class is called as multipath inheritance.
+
+  class A 
+{
+
+}
+
+  class B extends A
+{
+
+}
+
+  class C extends A
+{
+
+
+}
+
+  class D extends B,C
+{
+
+}
+
+6.Hybrid inheritance
+--------------------------
+
+Derivation of a class, involving more than one form of inheritance is called as hybrid inheriatnce.
+
+Class A
+{
+
+}
+
+class B extends A
+{
+
+}
+
+class C
+{
+
+}
+
+  class D extends B,C
+{
+
+}
+
+Note :
+------------
+
+  Multipath inheritance is also one example of hybrid inheritance.
+
+  Java does not support multiple inheritance, multipath inheritance and hybrid inheritance.
+
+Note2 :
+--------------
+
+    Java does not support multiple inheritance because of ambiguity to call.
+
+  class A
+  {
+
+    show();
+  }
+
+   class B
+  {
+   show();
+  }
+  class C extends A,B
+{
+      C obj = new C();
+      obj.show();
+
+
+}
+
+
+Note :
+
+   Super class reference can refer both super class object and sub class class object, but it can access only super class members only.
+
+        A obj1 = ____________; (new A() or new B())
+
+class A //super class
+{
+	int x = 10;
+	void show()
+	{
+		System.out.println("Class A");
+	}
+}
+
+class B extends A
+{
+	int y = 11;
+	void print()
+	{
+		System.out.println("Class B");
+		
+	}
+	
+	public static void main(String[] args)
+	{
+		A obj = new B();
+		
+		System.out.println(obj.x);
+		System.out.println(obj.y); //Not valid
+		obj.show();
+		obj.print(); //Not Valid
+		
+				
+	}
+}
+
+Sub class reference can refer only subclass object 
+but it can access both super class and sub class members.
+
+      B obj1 = new B();
+
+
+Example program for notes below :
+-----------------------------------------
+
+class A //super class
+{
+	int x = 10;
+	void show()
+	{
+		System.out.println("Class A");
+	}
+}
+
+class B extends A
+{
+	int y = 11;
+	void print()
+	{
+		System.out.println("Class B");
+		
+	}
+	
+	public static void main(String[] args)
+	{
+		B obj = new B();
+		
+		System.out.println(obj.x);
+		System.out.println(obj.y);
+		obj.show();
+		obj.print();
+		
+				
+	}
+}
+
+
+
+this -> obj ref  IIC => instance method, initialisation block and constructor, when i wanted to access instance variable or method of current class or same class
+
+Super keyword :
+-------------------
+
+It is also called as object reference or reference variable because it refers super class memory.
+
+  Super keyword explicitly required to access super class member whenever, 
+ both super class member and sub class member names are same.
+
+Member can be variable or method.
+
+class A
+{
+
+                   A()
+                 {
+                    }
+	int x = 10;
+	
+	void show()
+	{
+		System.out.println("Welcome");
+	}
+                  void give()
+                  {
+                        }
+
+        
+}
+
+class Main extends A
+{
+	int x = 20;
+
+                 void abc()
+                 {
+                      }
+
+                      void print()
+	{
+		int x = 30;
+		System.out.println(x);
+		System.out.println(this.x);
+		System.out.println(super.x);
+		super.show();
+                                   this.abc();
+                                   super.give();
+	}
+	
+	
+	
+	public static void main(String[] args)
+	{
+		Main obj = new Main();
+		obj.print();
+
+		
+	}
+}
+
+Note :
+----------
+static method does not refer this and super keywords in anyways.
+
+super():
+--------------
+It calls default constructor of super class.
+
+It is implicitly present as a first statement inside every constructor.
+
+
+super(args)
+----------------
+
+It calls parameterised constructor of super class.
+
+Note :
+-----------
+
+this() , or this(args) or super() or super(args) must  be a first statement in a constructor.
+
+program - 1
+--------------------
+
+class A
+{
+	A()
+	{                  
+		System.out.println("A class");
+	}
+}
+
+class Main extends A
+{
+	Main()
+	{
+                                super(); //implicitly present
+		System.out.println("Main class")
+	}
+	
+	public static void main(String[] args)
+	{
+		new Main();
+	}
+}
+
+Program - 2:
+-------------------
+
+class A extends Object
+{
+	A()
+	{
+                                  super();
+		System.out.println("welcome");
+	}
+	A(int x)
+	{
+		this();
+		System.out.println(x);
+	}
+}
+
+class Main extends A
+{
+                Main()
+           {
+                Sysout("hello")
+
+            }
+	Main(int y)
+	{
+
+                      this();
+	    System.out.println(y);
+	}
+	
+	public static void main(String[] args)
+	{
+		new Main(10);
+	}
+}
+
+
+class A extends Object
+{
+   A()
+  {
+     super();
+
+  }
+
+   A(int a)
+  {
+      //super();
+      this();
+
+  }
+
+  psvm()
+  {
+      new A(10);
+ }
+}
+ 
+import java.lang.* -> default package for every code that you write in java
+
+Object class -> default super class for every class that you write in java
+
+toString() -> is the default method that will be called for every object reference in java 
+toString()  method is present in java.lang.Object class.
+
+
+Polymorphism :
+-------------------------
+
+The ability to take more than one form is called as polymorphism.
+
+Poly means "many", morphism means forms and polymorphism means many forms.
+
+There are two types of polymorphism in java :
+-------------------------------------------------------
+
+1.) Compile-time polymorphism
+
+2.) Run-time polymorphism
+
+
+1. Compile - time polymorphism :
+----------------------------------------
+
+Binding of method call statement with method definition is done at compile time is known as compile time polymorphism.
+
+Example of compile time polymorphism is : Method Overloading.
+
+Method Overloading :
+--------------------------
+
+If two or more methods with the same name and with different parameters list, then it is said to method overloading. 
+
+void A()
+{
+
+}
+void A(int a, int b, int c)
+{
+
+
+}
+
+void A(int a, int b)
+{
+
+}
+
+int A(int a, float b)
+{
+
+
+}
+
+float A(float a, int b)
+{
+
+}
+
+main()
+
+{
+
+  A();
+}
+In method overloading, parameters can be different in number of arguments , datatypes and order of arguments.
+
+In method overloading, return type can same or different.
+
+Program - 1:
+------------------
+class Main
+{
+	void add(int a, int b)
+	{
+		System.out.println(a+b);
+	}
+	
+	
+	
+}
+
+class A extends Main{
+
+                  int add(int a, int b)
+	{
+		System.out.println(a*b);
+	}
+                public static void main(String[] args)
+	{
+                    A obj = new A();
+                      //obj.add(35,23,13); //method call statement
+                      obj.add(12, 15);			
+	}
+}
+
+2.)Runtime Polymorphism :
+---------------------------------
+
+Binding of method call Statement with method definition is done at runtime(execution) is called as runtime polymorphism.
+
+The example of runtime polymorphism is Method Overriding
+
+Method Overriding :
+----------------------------
+
+If two or more methods with the same name and with same parameters list, then it is said to be method overriding.
+
+Note :
+======
+**Methods cannot be overridden in the same class.
+
+Methods can be overridden only with inheritance.
+
+Program - 1:
+--------------------
+class A
+{
+	void show()
+	{
+		System.out.println("A class");
+	}
+
+                  void add(int a, int b)
+                   {
+                           
+                          int c = a+b;
+               }
+
+
+                   int add(int a, int b, int c)
+                   {
+                           
+                          int c = a+b;
+              }
+              
+                void print()
+	{
+		System.out.println("print() method");
+	}
+}
+
+
+class B extends A
+{
+	    void show()
+	   {
+		System.out.println("B class");
+	   }
+	
+	void display()
+	{
+		System.out.println("display() method");
+	}
+	
+	public static void main(String[] args)
+	{
+		A obj = new B();
+		obj.show();
+		obj.print();
+		//obj.display();
+		
+	}
+}
+
+Program - 2:
+-------------------
+class A
+{
+	final void show()
+	{
+		System.out.println("A class");
+	}
+	
+	void print()
+	{
+		System.out.println("print() method");
+	}
+}
+
+
+class Main extends A
+{
+	void show()
+	{
+		System.out.println("Main class");
+	}
+	
+	void display()
+	{
+		System.out.println("display() method");
+	}
+	
+	public static void main(String[] args)
+	{
+	   Main obj = new Main();
+		obj.show();
+		obj.print();
+		obj.display();
+		
+	}
+}
+
+Program - 3:
+--------------------
+class A
+{
+	public void show()
+	{
+		System.out.println("A class");
+	}
+	
+	void print()
+	{
+		System.out.println("print() method");
+	}
+}
+
+
+class Main extends A
+{
+	public void show()
+	{
+		System.out.println("Main class");
+	}
+	
+	void display()
+	{
+		System.out.println("display() method");
+	}
+	
+	public static void main(String[] args)
+	{
+	   Main obj = new Main();
+		obj.show();
+		obj.print();
+		//obj.display();
+		
+	}
+}
+
+Assignment 3 : Perform method overriding with parameters 
+Self learning-1 : Can I perform inheritance for a static or class method ? Why static methods cannot be overridden ?
+Self learning-2 : Can private methods be inherited ?
+
+
+Differences between Method Overloading and Method Overriding :
+------------------------------------------------------------------------------
+Method Overloading                                         Method Overriding
+-----------------------------------------------------------------------------------
+1. If two or more methods with same name and with different parameters list .Then it is said to be method overloading
+
+1. If two or more methods with same name and with same parameters list .Then it is said to be method overriding
+
+2.In method overloading, return type can be same or different.
+
+2.In method overriding , return type must be same,except covariant return type.
+
+3.Methods can be overloaded in the same class
+
+3.Methods cannot be overrided in the same class because of ambiguity to call
+
+4.Method can be overloaded in inheritance also
+
+4. Methods can be overridded only in inheritance.
+
+5.Final methods can be overloaded.
+
+final void A(int a, int b)
+
+final void A(int a, int b, int c)
+
+5.Final methods cannot be overridden because final keyword used to prevent method overriding.
+
+6.Static methods can be overloaded
+
+6. Static methods cannot be overridden because static methods are not a part of an object. 
+
+7.In method overloading, Access modifiers can be same or different.
+
+7. In method overridding, method must have same access modifier or less restrictive access modifier.
+
+private -> default -> protected -> public
+more                                                    less
+
+class A
+{
+  public void abc(int a, int b)
+  {
+
+  }
+}
+
+
+class B extends A
+{
+public void abc(int a, int b)
+   {
+
+
+    }
+}
+
+8.Private methods can be overloaded.
+
+8.Private methods cannot be overridden because private members cannot be inherited(because scope is within the class only).
+
+Co-variant return type :
+-------------------------------
+
+Java permits sub class type as a return type while overriding a method. This is covariant return type.
+
+Class A
+{
+
+}
+class B extends A
+{
+     protected   C hello()
+    {
+
+    }
+}
+
+class C extends B
+{
+    public C hello()
+    {
+
+    }
+}
+
+class D extends C
+{
+ C or D hello()
+  {
+    
+   }
+}
+
+
+class Employee //java bean
+{
+	private int age;
+                   
+	
+	public void setAge(int age) //setter method
+	{
+		
+			this.age = age;
+		
+	}
+	
+	public int getAge()
+	{
+		return this.age;
+	}
+}
+
+class Main 
+{
+	public static void main(String[] args)
+	{
+		Employee obj = new Employee();
+	
+		obj.setAge(20);
+		
+		int x = obj.getAge();
+		
+		System.out.println("The age of employee is : "+x);
+		
+	}
+}
+
+   
+Abstraction :
+----------------------
+
+  Providing neccessary information and hiding uneccessary information is called as   abstraction.
+                                                                        (or)
+  Providing neccessary information without disclosing(including) background details.
+
+  In java, abstraction can be implemented using abstract classes and interfaces.
+
+  Abstract class :
+---------------------
+
+A class that is declared with abstract keyword is called as abstract class.
+
+abstract class A
+{
+   abstract void show();
+   void print()
+   {
+     //set of statements
+
+   }
+}
+
+   A abstract class can have only abstract methods, only non - abstract methods or both abstract and non - abstract methods.
+
+Non- abstract methods are also called as concrete methods.
+
+Abstract method :
+---------------------
+
+A method that has no body is called a abstract method.
+
+  Abstract method must be declared with abstract keyword in java, otherwise compile-time error occurs.
+
+abstract void show(); // abstract method declaration.
+
+  Non-abstract method  or concrete method:
+-----------------------------------------------
+
+A method that has a body is called as an concrete method.
+
+void show()
+{
+
+}
+
+ If the class contains an abstract method, then the class must be declared with  abstract keyword, otherwise compile time error occurs.
+
+1.) 
+abstract class A
+{
+   void show()
+   {
+      
+   }
+ abstract void print();
+ 
+}
+
+    
+
+2.)
+
+abstract class B
+{
+
+ void show(){
+
+  }
+   abstract void print();
+
+} 
+
+
+3.)
+abstract class C
+{
+
+ abstract void show();
+  abstract void set();
+  void print()
+  {
+
+   }
+void display(){
+
+}
+} 
+
+abstract class D extends C
+{
+  abstract void show();
+
+   void set()
+  {
+
+   }
+}
+
+ class E extends D
+{
+     void show()
+   {
+
+   }
+}
+
+
+
+ Abstract classes cannot be instantiated.
+instantiation means object creation.
+
+Abstract classes can be inherited into another class by using "extends" keyword.
+
+ Whenever abstract class is inherited then, all the abstract methods of an abstract class must be overridden in the sub class or the sub class must be declared with abstract keyword otherwise compile-time error occurs.
+
+Program - 1:
+-----------------
+
+abstract class A
+{
+	abstract void show();
+	
+	void print()
+	{
+		System.out.println("print() method");
+	}
+}
+
+ class Main extends A
+{
+	 
+             void show(){
+
+                  System.out.println("show() method");
+           }
+
+	void display()
+	{
+		System.out.println("display() method");
+	}
+	public static void main(String[] args)
+	{
+	
+	    Main obj = new Main();
+	    obj.show();
+	    obj.display();
+	    obj.print();
+	    
+	}
+}
+
+program - 2 :
+----------------
+abstract class A
+{
+	abstract void show();
+	
+	abstract void give();
+	
+	void print()
+	{
+		System.out.println("print() method");
+	}
+}
+
+ abstract class Main extends A
+{
+	 void show()
+	{
+		System.out.println("show() method");
+	}
+	 
+	 abstract void give();
+}
+
+
+class D extends Main
+{
+	void give()
+                  {
+                       System.out.println("give() method");
+                   }
+
+
+        
+	void display()
+	{
+		System.out.println("display() method");
+	}
+	public static void main(String[] args)
+	{
+	    D obj = new D();
+	    obj.show();
+	    obj.display();
+	    obj.print();
+                        obj.get();
+	    
+	}
+}
+
+Note :
+-------------
+
+Abstract methods cannot be final.
+
+Abstract methods cannot be static.
+
+Abstract methods cannot be private.
+
+Abstract classes can have constructors and those constructors are called whenever the object of the sub classes are created.
+
+abstract class A
+{
+	A()
+	{
+		System.out.println("constructor");
+	}
+}
+
+class Main extends A
+{
+	Main() //implicitly present
+	{
+		super(); //This will be there implicitly.
+	}
+	public static void main(String[] args)
+	{
+		new Main();
+	}
+}
+
+Abstract class can have static members.
+
+abstract class A
+{
+	static void show()
+	{
+		System.out.println("show() method");
+	}
+}
+
+class Main extends A
+{
+	
+	public static void main(String[] args)
+	{
+		Main.show();
+	}
+}
+
+abstract class can have main method also.
+
+abstract class Main
+{
+	
+	public static void main(String[] args)
+	{
+	 System.out.println("welcome");
+	}
+}
+
+Interfaces :
+---------------
+
+An interface is a collection of public static final variables and public abstract methods.
+
+In an interface, all variables are implicitly public static final and 
+all methods are implicitly public abstract.
+
+Interface itself impilcitly abstract.
+
+Interfaces also cannot be instantiated.
+Instantiation means object creation.
+
+interface A
+{
+   int a ; //public static final int a;
+   
+  void show(); //public abstract void show()
+   void give();
+}
+
+Interface can be inherited into a class by using implements keyword.  
+
+Interface can also be inherited into another interface by using extends keyword.
+
+class cannot inherit the inteface.
+
+Whenever interface is inherited into a class 
+all the abstract methods must be overridden in the sub class , 
+if not declare sub class with abstract keyword otherwise compile time error occurs.
+
+.Class file will also be generated for every interface.
+
+Program -1:
+--------------------
+interface A
+{
+	 public static final int a = 5;
+	 void show();
+}
+
+class Main implements A
+{
+	int b = 10;
+	
+   void show(){
+    System.out.println("show method");
+
+   }
+     
+    void print()
+    {
+    	System.out.println("Print() method");
+    }
+    
+    
+    public static void main(String[] args)
+    {
+    	Main obj = new Main();
+    	obj.show();
+    	obj.print();
+    	System.out.println(A.a);
+    	System.out.println(obj.b);
+    }
+
+}
+
+Program-2 :
+-------------------
+
+interface A
+{
+	int a = 5;
+	void show();
+}
+
+class Main implements A
+{
+	int b = 10;
+	
+     public void show()
+	{
+		System.out.println("show() method");
+	}
+     
+    void print()
+    {
+    	System.out.println("Print() method");
+    }
+    
+    
+    public static void main(String[] args)
+    {
+    	A obj = new Main();
+    	obj.show();
+    	//obj.print();
+    	System.out.println(A.a);
+    	//System.out.println(obj.b);
+    }
+
+}
+
+ Intefaces are introduced in java is to achieve multiple inheritance.
+
+      class A{}
+      class B{}
+     interface C{}
+      interface D{}
+
+  class Main extends A,B{}
+
+   class Main1 implements C,D{}
+
+   class Demo extends A implements C{} 
+
+   class Demo1 extends A implements C,D{} 
+
+    interface S extends C,D{} 
+
+    interface E extends A,B{} //Not valid
+
+  One interface inheriting two or more classes is not valid.
+
+
+    Abstract class supports 0-100 % abstraction whereas 
+    interfaces support only 100% abstraction. 
+
+This is about the interfaces.
+
+Encapsulation :
+-------------------------
+
+What is   En-capsule-ation ?
+
+Encapsulation in java is a process 
+of wrapping code(methods) and data(variables)
+ together into a single unit like a capsule.
+
+                                                                                  (or)
+
+Binding of variables and methods into a single unit and
+ those methods(getters and setters) are operating on the same variables. 
+This is known as encapsulation.
+
+ To perform encapsulation there are some rules we need to follow :
+
+1. in a specific class(Java Bean), the variables declared must be private.
+
+2. To access those private variables we need getter and setter methods 
+that must be declared as public.
+
+class TimeSheet{ //Java Bean or Model
+
+   private int password;
+   private int serverIP;
+   public int getPassword()
+   {
+          return password;
+   }
+   public void setPassword(int pass)
+   {
+       this.password = pass;
+   }
+   public int getServerIP()
+   {
+          return serverIP;
+   }
+   public void setServerIP(int serverIP)
+   {
+       this.serverIP = serverIP;
+   }
+
+}
+
+
+
+
+The java bean class is the example of fully encapsulated class.  
+
+setter method is used for setting the value of private variable.
+
+getter method is used for getting/returning the value of private variable.
+
+Note : The setters and getters are used only for 
+accessing the private data or variables outside another class.
+
+class Employee //java bean
+{
+	private int age;                   	
+	public void setAge(int age) //setter method
+	{
+		if(age>100)
+		{
+			this.age = 100;
+		}
+		else if(age<0)
+		{
+			this.age = 0;
+		}
+		else
+		{
+			this.age = age;
+		}
+	}
+	
+	public int getAge()
+	{
+		return this.age;
+	}
+}
+
+class Main 
+{
+	public static void main(String[] args)
+	{
+		Employee obj = new Employee();	
+		obj.setAge(20);		
+		int x = obj.getAge();		
+		System.out.println("The age of employee is : "+x);
+		
+	}
+}
+
+In the above Program, age variable is bounded with setAge() and getAge() methods
+ and these methods are operating on age variable. This is known as Encapsulation. 
+
+Application of Encapsulation :
+-----------------------------------
+
+Encapsulation is used for data(variables) hiding.
+
+Github repo link:
+=======================
+https://github.com/roshithrao/Project-Excellence-EDL-Batch-ExcelR-Projects
+
+
+
+
+
+
+
+
+
+
+
+

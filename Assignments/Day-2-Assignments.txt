@@ -1,0 +1,64 @@
+Inclass Day-2 Challenge1:
+
+1. Create a studentapp class and create 4 student objects with their names
+ 2. Take 4 variables : rollNo, Name, branch, CollegeName.
+ 3. Print the rollNo, Name, branch, CollegeName for each student
+4. If student branch is cse, take 3 subjects and calculate percentage according and print it up.
+5.If student branch is ece, take 2 subjects and calculate percentage accordingly and print it up.
+
+Inclass Day-2 Challenge2:
+
+1. Create a Java program that models a basic vehicle system. The program should include the following requirements:
+2. Abstraction: Create an abstract class Vehicle with abstract methods for starting the vehicle, stopping the vehicle, and displaying vehicle details.
+3. Interfaces: Define an interface ElectricVehicle that declares methods for charging the vehicle and displaying the battery level.
+4. Inheritance: Create two classes Car and Bike that inherit from the Vehicle class. The Car class should implement the ElectricVehicle interface.
+5. Implement the required methods in the Car and Bike classes.
+6. In the main method, create instances of Car and Bike, invoke their methods, and display the output.
+
+Git
+Project-Excellence-EDL-Batch-ExcelR-Projects
+
+
+
+Assignment:
+==============
+
+ Write a program to write string data appended into a file.
+previous version : Are you ready?
+Updated version of file : Are you ready? WelcomeToJava 
+
+ Project: Library Management System- Build a simple Java console application to
+ manage a library system.
+ ○ Description: Build a console application that allows users to perform various
+ library management operations such as adding, removing, searching, and borrowing books.
+ ○ Tasks:
+ ■ Implement classes for books with fields id, title, author,  library users with id and name, and a class with transactions adding, removing, searching, and borrowing books..
+ ■ Create methods for adding and removing books.
+ ■ Implement search functionality using different criteria (e.g., title, author, ID).
+ ■ Managebookborrowing and returning operations and create exceptions and handle them where ever needed, like when the book is not found you can throw BookNotFound Exception.
+
+class LMS{
+
+   1: addBook();
+    2: removeBook(int id);
+   3:  displayBook();
+   4: searchBook(String title);
+   5: exit
+}
+
+logical-DSA-1: 
+
+Write a program to generate the below output :
+i/p :  aaabbbbccd -> o/p: 3a4b2c1d
+i/p: aabbcd -> o/p: 2a2b1c1d
+
+ 
+logical DSA-2. 
+Shift the elements of an array by k places :
+k = 3 and arr is [1,2,3,4,5]
+o/p should be [3,4,5,1,2]
+
+Github repo link:
+=======================
+https://github.com/roshithrao/Project-Excellence-EDL-Batch-ExcelR-Projects
+

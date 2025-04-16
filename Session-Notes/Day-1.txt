@@ -1,0 +1,60 @@
+Day-1:
+==============
+1.	Introduction to Full Stack Development with real world examples?
+2.	Why Full stack development is popular?
+3.	Full Stack Development Terminology
+4.	Development Tools Installation
+5.	Introduction to java features and first program execution
+6.	Git and Github Introduction
+7.	Pushing code to github using git
+
+Full Stack: Frontend+Backend+Database
+
+Full Stack team comprises of:
+
+Backend developer
+Frontend dev
+DBA -> 20-25 members
+
+FULL STACK DEVELOPER -> 5-6
+
+Tech Stack Required for Development:
+=====================================
+
+Frontend UI: HTML, CSS, Javascript, React, Angular, Vue.js
+
+
+Backend: C++, Java, Python, NodeJs, ExpressJS Django, Spring, Springboot
+
+
+Database: SQL/ NOSQL -> Mysql, Oracle, PostgreSQL, MYSQL Server,....   MONGODB, CassandraDB....
+
+Java Full Stack: Java Spring Springboot  React SQL/NOSQL
+
+Tools to Install:
+
+1. JDK 17/21-> Java
+
+2. Eclipse IDE(eclipse for java and web developers)
+
+3. Github Signup
+
+Mern Stack: Mongodb ExpressJS React NodeJS
+
+Mean Stack : Mongodb ExpressJS Angular NodeJS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
