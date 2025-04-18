@@ -1,0 +1,4339 @@
+Day-3 Agenda:
+==================
+
+1st hour:
+Data structures, Collections, Exception handling, Multithreading
+
+2nd hour:
+Database, SQL, JDBC
+Servlets, handson 
+Spring, Springboot
+
+
+
+Assignment: Student Mgmt App, Yesterday assignment
+                       Interview Questions
+
+Installation : MySQL installation, eclipse for java and web developers
+
+mysql server
+mysql workbench download for windows -> youtube
+mysql commandline
+
+root
+remember your password: root123
+
+==================================================
+Data Structures :
+   -> What is a data structure ?
+   -> What are the types of Data structures that are there in java ?
+   -> What are linear data structures ?
+   ->What are non-linear data structures ?
+   -> Linear Data structures :
+    Array 
+    Linked List 
+    Stack 
+    Queue
+    
+MySQL Introduction
+
+JDBC Application development
+ 
+What is a Data Structure ?
+=======================
+
+Data Structure is a way to store and organize data so that the memory can be used efficiently and data can be accessed effectively.
+
+The data structure name indicates itself that organizing the data in memory.
+
+There are many ways of organizing the data in the memory as we have already seen one of the data structures, i.e., array in Java language. 
+
+
+int a = 12;
+
+int b = 13;
+
+
+int a[] = {12,13};
+
+int a[] = new int[7];
+
+a[0] = 123;
+
+
+
+Array is a collection of memory elements in which data is stored sequentially, i.e., one after another. In other words, we can say that array stores the elements in a continuous manner.
+
+This organization of data is done with the help of an array of data structures. There are also other ways to organize the data in memory. 
+
+Let's see the different types of data structures.
+
+The data structure is not any programming language like C, C++, java, etc. It is a set of algorithms that we can use in any programming language to structure the data in the memory.
+
+To structure the data in memory, 'n' number of algorithms were proposed, and all these algorithms are known as Abstract data types. These abstract data types are the set of rules.
+
+Types of Data Structures :
+==================
+
+1.Primitive data structure => That hold a single value
+2.Non-primitive data structure - that can hold many values
+                                                       Linear and non linear data structures.
+
+
+Primitive Data structure
+====================
+
+The primitive data structures are primitive data types. The int, char, float, double, and pointer are the primitive data structures that can hold a single value.
+
+Non-Primitive Data structure
+=======================
+
+The non-primitive data structure is divided into two types:
+
+1.Linear data structure
+2.Non-linear data structure
+
+Linear Data Structure :
+==================
+
+The arrangement of data is done in a sequential manner is known as a linear data structure.
+
+The data structures used for this purpose are Arrays, Linked list, Stacks, and Queues.
+
+In these data structures, one element is connected to only one another element in a linear form.
+
+Non Linear Data Structure :
+========================
+
+When one element is connected to the 'n' number of elements is known as a non-linear data structure. 
+
+The best example is trees and graphs.
+
+ In this case, the elements are arranged in a random manner.
+
+
+Data structures can also be classified based on the memory allocation as:
+
+Static data structure: alloted at compile time
+
+ It is a type of data structure where the size is allocated at the compile time. Therefore, the maximum size is fixed.
+
+Dynamic data structure: alloted at run time
+
+It is a type of data structure where the size is allocated at the run time. Therefore, the maximum size is flexible.
+
+Major Operations that are performed on data structures
+===============================================
+
+Searching: We can search for any element in a data structure.
+Sorting: We can sort the elements of a data structure either in an ascending or descending order.
+Insertion: We can also insert the new element in a data structure.
+Updation: We can also update the element, i.e., we can replace the element with another element.
+Deletion: We can also perform the delete operation to remove the element from the data structure.
+
+
+Advantages of Data structures
+=============================
+The following are the advantages of a data structure:
+
+Efficiency: If the choice of a data structure for implementing a particular ADT is proper, it makes the program very efficient in terms of time and space.
+
+Reusability: The data structure provides reusability means that multiple client programs can use the data structure.
+
+Abstraction: The data structure specified by an ADT also provides the level of abstraction. The client cannot see the internal working of the data structure, so it does not have to worry about the implementation part. The client can only see the interface
+
+Linked list :
+===========
+
+Linked list is a linear data structure that includes a series of connected nodes. 
+
+Linked list can be defined as the nodes that are randomly stored in the memory. 
+
+A node in the linked list contains two parts, i.e., first is the data part and second is the address part. The last node of the list contains a pointer to the null. 
+
+After array, linked list is the second most used data structure. In a linked list, every link contains a connection to another link.
+
+Representation of a Linked list
+=========================
+
+Show diagram 
+
+
+Why use linked list over array?
+========================
+
+Linked list is a data structure that overcomes the limitations of arrays. Let's first see some of the limitations of arrays -
+
+The size of the array must be known in advance before using it in the program.
+
+Increasing the size of the array is a time taking process. It is almost impossible to expand the size of the array at run time.
+
+All the elements in the array need to be contiguously stored in the memory. Inserting an element in the array needs shifting of all its predecessors.
+
+Linked list is useful because -
+======================
+
+It allocates the memory dynamically. All the nodes of the linked list are non-contiguously stored in the memory and linked together with the help of pointers.
+
+In linked list, size is no longer a problem since we do not need to define its size at the time of declaration. List grows as per the program's demand and limited to the available memory space.
+
+Types of Linked list
+=================
+
+Linked list is classified into the following types -
+
+Singly-linked list - Singly linked list can be defined as the collection of an ordered set of elements. A node in the singly linked list consists of two parts: data part and link part. Data part of the node stores actual information that is to be represented by the node, while the link part of the node stores the address of its immediate successor.
+
+Doubly linked list - Doubly linked list is a complex type of linked list in which a node contains a pointer to the previous as well as the next node in the sequence. Therefore, in a doubly-linked list, a node consists of three parts: node data, pointer to the next node in sequence (next pointer), and pointer to the previous node (previous pointer).
+
+Circular singly linked list - In a circular singly linked list, the last node of the list contains a pointer to the first node of the list. We can have circular singly linked list as well as circular doubly linked list.
+
+Circular doubly linked list - Circular doubly linked list is a more complex type of data structure in which a node contains pointers to its previous node as well as the next node. Circular doubly linked list doesn't contain NULL in any of the nodes. The last node of the list contains the address of the first node of the list. The first node of the list also contains the address of the last node in its previous pointer.
+
+
+Advantages of Linked list
+==========================
+The advantages of using the Linked list are given as follows -
+
+Dynamic data structure - The size of the linked list may vary according to the requirements. Linked list does not have a fixed size.
+
+Insertion and deletion - Unlike arrays, insertion, and deletion in linked list is easier. Array elements are stored in the consecutive location, whereas the elements in the linked list are stored at a random location. To insert or delete an element in an array, we have to shift the elements for creating the space. Whereas, in linked list, instead of shifting, we just have to update the address of the pointer of the node.
+
+Memory efficient - The size of a linked list can grow or shrink according to the requirements, so memory consumption in linked list is efficient.
+
+Implementation - We can implement both stacks and queues using linked list.
+
+Disadvantages of Linked list
+=======================
+The limitations of using the Linked list are given as follows -
+
+Memory usage - In linked list, node occupies more memory than array. Each node of the linked list occupies two types of variables, i.e., one is a simple variable, and another one is the pointer variable.
+
+Traversal - Traversal is not easy in the linked list. If we have to access an element in the linked list, we cannot access it randomly, while in case of array we can randomly access it by index. For example, if we want to access the 3rd node, then we need to traverse all the nodes before it. So, the time required to access a particular node is large.
+
+Reverse traversing - Backtracking or reverse traversing is difficult in a linked list. In a doubly-linked list, it is easier but requires more memory to store the back pointer
+
+Applications of Linked list
+========================
+The applications of the Linked list are given as follows -
+
+With the help of a linked list, the polynomials can be represented as well as we can perform the operations on the polynomial.
+
+A linked list can be used to represent the sparse matrix.
+
+The various operations like student's details, employee's details, or product details can be implemented using the linked list as the linked list uses the structure data type that can hold different data types.
+
+Using linked list, we can implement stack, queue, tree, and other various data structures.
+
+The graph is a collection of edges and vertices, and the graph can be represented as an adjacency matrix and adjacency list. 
+
+If we want to represent the graph as an adjacency matrix, then it can be implemented as an array. If we want to represent the graph as an adjacency list, then it can be implemented as a linked list.
+
+A linked list can be used to implement dynamic memory allocation. The dynamic memory allocation is the memory allocation done at the run-time.
+
+Operations performed on Linked list
+==============================
+The basic operations that are supported by a list are mentioned as follows -
+
+
+Insertion - This operation is performed to add an element into the list.
+Deletion - It is performed to delete an operation from the list.
+Display - It is performed to display the elements of the list.
+Search - It is performed to search an element from the list using the given key.
+
+Complexity of Linked list
+Now, let's see the time and space complexity of the linked list for the operations search, insert, and delete.
+
+1. Time Complexity
+==================
+Operations	Average case time complexity	Worst-case time complexity
+Insertion	O(1)	                                                O(1)
+Deletion	O(1)	                                                O(1)
+Search	O(n)	                                                 O(n)
+Where 'n' is the number of nodes in the given tree.
+
+The space complexity of linked list is O(n).
+
+Singly Linked list
+===============
+
+It is the commonly used linked list in programs.
+ 
+If we are talking about the linked list, it means it is a singly linked list.
+ 
+The singly linked list is a data structure that contains two parts, i.e., one is the data part, and the other one is the address part, which contains the address of the next or the successor node. The address part in a node is also known as a pointer.
+
+
+In a singly linked list, we could traverse only in one direction, because each node contains address of the next node and it doesn't have any record of its previous nodes.
+
+ However, doubly linked list overcome this limitation of singly linked list. Due to the fact that, each node of the list contains the address of its previous node, we can find all the details about the previous node as well by using the previous address stored inside the previous part of each node.
+
+Doubly Linked List :
+===============
+
+Memory Representation of a doubly linked list
+
+
+Memory Representation of a doubly linked list is shown in the following image. 
+Generally, doubly linked list consumes more space for every node and therefore, causes more expansive basic operations such as insertion and deletion. 
+However, we can easily manipulate the elements of the list since the list maintains pointers in both the directions (forward and backward).
+
+Circular Singly Linked List :
+=====================
+
+In a circular Singly linked list, the last node of the list contains a pointer to the first node of the list. We can have circular singly linked list as well as circular doubly linked list.
+
+We traverse a circular singly linked list until we reach the same node where we started. The circular singly liked list has no beginning and no ending. There is no null value present in the next part of any of the nodes.
+
+
+Circular Doubly Linked List
+=======================
+
+Circular doubly linked list is a more complexed type of data structure in which a node contain pointers to its previous node as well as the next node.
+
+ Circular doubly linked list doesn't contain NULL in any of the node.
+
+ The last node of the list contains the address of the first node of the list.
+
+ Due to the fact that a circular doubly linked list contains three parts in its structure therefore, it demands more space per node and more expensive basic operations. 
+
+However, a circular doubly linked list provides easy manipulation of the pointers and the searching becomes twice as efficient.
+
+ The first node of the list also contain address of the last node in its previous pointer.
+
+
+Stack 
+=======
+
+What is a Stack?
+
+A Stack is a linear data structure that follows the LIFO (Last-In-First-Out) principle.
+
+ Stack has one end(top), whereas the Queue has two ends (front and rear).
+ 
+It contains only one pointer top pointer pointing to the topmost element of the stack. 
+
+Whenever an element is added in the stack, it is added on the top of the stack,
+ and the element can be deleted only from the top of the  stack.
+
+ In other words, a stack can be defined as a container in which insertion and deletion 
+can be done from the one end known as the top of the stack.
+
+Some key points related to stack
+========================
+It is called as stack because it behaves like a real-world stack, piles of books, etc.
+
+A Stack is an abstract data type with a pre-defined capacity, 
+which means that it can store the elements of a limited size.
+
+It is a data structure that follows some order to insert and delete the elements, and 
+that order can be LIFO or FILO.
+
+Working of Stack
+===========
+
+show diagram 
+
+
+Standard Stack Operations -push,pop,peek
+=========================
+The following are some common operations implemented on the stack:
+
+push(): When we insert an element in a stack then the operation is known as a push. If the stack is full then the overflow condition occurs.
+
+pop(): When we delete an element from the stack, the operation is known as a pop. If the stack is empty means that no element exists in the stack, this state is known as an underflow state.
+
+isEmpty(): It determines whether the stack is empty or not.
+
+isFull(): It determines whether the stack is full or not.
+
+peek(): It returns the element at the top position.
+
+count(): It returns the total number of elements available in a stack.
+
+change(): It changes the element at the given position.
+
+display(): It prints all the elements available in the stack.
+
+
+PUSH operation
+===================
+The steps involved in the PUSH operation is given below:
+
+Before inserting an element in a stack, we check whether the stack is full.
+If we try to insert the element in a stack, and the stack is full, then the overflow condition occurs.
+When we initialize a stack, we set the value of top as -1 to check that the stack is empty.
+When the new element is pushed in a stack, first, the value of the top gets incremented, i.e., top=top+1, 
+and the element will be placed at the new position of the top.
+The elements will be inserted until we reach the max size of the stack.
+
+
+POP operation
+===============
+The steps involved in the POP operation is given below:
+
+Before deleting the element from the stack, we check whether the stack is empty.
+If we try to delete the element from the empty stack, then the underflow condition occurs.
+If the stack is not empty, we first access the element which is pointed by the top
+Once the pop operation is performed, the top is decremented by 1, i.e., top=top-1.
+
+Applications of Stack
+================
+
+String reversal
+
+UNDO/REDO
+
+Recursion
+
+DFS(Depth First Search)
+
+Backtracking
+
+Expression conversion
+
+Memory management
+
+Real time examples are CD Rack, Pile of books.
+
+Stack Implementations :
+================
+
+Stack can be implemented through
+
+1.Array
+
+2.Linked List :
+
+Instead of using array, we can also use linked list to implement stack. 
+Linked list allocates the memory dynamically. 
+However, time complexity in both the scenario is same for all the operations i.e. push, pop and peek.
+
+In linked list implementation of stack, the nodes are maintained non-contiguously in the memory. 
+Each node contains a pointer to its immediate successor node in the stack. 
+Stack is said to be overflown if the space left in the memory heap is not enough to create a node.
+
+Queue :
+========
+
+1. A queue can be defined as an ordered list which enables insert operations to be performed at 
+one end called REAR and delete operations to be performed at another end called FRONT.
+
+2. Queue is referred to be as First In First Out list.
+
+3. For example, people waiting in line for a rail ticket form a queue.
+
+Applications of Queue:
+==================
+
+Queues are widely used as waiting lists for a single shared resource like printer, disk, CPU.
+
+Queues are used in asynchronous transfer of data (where data is not being transferred at the same rate between two processes) for eg. pipes, file IO, sockets.
+
+Types of Queue
+=============
+
+There are four different types of queue that are listed as follows -
+
+Simple Queue or Linear Queue
+Circular Queue
+Priority Queue
+Double Ended Queue (or Deque)
+
+Simple Queue or Linear Queue
+=====================
+
+In Linear Queue, an insertion takes place from one end while the deletion occurs from another end. 
+The end at which the insertion takes place is known as the rear end, and the end at which the deletion takes place is known as front end. 
+It strictly follows the FIFO rule.
+
+Drawback of Linear Queue :
+=====================
+
+The major drawback of using a linear Queue is that insertion is done only from the rear end. 
+If the first three elements are deleted from the Queue, we cannot insert more elements
+ even though the space is available in a Linear Queue. 
+In this case, the linear Queue shows the overflow condition 
+as the rear is pointing to the last element of the Queue.
+
+Queues are used as buffers in most of the applications like MP3 media player, CD player, etc.
+
+Queue are used to maintain the play list in media players in order to add and remove the songs from the play-list.
+Queues are used in operating systems for handling interrupts.
+
+Circular Queue:
+===========
+
+In Circular Queue, all the nodes are represented as circular. It is similar to the linear Queue except that the last element of the queue is connected to the first element. 
+It is also known as Ring Buffer, as all the ends are connected to another end. 
+
+Advantage of circular queue :
+======================
+The drawback that occurs in a linear queue is overcome by using the circular queue. If the empty space is available in a circular queue, the new element can be added in an empty space by simply incrementing the value of rear. The main advantage of using the circular queue is better memory utilization.
+
+Priority Queue
+==============
+
+It is a special type of queue in which the elements are arranged based on the priority.
+ It is a special type of queue data structure in which every element has a priority associated with it. 
+Suppose some elements occur with the same priority, they will be arranged according to the FIFO principle. 
+
+insertion in priority queue takes place based on the arrival, while deletion in the priority queue occurs based on the priority. Priority queue is mainly used to implement the CPU scheduling algorithms.
+
+There are two types of priority queue that are discussed as follows -
+
+Ascending priority queue - In ascending priority queue, elements can be inserted in arbitrary order, 
+but only smallest can be deleted first. Suppose an array with elements 7, 5, and 3 in the same order, so, insertion can be done with the same sequence, but the order of deleting the elements is 3, 5, 7.
+
+Descending priority queue - In descending priority queue, elements can be inserted in arbitrary order, but only the largest element can be deleted first. Suppose an array with elements 7, 3, and 5 in the same order, so, insertion can be done with the same sequence, but the order of deleting the elements is 7, 5, 3.
+
+Deque (or, Double Ended Queue)
+======================
+
+In Deque or Double Ended Queue, insertion and deletion can be done from both ends of the queue 
+either from the front or rear. 
+
+It means that we can insert and delete elements from both front and rear ends of the queue. 
+
+Deque can be used as a palindrome checker means that if we read the string from both ends, then the string would be the same.
+
+Deque can be used both as stack and queue as it allows the insertion and deletion operations on both ends. 
+
+Deque can be considered as stack because stack follows the LIFO (Last In First Out) principle in which insertion and deletion both can be performed only from one end.
+
+ And in deque, it is possible to perform both insertion and deletion from one end, and Deque does not follow the FIFO principle.
+
+There are two types of deque that are discussed as follows -
+
+Input restricted deque - As the name implies, in input restricted queue, insertion operation can be 
+performed at only one end, while deletion can be performed from both ends.
+
+Output restricted deque - As the name implies, in output restricted queue, deletion operation 
+can be performed at only one end, while insertion can be performed from both ends.
+
+Operations performed on queue:
+=======================
+
+The fundamental operations that can be performed on queue are listed as follows -
+
+Enqueue: The Enqueue operation is used to insert the element at the rear end of the queue. It returns void.
+
+Dequeue: It performs the deletion from the front-end of the queue. It also returns the element which has been removed from the front-end. It returns an integer value.
+
+Peek: This is the third operation that returns the element, which is pointed by the front pointer in the queue but does not delete it.
+
+Queue overflow (isfull): It shows the overflow condition when the queue is completely full.
+Queue underflow (isempty): It shows the underflow condition when the Queue is empty, i.e., no elements are in the Queue.
+
+Ways to implement the queue
+====================
+
+There are two ways of implementing the Queue:
+
+Implementation using array: The sequential allocation in a Queue can be implemented using an array.
+
+Implementation using Linked list: The linked list allocation in a Queue can be implemented using a linked list.
+
+Drawback of array implementation
+===========================
+Although, the technique of creating a queue is easy, but there are some drawbacks of using this technique to implement a queue.
+
+Memory wastage : The space of the array, which is used to store queue elements, can never be reused to store the elements of that queue because the elements can only be inserted at rear end and the value of rear might be so high so that, all the space before that, can never be filled.
+
+Deciding the array size
+
+Linked List representation :
+=======================
+The storage requirement of linked representation of a queue with n elements is o(n) 
+while the time requirement for operations is o(1).
+
+In the linked queue, there are two pointers maintained in the memory i.e. front pointer and rear pointer.
+ The front pointer contains the address of the starting element of the queue while the rear pointer contains the address of the last element of the queue.
+
+
+Collections or Collection Framework in Java :
+================================
+
+1995 -> Beta and Alpha versions of java
+
+ java is open source
+
+  1996 - Java 1.0 or JDK 1.0
+
+              Java 1.1
+
+   Joshwa -> suggested collections feature to sun microsystem -> found out that there is a disadvantage in java that is with arrays like java is facing difficulty whenever we are working with large volume of data in one place and to peform operations on that data is also a big problem for them
+
+  Arrays -> disadvantages -> contiguous memory allocation
+                                                   size is also fixed
+                                                   Homogeneous data type elements
+
+   -> He came up with API / Heirarchy of different classes called as Collections
+
+   From Java 1.2 => added collection framework into java
+
+   classes -> Mainly 7 classes -> so many ibuilt methods in each class. and we will use them.
+
+  collection framework -> set of classes and interfaces together
+
+  The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.
+
+  Java Collections can achieve all the operations that you perform on a data such as searching, sorting, insertion, updation, and deletion.
+
+  Java Collection means a single unit of objects. Java Collection framework provides many interfaces (Set, List, Queue, Deque) and classes (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet).
+
+ Note : All the collections are part of java.util package 
+
+ Note : Inside a Collection, each and every data is called as object.
+
+Any group of individual objects which are represented as a single unit is known as a collection of objects. 
+
+What is a Framework?
+====================
+
+A framework is a set of classes and interfaces which provide a ready-made architecture. In order to implement a new feature or a class, there is no need to define a framework. However, an optimal object-oriented design always includes a framework with a collection of classes such that all the classes perform the same kind of task. 
+
+   1. Redundant code or implemenatation logic
+   2. gives us a flexibility to concentrate on business logic
+
+What is Collection framework ? ->> java.util;
+=========================
+
+The Collection framework represents a unified architecture for storing and manipulating a group of objects. It has:
+
+Interfaces and its implementations, i.e., classes
+Algorithm
+
+Collection-Heirarchy - (show image)
+
+*Methods of a collection interface :
+============================
+ -> the Collection interface builds the foundation on which the collection framework depends.
+
+ -> The Collection interface is the interface which is implemented by all the classes in the collection framework. It declares the methods that every collection will have.
+
+
+class A
+{
+
+
+}
+
+class B
+{
+
+
+}
+
+interface C
+{
+
+
+}
+
+interface D
+{
+
+}
+
+interface C  implements D
+{
+
+}
+
+class B implements C extends A
+
+{
+
+
+}
+
+
+
+
+7 Classes :
+===========
+
+   1.) ArrayList
+
+    2.) LinkedList
+
+     3.) ArrayDeque
+    
+     4.) PriorityQueue
+      
+      5.) TreeSet
+
+      6.) HashSet
+      
+     7.) LinkedHashSet
+
+1.) ArrayList
+============
+
+-> Arraylist functionality is same like an array.
+
+-> It internally makes use of dynamic Array Data Structure.
+
+-> It implements List Interface.
+
+ -> This ArrayList will grow or shrink at rear end based on the number of elements.
+
+ -> Mixture(Heterogeneous type- Any type of data can be stored) of data can be stored.  
+
+  -> retains order of insertion. 
+
+  -> It is also based on indexed approach
+
+ -> Duplicates are allowed in ArrayList.
+
+  -> index based approach in ArrayList is not recommended since shifting of elements is time consuming.
+
+Program :
+=========
+
+import java.util.ArrayList;
+
+
+public class LaunchArrayList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     
+		ArrayList ar = new ArrayList();    
+		
+		ar.add(12);
+		ar.add("ExcelR");
+		ar.add('B');
+		ar.add(25.5);
+		
+		System.out.println(ar);
+		
+		ArrayList ar2 = new ArrayList();
+	
+		ar2.add(10);
+		ar2.add(12);
+		ar2.add(16);
+		
+		System.out.println(ar2);
+		
+		ar.addAll(ar2);
+		
+		System.out.println(ar);
+		
+		boolean b = ar2.contains(12);
+		
+		System.out.println(b);
+		
+		Object o = ar.get(2);
+		
+		System.out.println(o);
+		
+		int c = ar.size();
+		
+		System.out.println(c);
+		
+		
+		ArrayList ar3 = new ArrayList();
+		
+		ar3.add(1, 100);
+		
+		System.out.println(ar3); exception
+		
+		System.out.println(ar.getClass());
+		
+		ar2.ensureCapacity(5);
+		
+		System.out.println(ar2);
+		
+		System.out.println(ar2.size());
+		
+		ar2.trimToSize();
+		
+    //assigment for today : Practice other methods
+				
+	}
+
+}
+
+Why to use Array over ArrayList ?
+==============================
+
+=> Array is faster than ArrayList and also efficient Whenever size/capacity is known already
+
+=> In our aplication, if only one type of data is generated.
+
+=> If i wanted to store primitives.
+
+  When ArrayList is required ?
+=============================
+   
+When we want to use dynamic data and Heterogeneous Data.
+
+
+
+
+    Iterable
+
+    Collection
+
+    List
+
+     ArrayList
+
+      -Dynamic Array Data Structure
+      - Homogeneous and Hetergeneous type of data
+      - Insertion order is maintained(at the rear end)
+      -Duplicates are allowed
+      -Null values are also allowed
+      -Index based accessing is allowed but not recommended because of shifting of elements
+      
+
+     LinkedList
+
+     - Doubly Linked List Data Structure
+     -Homogeneous and Hetergeneous type of data
+     -Insertion order is maintained(at the rear end)
+      -Duplicates are allowed
+      -Null values are also allowed
+      -Index based accessing is allowed and it is recommended because no shifting of elements will happen
+     - Searching operation is time consuming in the case of linked list.
+
+     Vector
+
+      Stack
+
+    Queue
+
+     PriorityQueue
+
+    Deque
+     
+     LinkedList
+
+      ArrayDeque
+
+    Set
+
+      HastSet
+
+      LinkedHashSet
+
+    SortedSet
+
+       TreeSet
+
+
+
+
+
+
+
+
+
+
+2. LinkedList
+================
+
+-> This LinkedList in collection internally uses Doubly Linked List Data structure.
+
+ -> It implements both List and Dequeue Intefaces.
+
+1. Single Linked List
+
+2. Double Linked List
+
+3. Circular Linked List.
+
+-> It makes use of Disperse Memory locations in RAM
+
+-> Stores both homogeneous and heterogeneous type of data.
+
+-> We can add one collection to another using addAll() method.
+
+-> Order of insertion is maintained.
+
+-> Duplicates are allowed in linked list.
+
+-> In LinkedList , Shifting of elements will not happen.
+
+-> So, Index based approach is recommended
+
+-> We can conclude that we can add elements at frontend, at rearend, at middlend or at any position using index.
+
+-> No demand of contiguous memory allocation.
+
+Note: All the Node creation and address maintainence is totally manged by JVM since java does not support the concept of pointers for programmers this only is the reason to say is "abstract high level language"(No worry of internal details).
+
+Program :
+==========
+
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+
+public class LaunchArrayList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     
+		LinkedList ll1 = new LinkedList();
+		
+		ll1.add(10);
+		
+		ll1.add(100);
+		
+		ll1.add("Roshith");
+		
+		ll1.add("ExcelR");
+		
+		ll1.add('A');
+		
+		System.out.println(ll1);
+		
+		ll1.addFirst(12);
+		
+		ll1.addLast(10);
+		
+		System.out.println(ll1);
+		
+		ArrayList ar1 = new ArrayList();
+		
+		ar1.add(1000);
+		
+		ar1.add(2000);
+		
+		ar1.add(3000);
+		
+		
+		ll1.addAll(ar1);
+		
+		
+		System.out.println(ll1);
+		
+		ll1.add(1, 11);
+		
+		System.out.println(ll1);
+		
+		LinkedList ll2 = new LinkedList();
+		
+		ll2.add(10);
+		
+		ll2.offer(11);
+		
+		System.out.println(ll2);			
+		
+		
+	}
+
+}
+
+
+
+   Difference between add() and offer() :
+===============================
+
+  If you use add() method -> That object will be added definently into our collection.
+
+
+   If you use offer() method -> The object may or may not be added into our collection. It purely depends upon                                                     memory availability. 
+=================================================================================
+
+3. ArrayDequeue :
+===============
+
+-> It follows Double ended Queue Data Structure.
+
+-> It implements Deque Interface.
+
+-> Duplicates are allowed
+
+-> We can insert or delete the elements from rear end and front end only but not at the middle end or at a specific position.
+
+-> Here index based accessing is not allowed. 
+
+ -> Order of insertion is maintained.
+-> Null values are not allowed.
+
+Program :
+========
+
+import java.util.ArrayDeque;
+
+public class LaunchArrayList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     
+		ArrayDeque ad = new ArrayDeque();
+		
+		ad.add(10);
+		
+		ad.add(100);
+		
+		ad.add("ExcelR");
+		
+		ad.add("ExcelR");
+		
+		ad.addFirst(100);
+		
+		ad.addLast(2000);
+		
+		System.out.println(ad);
+				
+	}
+
+}
+
+PriorityQueue :
+============
+
+-> It implements Queue Interface.
+
+-> In the backend it is based on Minimum Heap Data Structure.
+
+-> Where highest Priority element is readily avaiable at the front of the collection.
+
+-> Since order of insertion is not retained, index based approach is not possible.(is not allowed).
+
+-> Duplicates are also allowed.
+
+-> Contiguous Memory Allocation will be there.
+
+-> Null values are not allowed.
+
+
+Program :
+======
+
+import java.util.*;
+
+
+public class LaunchArrayList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    PriorityQueue pr = new PriorityQueue(); 
+    
+    
+    //min heap data structure.
+    
+    pr.add(1000);
+    pr.add(100);
+    pr.add(250);
+    pr.add(1250);
+    pr.add(750);
+    pr.add(750);
+    
+    System.out.println(pr);		
+	}
+
+}
+
+O/P : [100, 750, 250, 1250, 1000, 750]
+
+
+
+TreeSet :
+===========
+
+-> It implements Set Interface.
+
+-> Actually, in a Set , Duplicates are not allowed. So, In TreeSet also, duplicates are not allowed.
+
+-> In the backend, it is based out of or it follows Balanced Search Tree Data Structure ( It also internally follows Red- Black Algorithm and in-order traversal) 
+
+Assignment : Practice PreOrder and PostOrder Traversal
+
+-> It gives the output in the sorted i.e., ascending order.
+
+-> Index based accessing is not allowed.
+
+-> Null values are not allowed.
+
+Program :
+==========
+
+import java.util.*;
+
+
+public class LaunchArrayList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+      TreeSet ts = new TreeSet();
+      
+      ts.add(100);
+      ts.add(50);
+      ts.add(150);
+      ts.add(25);
+      ts.add(75);
+      ts.add(125);
+      ts.add(175);
+      
+      System.out.println(ts);		
+	
+        }
+
+}
+
+Output : [25, 50, 75, 100, 125, 150, 175]
+
+Some Important TreeSet Methods
+===================================
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+	TreeSet tr = new TreeSet();
+	
+	tr.add(0);
+	tr.add(150);
+	tr.add(100);
+	tr.add(20);
+	tr.add(15);
+	tr.add(801);
+	
+	//System.out.println(tr);
+	
+    System.out.println(tr.higher(21));
+	
+	System.out.println(tr.ceiling(21)); //celing - top  flooring - down
+	
+	System.out.println(tr.lower(21));
+	
+	System.out.println(tr.floor(21));
+			
+		
+	}
+}
+
+Higher Method : 
+===============
+
+It will retrieve the next higher value nearest to the specified object in the collection irrespective of the presence of the object in collection.
+
+
+Ceiling Method :
+===================
+
+It will give the nearest lower object only if the specified object is not present, if its present,  it will just give the same value.
+
+
+Same like these only but opposite , there were Lower and floor methods were there.
+
+Assignment2 : Write the differences for higher(), ceiling(), lower(), floor().
+
+
+Searching operation will be better when compared to before collection classes i.e., O(logn) when  it is only balanced binary search tree. If it is skewed tree time complexity will be higher i.e., O(n).
+
+Assignment3 : Practice other methods of ArrayDeque, PriorityQueue, TreeSet
+
+
+HashSet and LinkedHashSet :
+=============================
+
+-> These two classes implements Set Interface.
+
+-> Internally these both classes uses HashTable (HashFunction) that is backed by Hashing algorithm.
+
+-> General view of working of Hashing Technique :
+
+They will write formula in HashFunction, so that each element goes and sit in the HashTable at a specified
+bucket( but only 1 data in one bucket).
+
+-> During searching operation also, it searches only one bucket based on the formula, so searching will
+    be faster and Time Complexity is O(1).
+
+-> In HashSet insertion order is not maintained whereas in LinkedHashSet insertion order is maintained. 
+
+Assignment-1: Read out hashing algorithm and know the differences between HashSet and LinkedHashSet
+
+
+Program :
+==========
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+                HashSet hs = new HashSet();
+	
+	hs.add(121);
+	hs.add(100);
+	hs.add(200);
+	hs.add(20);
+	hs.add(12);
+	
+	System.out.println(hs.toString());
+	
+	if(hs.contains(121))
+	{
+	    System.out.println("It is there");
+	}
+		
+	}
+}
+
+
+List l = new ArrayList();
+
+LinkedList l = new LinkedList();
+
+  Different ways of accessing the data :
+=================================
+
+-> How to iterate or how to access the objects inside a collection ?
+
+There are 3 ways :   for, foreach, iterator
+
+
+for  loop:
+============
+ retrieval inside a collection is possible only when index based accessing is there.
+
+-> ArrayList and LinkedList will only support for loop retrieval.
+
+enhanced for loop or foreach :
+====================
+
+It is supported by every collection class.
+for(int a : arr)
+{
+
+}
+
+for(Object a : ll)
+{
+    Sysout(a);
+
+}
+
+Iterator interface(java.util)
+===============
+
+Iterator interface provides the facility of iterating the elements in a forward direction only.
+
+Methods of Iterator interface
+=========================
+
+There are only three methods in the Iterator interface. They are:
+
+No.	Method	                                       Description
+1	public boolean hasNext()	It returns true if the iterator has more elements otherwise it returns false.
+2	public Object next()	                   It returns the element and moves the cursor pointer to the next element.
+3	public void remove()	                   It removes the last elements returned by the iterator. It is less used.
+
+Iterable Interface (java.lang)
+===============
+
+-> The Iterable interface is the root interface for all the collection classes. 
+-> The Collection interface extends the Iterable interface and therefore all the subclasses of Collection interface also implement the Iterable interface.
+
+It contains only one abstract method. i.e.,
+
+Iterator<T> iterator()  
+It returns the iterator over the elements of type T.
+
+iterator() method :
+==============
+
+-> This is supported by every collection class since Iterable is the top interface for every collection class.
+
+-> iterator() method iterates the objects in forward direction.
+
+->listIterator() method iterates the objects in reverse direction.
+
+->descendingIterator() method also does the same thing(reverse order) but it is only present in LinkedList, ArrayDeque, TreeSet.
+
+Program :
+===========
+
+import java.util.*;
+
+
+public class LaunchArrayList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+      ArrayList al = new ArrayList();
+      
+      al.add(1000);
+      al.add(150);
+      al.add(2000);
+      al.add(300);
+      al.add(400);
+      al.add(500);
+      al.add("ExcelR");
+      al.add("hyd");
+      
+      
+	  //for loop
+//      for(int i=0;i<al.size();i++)
+//      {
+//    	  System.out.println(al.get(i));
+//      }
+      
+      System.out.println("********");
+      
+      for(Object o : al)
+      {
+    	  System.out.println(o);
+      }
+      
+      System.out.println("*****");
+      
+      Iterator itr = al.iterator();
+      
+      while(itr.hasNext())
+      {
+    	  System.out.println(itr.next());
+      }
+      
+      System.out.println("******");
+      
+     ListIterator litr =al.listIterator(al.size());
+     
+     while(litr.hasPrevious())
+     {
+    	 System.out.println(litr.previous());
+     }
+      
+      
+     LinkedList ll = new LinkedList();
+     
+     ll.add(1000);
+     ll.add(150);
+     ll.add(2000);
+     ll.add(300);
+     ll.add(400);
+     ll.add(500);
+     ll.add("ExcelR");
+     ll.add("hyd");
+     
+     Iterator idtr1 = ll.descendingIterator(); //LinkedList, ArrayDeque,
+      
+     System.out.println("It is descending iterator");       //TrreSet
+     
+     while(idtr1.hasNext())
+     {
+    	 System.out.println(idtr1.next());
+     }
+      		
+		
+	}
+
+}
+
+Legacy classes : (JDK 1.0)
+=============
+
+Vector == ArrayList
+==================
+
+-> Vector is a special type of ArrayList that defines a dynamic array. 
+-> ArrayList is not synchronized while vector is synchronized. The vector class has several legacy methods that are not present in the collection framework. 
+-> Vector implements Iterable after the release of JDK 5 that defines the vector is fully compatible with collections, and vector elements can be iterated by the for-each loop.
+
+Dictionary
+
+Stack
+==========
+
+Stack class extends Vector class, which follows the LIFO(LAST IN FIRST OUT) principal for its elements. 
+The stack implementation has only one default constructor, i.e., Stack().
+
+ Stack() : It is used to create a stack without having any elements.
+
+There are the following methods can be used with Stack class:
+
+The push() method is used to add an object to the stack. It adds an element at the top of the stack.
+The pop() method is used to get or remove the top element of the stack.
+The peek() method is similar to the pop() method, but it can't remove the stack's top element using it.
+The empty() method is used to check the emptiness of the stack. It returns true when the stack has no elements in it.
+The search() method is used to ensure whether the specified object exists on the stack or not.
+
+These all legacy classes were synchronised, means multithreading wont be there and all also all will have different functionality.
+
+How to iterate over the elements over the leagcy class instead of iterator :
+===================================================
+
+-> Enumeration Interface is like iterator in a legacy class performs same functionality.
+
+public class LaunchArrayList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Vector v = new Vector();
+		
+		v.add(100);
+		v.add(200);
+		v.add(300);
+		v.add(400);
+		
+		Enumeration e = v.elements();
+		
+		while(e.hasMoreElements())
+		{
+			System.out.println(e.nextElement());
+		}
+			
+		
+	}
+
+}
+
+Map(I) :
+======
+    Key     Value
+   10 Rajesh -> Entry
+
+    11 Sunil
+
+    12 Roshith
+
+-> The Map is not a part of Collection. This has seperate heirarchy.
+
+
+       Map 
+=== 
+=       > It is not a child interface of Collection.
+=       > If we want to represent group of Objects as key-value pair then we need to go  for Map. 
+=       > Both keys and values are Objects only 
+=         > Duplicate keys are not allowed but values are allowed. 
+=         > Key-value pair is called as "Entry". 
+refer: MapHierarchy.png 
+Map methods 
+------------------- 
+1. It contains 12 methods which is common for all the implementation Map Objects 
+
+a. Object put(Object key,Object value) // To add key,value pair
+
+ b. void putAll(Map m) // To add another map 
+
+c. Object get(Object key) // To get the value based on key 
+
+d. Object remove(Object key) //To remove an entry based on key 
+
+e. boolean containsKey(Object key) //Check whether it contains key or not 
+
+f. boolean containsValue(Object value)//Check whether it contains value or not 
+
+g. boolean isEmpty() //To check wheter the Map is empty or not 
+
+h. int size() //To get the size of a Map 
+
+i. void clear() //To remove all Entry from a map 
+views of a Map 
+
+j.Set keySet() //Convert the key's of Map into Set for reading purpose 
+
+k.Collection values() //Convert the values of Map into Collection for reading purpose 
+
+l.Set entrySet() // Convert whole Entry of Map into Set for reading purpose. 
+
+Entry(I) 
+======= 
+ 1. Each key-value pair is called Entry. 
+ 2. Without existence of Map,there can't be existence of Entry Object. 
+ 3. Interface entry is defined inside Map interface. 
+
+interface Map{ 
+interface Entry{ 
+Object getKey(); //To get the key using Map.Entry Object 
+Object getValue();//To get the value using Map.Entry Object 
+Object setValue(Object newValue);//To update the value Using Map.Entry  Object 
+} 
+} 
+
+HashMap 
+======= 
+ Underlying DataStructure: Hashtable 
+ insertion order : not maintained
+ duplicate keys : not allowed
+ duplicate values : allowed 
+ Heterogenous objects : allowed 
+ null insertion : for keys allowed only once,but for values can be any no. 
+ implementation interface: Serializable,Cloneable. 
+
+
+Difference b/w HashMap(c) and Hashtable(c) 
+====================================== 
+ HashMap => All the methods are not synchronized. 
+ Hashtable => All the methods are synchronzied. 
+ HashMap => At a time multiple threads can operate on a Object, so it is not  ThreadSafe. 
+ Hashtable => At a time only one Thread can operate on a Object, so it is  ThreadSafe. 
+ HashMap => Pefromance is high. 
+ Hashtable => Performance is low. 
+ HashMap => null is allowed for both keys and values. 
+ Hashtable => null is not allowed for both keys and values,it would result in  NullPointerException. 
+ HashMap => Introduced in 1.2v 
+ Hashtable => Introduced in 1.0v 
+Constructors 
+============ 
+ 1. HashMap hm=new HashMap() 
+ //default capacity => 16, loadfactor => 0.75(upon increase of data by  75% automatically 
+ size of HashMap will be doubled) 
+ 2. Hashmap hm=new HashMap(int capacity); 
+  
+ 3. HashMap hm=new HashMap(int capacity,float fillratio); 
+ 4. HashMap hm=new HashMap(Map m); 
+eg#1. 
+eg#1. 
+import java.util.*; 
+class Test  
+{ 
+public static void main(String[] args)  
+{ 
+HashMap hm = new HashMap(); 
+hm.put(10,"sachin"); 
+hm.put(7,"dhoni"); 
+hm.put(18,"kohli"); 
+hm.put(45,"rohith"); 
+System.out.println(hm);//hm.toString() will be called 
+
+Set s = hm.keySet();//To get the keys from Map 
+System.out.println(s); 
+
+System.out.println(s.getClass().getName()); 
+System.out.println();
+Collection c = hm.values();//To get the values from Map 
+System.out.println(c); 
+System.out.println(c.getClass().getName()); 
+System.out.println(); 
+Set mapData = hm.entrySet();//To get the K,V from Map as Set 
+System.out.println(mapData); 
+System.out.println(mapData.getClass().getName()); 
+System.out.println(); 
+
+
+Iterator itr = mapData.iterator(); 
+while(itr.hasNext()){ 
+//Object is return type of next(), i am converting to Map.Entry  Object to call methods of Entry interface 
+// The data of Map.Entry is stored as object 
+Map.Entry data =(Map.Entry)itr.next(); 
+
+
+
+System.out.println(data.getClass().getName()); 
+System.out.println(data.getKey() + ": " + data.getValue()); 
+
+
+if (data.getKey().equals(10)) 
+{ 
+data.setValue("SRT"); 
+} 
+} 
+System.out.println(); 
+System.out.println(hm); 
+} 
+} 
+LinkedHashMap 
+============= 
+ => It is the child class of HashMap. 
+ => It is same as HashMap,but with the following difference 
+ HashMap => underlying datastructure is hashtable.  LinkedHashMap => underlying datastructure is LinkedList + hashtable. 
+ HashMap => insertion order not preserved. 
+ LinkedHashMap => insertion order preserved. 
+ HashMap => introduced in 1.2v 
+ LinkedHashMap => introduced in 1.4v 
+eg#1. 
+import java.util.*; 
+class Test  
+{ 
+public static void main(String[] args)  
+{ 
+LinkedHashMap hm = new LinkedHashMap(); 
+hm.put(10,"sachin"); 
+hm.put(7,"dhoni"); 
+hm.put(18,"kohli"); 
+hm.put(45,"rohith"); 
+System.out.println(hm);//hm.toString() will be called 
+System.out.println();
+Set s = hm.keySet();//To get the keys from Map 
+System.out.println(s); 
+System.out.println(s.getClass().getName()); 
+System.out.println(); 
+Collection c = hm.values();//To get the values from Map 
+System.out.println(c); 
+System.out.println(c.getClass().getName()); 
+System.out.println(); 
+Set mapData = hm.entrySet();//To get the K,V from Map as Set System.out.println(mapData); 
+System.out.println(mapData.getClass().getName()); 
+System.out.println(); 
+Iterator itr = mapData.iterator(); 
+while(itr.hasNext()){ 
+Map.Entry data =(Map.Entry)itr.next(); 
+System.out.println(data.getKey() + ": " + data.getValue()); 
+
+if (data.getKey().equals(10)) 
+{ 
+data.setValue("SRT"); 
+} 
+} 
+System.out.println(); 
+System.out.println(hm); 
+} 
+} 
+import java.util.*; 
+class Test  
+{ 
+public static void main(String[] args)  
+{ 
+HashMap h = new HashMap(); 
+//Creating a key 
+Integer i1= new Integer(10); 
+Integer i2= new Integer(10); 
+//Adding the data to HashMap 
+h.put(i1,"sachin"); 
+h.put(i2,"Messi"); 
+System.out.println(h);//{10=Messi} 
+} 
+} 
+IdentityHashMap 
+=============== 
+ It is same as HashMap, with the following differences 
+
+a. In case of HashMap,jvm will use equals() to check whether the keys are 
+duplicated or not. 
+ equals() => meant for ContentComparison. 
+
+b. In case of IdentityHashMap,jvm wil use == operator to identify whether the keys  are duplicated. 
+ or not. 
+
+1. Difference between Collection and collections ? -> Self learning
+2. comparable and comparator interface 
+3. Difference between fail fast and fail safe operation ?
+4. Internal working of HashMap ?
+
+Assignment:
+
+ Write a program to write string data appended into a file.
+previous version : Are you ready?
+Updated version of file : Are you ready? WelcomeToJava 
+
+ Project: Library Management System- Build a simple Java console application to
+ manage a library system.
+ ○ Description: Build a console application that allows users to perform various
+ library management operations such as adding, removing, searching, and borrowing books.
+ ○ Tasks:
+ ■ Implement classes for books with fields id, title, author,  library users with id and name, and a class with transactions adding, removing, searching, and borrowing books..
+ ■ Create methods for adding and removing books.
+ ■ Implement search functionality using different criteria (e.g., title, author, ID).
+ ■ Managebookborrowing and returning operations and create exceptions and handle them where ever needed, like when the book is not found you can throw BookNotFound Exception.
+
+class LMS{
+
+   1: addBook();
+    2: removeBook(int id);
+   3:  displayBook();
+   4: searchBook(String title);
+   5: exit
+}
+
+Exception Handling:
+===================
+
+So, What is Exception Handling :
+==========================
+
+Exception handling is a mechanism of handling runtime errors, to maintain the normal flow of execution of an application.
+
+What is Exception ? 
+=================
+
+In Java, an exception is an event that disrupts the normal flow of the program. It is an object which is thrown at runtime.
+                                                                                    (or)
+Exception is also called as a runtime error.
+
+There are three types of exceptions :
+
+1.Checked exception
+2.Unchecked exception
+3.error
+
+1.Checked Exceptions : (Compile-time exceptions)
+-----------------------------------
+
+The Exception classes that are derived from java.lang.Exception class 
+are called as checked Exceptions.
+
+class ClassNotFoundException extends Exception 
+{
+
+}
+
+Checked exceptions are checked at compile-time.
+
+Checked Exceptions do not include java.lang.RuntimeException class and all its subclasses.
+
+All checked exceptions must be handled by programmer explicitly otherwise compile-time error occurs.
+
+  Example : 
+       ClassNotFoundException :ClassNotFoundException is a checked   exception in Java that occurs when the JVM  tries to load a particular class but does not find it in the classpath.
+
+                    IOException : the base class for exceptions thrown while accessing information using streams, files                                and directories.
+ 
+                     SQLException:  An exception that provides information  on a database access error or other errors.
+
+2.Unchecked Exceptions : (Runtime Exceptions)
+-----------------------------------
+
+ The exception classes that are derived from java.lang.RuntimeException class are called as unchecked exceptions.
+
+ Unchecked exceptions are not checked at compile-time, but they are checked at runtime.
+
+  All uncehecked are handled by system implicitly.(Programmer no need to handle). 
+
+1/0 => arithmetic exception
+           denominator should not be zero
+
+   Unchecked exceptions are handled by programmer to display user friendly error messages.
+ 
+Example : NullPointerException, ArrayIndexOutOfBoundsException and IllegalArgumentException. 
+
+     Addition ad = new Addition();
+     ad = null;
+    null.add();
+     
+
+3) System Error
+
+Error is irrecoverable. Some example of errors are OutOfMemoryError, VirtualMachineError, 
+AssertionError etc.
+
+Advantages of Exception Handling :
+------------------------------------------
+The core advantage of exception handling is to maintain the normal flow of the application.
+ An exception normally disrupts the normal flow of the application; 
+that is why we need to handle exceptions. Let's consider a scenario:
+
+statement 1;  
+statement 2;  
+statement 3;  
+statement 4;  
+statement 5;//exception occurs checked exception(It disrupts the normal flow of the application)
+statement 6;  
+statement 7;  
+statement 8;  
+statement 9;  
+statement 10;  
+
+Suppose there are 10 statements in a Java program and an exception occurs at statement 5; 
+the rest of the code will not be executed, i.e., statements 6 to 10 will not be executed. 
+However, when we perform exception handling, the rest of the statements will be executed. 
+That is why we use exception handling in Java.
+
+Need of Exception Handling :
+----------------------------------
+To maintain normal flow execution of an application or to handle runtime errors.
+
+
+How to handle the exceptions :
+
+The following keywords are used in Exception handling :
+
+1.try
+
+2.catch
+
+3. throw
+
+4.throws
+
+5.Finally
+
+1.try-catch :
+-----------------------
+
+try - block :
+-----------------
+Java try block is used to enclose the code that might throw an exception. 
+
+Note : It must be used within the method.
+
+If an exception occurs at the particular statement in the try block, 
+the rest of the block code will not execute. 
+So, it is recommended not to keep the code in try block that will not throw an exception.
+
+try-catch :
+--------------
+
+The try keyword creates a try...catch statement.
+
+The try statement allows you to define a block of code to be tested for exceptions while it is being executed.
+
+The catch statement allows you to define a block of code to be executed, if an exception occurs in the try block.
+
+
+ try - testing or throwing.
+
+ catch - handling the exception that has occured.
+
+
+try-catch Syntax :
+------------
+try{    
+//code that may throw an exception 
+
+System.out.println("welcome");
+ int a = 1/0;
+System.out.println("hello");
+
+
+
+} //Object ref = new ArithmeticException();
+catch(ArithmeticException ae){
+    System.out.println("denominator pls dont give zero");
+}  
+
+
+A obj = new A();
+
+try- finally syntax :
+-----------------------
+
+try{    
+//code that may throw an exception    
+}
+finally
+{
+
+}   
+
+
+catch block 
+---------------
+The catch block is used to handle the Exception by declaring the type of exception within the parameter.
+
+ The declared exception must be the parent class exception ( i.e., Exception) or the generated exception type. 
+
+However, the good approach is to declare the generated type of exception.
+
+Example code-1 :
+===============
+
+public class TryCatchExample {  
+  
+    public static void main(String[] args) {  
+        try  
+        {  
+        int data=50/0; //may throw exception   
+                         
+        System.out.println("rest of the code");  
+        }  
+             // handling the exception   
+        catch(Exception e) 
+        {  
+            System.out.println(e); 
+
+             e.printStackTrace(); 
+        }  
+          
+    }  
+      
+}
+
+Example code-2 :
+==============
+
+public class TryCatchExample2 {  
+  
+    public static void main(String[] args) {  
+        try  
+        {  
+        int data=50/0; //may throw exception   
+        }  
+             // handling the exception  
+        catch(Exception e)  
+        {  
+                  // displaying the custom message  
+            System.out.println("Can't divided by zero");  
+        }  
+    }  
+      
+}  
+
+Example code-3 :
+===============
+
+public class TryCatchExample3 {  
+  
+    public static void main(String[] args) {  
+        int i=50;  
+        int j=0;  
+        int data;  
+        try  
+        {  
+        data=i/j; //may throw exception   
+        }  
+            // handling the exception  
+        catch(Exception e)  
+        {  
+             // resolving the exception in catch block  
+            System.out.println(i/(j+2));  
+        }  
+    }  
+}    
+
+Note :
+=====
+
+The catch block must be used after the try block only. 
+You can use multiple catch block with a single try block.
+
+
+
+try
+{
+
+}
+catch(Arithmetic ae)
+{
+
+}
+
+catch(NullPointerException ne)
+{
+
+}
+
+
+
+Working of try-catch block:
+---------------------------------
+
+
+
+The JVM firstly checks whether the exception is handled or not. If exception is not handled, 
+JVM provides a default exception handler that performs the following tasks:
+
+Prints out exception description.
+Prints the stack trace (Hierarchy of methods where the exception occurred).
+Causes the program to terminate.
+
+
+But if the application programmer handles the exception, 
+the normal flow of the application is maintained, i.e., rest of the code is executed.
+
+Program using try with multi-catch block :
+-----------------------------------------
+
+class Demo
+{
+         public static void main(String args[])
+         {
+                 try{
+                 int x=Integer.parseInt(args[0]);
+                 int y=Integer.parseInt(args[1]);
+                 int z=x/y;
+                 System.out.println(z);
+                 }
+ 
+             catch(ArrayIndexOutOfBoundsException ae)
+                 {
+        System.err.println(“Please pass two arguments”);
+                 }
+       catch(NumberFormatException ne)
+       {
+         System.err.println(“Please pass two numbers only”);
+       }
+         catch(ArithmeticException ae)
+     {
+         System.err.println(“Please pass second argument except zero”);
+       }
+     catch(Exception e)
+    {
+       System.err.println("some other errror has occured");
+    
+     }
+   
+}
+}
+
+
+Java Catch Multiple Exceptions
+-------------------------------------------
+Java Multi-catch block
+----------------------------------
+
+A try block can be followed by one or more catch blocks. 
+Each catch block must contain a different exception handler. 
+So, if you have to perform different tasks at the occurrence of different exceptions, 
+use java multi-catch block.
+
+Rules :
+--------------
+
+
+At a time only one exception occurs and at a time only one catch block is executed.
+
+All catch blocks must be ordered from most specific to most general, 
+i.e. catch for ArithmeticException must come before catch for Exception.
+
+Example-1 :
+============
+public class MultipleCatchBlock {  
+  
+    public static void main(String[] args) {  
+          
+           try{    
+                int a[]=new int[5];    
+                a[5]=30/2;    
+                System.out.println(a[10]);  
+               }    
+               catch(ArithmeticException e)  
+                  {  
+                   System.out.println("Arithmetic Exception occurs");  
+                  }    
+               catch(ArrayIndexOutOfBoundsException e)  
+                  {  
+                   System.out.println("ArrayIndexOutOfBounds Exception occurs");  }    
+               catch(Exception e)  
+                  {  
+                   System.out.println("Parent Exception occurs");  
+                  }             
+               System.out.println("rest of the code");    
+    }  
+}
+
+Example-2 :
+==================
+class Variable
+{
+	public static void main(String[] args)
+	{
+		int arr[] = new int[5];
+		try
+		{
+			arr[10] = 1/0;
+		}
+		catch(ArithmeticException ae)
+		{
+			System.out.println("Arithmetic exception has occured");
+		}
+		catch(ArrayIndexOutOfBoundsException ai)
+		{
+			System.out.println("array index exception has occured");
+		}
+		
+	}
+}
+
+Example -3 :
+===============
+class MultipleCatchBlock{    
+  public static void main(String args[]){    
+   try{    
+    int a[]=new int[5];    
+    a[5]=30/0;    
+   }    
+   catch(Exception e){System.out.println("common task completed");}    
+   catch(ArithmeticException e){System.out.println("task1 is completed");}    
+   catch(ArrayIndexOutOfBoundsException e){System.out.println("task 2 completed");}    
+   System.out.println("rest of the code...");    
+ }    
+}   
+
+
+// A Java program to demonstrate that we needed
+// multiple catch blocks for multiple exceptions
+// prior to Java 7
+
+import java.util.Scanner;
+public class Test
+{
+	public static void main(String args[])
+	{
+		Scanner scn = new Scanner(System.in);
+		try
+		{
+			int n = Integer.parseInt(scn.nextLine());
+		
+			if (99%n == 0)
+				System.out.println(n + " is a factor of 99");
+		}
+		catch (ArithmeticException ex )
+		{
+			System.out.println("Arithmetic " + ex);
+		}
+		catch (NumberFormatException ex )
+		{
+			System.out.println("Number Format Exception " + ex);
+		}
+	}
+}
+
+Starting from Java 7.0, it is possible for a single catch block 
+to catch multiple exceptions by separating each with | (pipe symbol) in the catch block.
+
+Catching multiple exceptions in a single catch block reduces code duplication and increases efficiency. The bytecode generated while compiling this program will be smaller than the program having multiple catch blocks as there is no code redundancy.
+
+Syntax:
+
+try {  
+    // code
+} 
+catch (ExceptionType1 | Exceptiontype2 ex){   
+    // catch block
+}
+
+
+// A Java program to demonstrate
+// multicatch feature
+
+import java.util.Scanner;
+
+public class Test
+{
+	public static void main(String args[])
+	{
+		Scanner scn = new Scanner(System.in);
+		try
+		{
+			int n = Integer.parseInt(scn.nextLine());
+			if (99%n == 0)
+				System.out.println(n + " is a factor of 99");
+		}
+		catch (NumberFormatException | ArithmeticException ex)
+		{
+			System.out.println("Exception encountered " + ex);
+		}
+	}
+}
+
+
+
+
+throw keyword :
+-------------------------
+
+The throw keyword is used to create a custom error.
+
+It is used to explicitly throw an exception ourselves.
+
+The throw statement is used together with an exception type. 
+There are many exception types available in Java: ArithmeticException, ClassNotFoundException, ArrayIndexOutOfBoundsException, SecurityException, etc.
+
+If in an application, if i wanted to throw an exception explicitly according to my need.
+
+The exception type is often used together with a custom method, like in the example below:
+
+1/0 =>arithmetic exception
+
+public class Main {
+  static void checkAge(int age)  { 
+    if (age < 18) { 
+   try{
+      throw new ClassNotFoundException("Access denied - You must be at least 18 years old.");
+      }
+    catch(ClassNotFoundException e)
+   {
+
+
+   }
+ 
+    } 
+  else {
+      System.out.println("Access granted - You are old enough!"); 
+    }
+ } 
+ 
+ public static void main(String[] args)  { 
+ try{
+   checkAge(15); 
+  }
+  catch(ClassNotFoundException ce)
+  {
+       System.out.println("Exception handled")
+  }
+
+ } 
+}
+
+prcatice :
+=========
+
+class ThrowExcep {
+    static void fun()
+    {
+        try {
+            throw new NullPointerException("demo");
+        }
+        catch (NullPointerException e) {
+            System.out.println("Caught inside fun().");
+            throw e; // rethrowing the exception
+        }
+    }
+ 
+    public static void main(String args[])
+    {
+        try {
+            fun();
+        }
+        catch (NullPointerException e) {
+            System.out.println("Caught in main.");
+        }
+    }
+}
+
+throws keyword :
+------------------------
+
+The throws keyword indicates what exception type may be thrown by a method.
+
+There are many exception types available in Java: ArithmeticException, ClassNotFoundException, ArrayIndexOutOfBoundsException, SecurityException, etc.
+
+throws is a keyword in Java that is used in the signature of a method to indicate that this method might throw one of the listed type exceptions. 
+
+The caller to these methods has to handle the exception using a try-catch block. 
+
+In a program, if there is a chance of raising an exception then the compiler always warns us about it and compulsorily we should handle that checked exception, Otherwise, we will get compile time error saying unreported exception XXX must be caught or declared to be thrown.
+
+ To prevent this compile time error we can handle the exception in two ways: 
+
+By using try catch
+By using the throws keyword
+
+We can use the throws keyword to delegate the responsibility of exception handling to the caller (It may be a method or JVM) then the caller method is responsible to handle that exception.  
+
+class tst {
+    public static void main(String[] args)
+    {
+        Thread.sleep(10000);
+        System.out.println("Hello Geeks");
+    }
+}
+Output
+
+error: unreported exception InterruptedException; must be caught or declared to be thrown
+
+other way to solve this :
+===============
+
+class tst {
+    public static void main(String[] args)
+        throws InterruptedException
+    {
+        Thread.sleep(10000);
+        System.out.println("Hello Students");
+    }
+}
+Output
+
+Hello Students
+
+
+Program : 
+----------------
+public class Main {
+  static void checkAge(int age) throws SQLException{
+    if (age < 18) {
+      throw new ArithmeticException("Access denied - You must be at least 18 years old.");
+    }
+    else {
+      System.out.println("Access granted - You are old enough!");
+    }
+  }
+
+  public static void main(String[] args) throws SQLException {
+    checkAge(15); // Set age to 15 (which is below 18...)
+  }
+}
+
+Important Points to Remember about throws Keyword
+=======================================
+
+throws keyword is required only for checked exceptions and usage of the throws keyword for unchecked exceptions is meaningless.
+
+throws keyword is required only to convince the compiler and usage of the throws keyword does not prevent abnormal termination of the program.
+
+With the help of the throws keyword, we can provide information to the caller of the method about the exception.
+
+Key Differences between throw and throws :
+-------------------------------------------------
+1.throw Keyword explicitly throws an exception whereas throws keyword is used to declare an exception.
+
+2.throw keyword is used within the method whereas, throws is used along method signature.
+
+3.you cannot throw multiple exceptions whereas, you can declare multiple exceptions.
+
+
+
+
+finally keyword :
+----------------------------
+
+The finally keyword is used to execute code (used with exceptions - try..catch statements) 
+no matter if there is an exception or not.
+
+Either the exception has occured or not, finally block will execute for sure
+
+
+
+try {
+  int[] myNumbers = {1, 2, 3};
+  System.out.println(myNumbers[3]);
+} catch (Exception e) {
+  System.out.println("Something went wrong.");
+} 
+
+finally{
+  System.out.println("The 'try catch' is finished.");
+}
+
+What is the use of Finally Block ?
+==========================
+It is used to perform cleanup activities.
+
+Cleanup activities are nothing but closing a file, closing a database connection,
+ closing a network socket etc..,
+
+
+Finally block is executed always.
+
+Java Object finalize() Method
+=====================
+
+Finalize() is the method of Object class. 
+
+This method is called just before an object is garbage collected. finalize() method overrides to dispose system resources, perform clean-up activities and minimize memory leaks.
+
+Syntax
+=======
+protected void finalize() throws Throwable  
+
+Example code :
+============
+
+public class JavafinalizeExample1 extends Object {  
+     public static void main(String[] args)   
+    {   
+        JavafinalizeExample1 obj = new JavafinalizeExample1();   
+        System.out.println(obj.hashCode());   
+        obj = null;   
+        // calling garbage collector    
+        System.gc();   
+        System.out.println("end of garbage collection");   
+  
+    }   
+    @Override  
+    protected void finalize()   
+    {   
+        System.out.println("finalize method called");   
+    }   
+}  
+
+Output :
+
+2018699554
+end of garbage collection 
+finalize method called
+
+Difference between final and finally and finalize() :
+=================================
+
+=> The final keyword is used to prevent the value of the variable, method and class whereas,
+
+finally block is used to perform cleanup activities and it is exceuted always.
+
+finalize() method is part of Object class that will called before the object is garbage collected.
+
+
+
+
+
+Creating a user defined exception in  java :(Custom Exceptions)
+---------------------------------------------------------------------------
+
+Java provides us the facility to create our own exceptions which are basically derived classes of Exception. 
+
+Creating our own Exception is known as a custom exception or user-defined exception. 
+
+Basically, Java custom exceptions are used to customize the exception according to user needs. 
+
+In simple words, we can say that a User-Defined Exception or custom exception
+ is creating your own exception class and throwing that exception using the ‘throw’ keyword.
+
+
+
+class KecException extends Exception
+{
+
+     static void myName() throws KecException 
+    {
+
+        throw new KecException("This is generated");
+
+      }
+   psvm(String[] args) throws KecException
+   {
+
+      myName();
+    }
+
+}
+
+
+      Runtime error examples :
+=========================
+
+Example -1 :
+==========
+
+     public class LaunchExcep1 {
+	
+	
+	public static void main(String[] args) {
+		
+		System.out.println("creating array !!!!");
+		
+		int arr[] = new int[555555555555]; //array size is fixed
+		                        //same type
+		                     //it demands contiguous memory locations
+		
+		System.out.println("array creation is done.");
+
+	}
+
+}
+
+
+Example - 2 :
+=============
+
+public class LaunchExcep1 {
+
+     static void abc()
+	{
+		abc();
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("calling");
+		abc();
+        System.out.println("execution done");
+	}
+
+}
+
+Exception Example 
+================
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class LaunchExcep1 {
+
+	static void abc()
+	{
+         System.out.println("Welcome to divison app.");
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		try
+		{
+			
+		 System.out.println("Enter Numerator !!!");
+			
+		 int firstNumber = sc.nextInt();
+			
+		 System.out.println("Enter Denominator !!!");
+			
+		int secondNumber = sc.nextInt(); //faulty input
+		
+		int result = firstNumber/secondNumber;
+		
+		System.out.println("The result is :"+ result);
+		
+		System.out.println("Thank you for using our app.");
+		}
+		catch(ArithmeticException ae)
+		{
+			System.out.println("Denominator should not be zero");
+		}
+		
+		catch(InputMismatchException ie)
+		{
+			System.out.println("Enter only number");
+		}
+		
+		finally
+		{
+			System.out.println("Thank-You!!! Use it again");
+	          }		
+		
+		
+	}
+	
+	
+     public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		abc();
+		
+		
+	}
+
+}
+
+Multithreading :
+---------------------
+
+Multithreading in Java is a process of executing multiple threads simultaneously.
+                                                                              (or)
+
+Execution of more than one thread at a time is called as multithreading.
+
+
+   download -> install -> run (use that app)
+    Hard disk                      process => thread
+
+
+What is Thread :
+---------------------------
+
+A thread is a lightweight sub-process, the smallest unit of processing.
+(A Thread is a smallest unit of a process) 
+
+                                                          (or)
+A thread is a piece of code that executes independently.(Smallest piece of code)
+
+Every program contains at least one thread. i.e. main thread
+
+Main thread default name is main only.
+
+Main thread default priority is normal priority(Priority number is 5)
+
+Process - A program under exceution.
+
+Multiprocessing and multithreading, both are used to achieve multitasking.
+
+However, we use multithreading than multiprocessing because threads use a shared memory area.
+
+Java Multithreading is mostly used in games, animation, etc.
+
+Advantages of Java Multithreading
+----------------------------------------------
+1) It doesn't block the user because threads are independent and 
+you can perform multiple operations at the same time.
+
+2) You can perform many operations together, so it saves time.
+
+3) Threads are independent, so it doesn't affect other threads if an exception occurs in a single thread.
+
+=========================================================================
+
+Life cycle of a thread :
+--------------------------------
+
+***Attched image****
+
+Whenever thread class constructor is called new thread will born.
+
+Thread comes to a ready(runnable) state whenever start() method is called.
+
+Thread will run whenever run() method is called.
+
+Thread comes to a sleeping state whenever sleep() method is called.
+
+Sleeping thread will wake up automatically whenever time interval is finished.
+
+Thread is suspended whenever suspend() method is called.
+
+Suspended thread will run whenever resume() method is called.
+
+Thread comes to a waiting state whenever wait() method is called.
+
+Waiting thread will run whenever notify() method is called.
+
+Thread will die whenever destroy() method is called.
+
+Program to get current thread information:
+-------------------------------------------------------
+
+class Demo
+{
+        public static void main(String args[])
+        {
+                Thread t=Thread.currentThread();
+                System.out.println(t.getName());
+                System.out.println(t.getPriority());
+                t.setName(“demo”);
+                t.setPriority(Thread.MAX_PRIORITY);
+                System.out.println(t.getName());
+                System.out.println(t.getPriority());       
+}
+}
+
+How to create a thread in Java ???
+
+There are two ways to create a thread:
+
+1.By extending Thread class
+2.By implementing Runnable interface.
+3. Executors => threads will be created automatically by jvm
+
+
+1.By extending Thread class :
+
+Steps to develop multithreaded application by extending java.lang.Thread class:
+-------------------------------------------------------
+
+1) Create a class that extends java.lang.Thread class
+2) Override run() method.
+Note: run() method given as a null body method to write child thread task code.
+3) Write child thread task code in a run() method.
+4) Write main() method
+5) Create an object of current class.
+6) Call start() method.
+Note: start() method implicitly calls run() method.
+7) Write main thread task code in a main() method.
+
+
+Why Runnable ? => interface
+
+
+class B
+{
+    int rollNo;
+}
+
+class A extends Thread => A thread
+{
+   public void run()
+{
+    System.out.println("another thread"); 
+
+ }
+public static void main(String[] args)
+{
+   A obj = new A();
+   Thread obj = new A();
+   Thread obj = new Thread(new A());
+
+    obj.start();
+
+   S.O.P(Thread.currentThread().getPriority());
+  
+
+}
+}
+
+
+
+
+
+// Java code for thread creation by extending
+// the Thread class
+class MultithreadingDemo extends Thread{
+	public void run()
+	{
+		try {
+			// Displaying the thread that is running
+			System.out.println(
+				"Thread " + Thread.currentThread().getId()
+				+ " is running");
+		}
+		catch (Exception e) {
+			// Throwing an exception
+			System.out.println("Exception is caught");
+		}
+	}
+}
+
+// Main Class
+public class Multithread {
+	public static void main(String[] args)
+	{
+		int n = 8; // Number of threads
+		for (int i = 0; i < n; i++) {
+			MultithreadingDemo object
+				= new MultithreadingDemo();
+			object.start();
+		}
+	}
+}
+
+2.)Thread creation by implementing the Runnable Interface
+
+Steps to create multithread application by implementing
+java.lang.Runnable interface:
+
+1) Create a class that implements java.lang.Runnable interface.
+2) Override run() method.
+3) Write child thread task code in a run() method.
+4) Write main() method
+5) Create an object of current class & assign to Runnable reference
+6) Create an object Thread class by passing Runnable reference
+7) Call start() method.
+8) Write main thread task code in a main() method.
+
+class A implements Runnable
+{
+    public void run()
+    {
+
+     }
+
+}
+
+class B
+{
+
+   public static void main(String[] args)
+   {
+      Runnable obj = new A();
+
+       Thread t = new Thread(obj);
+   }
+
+}     
+
+
+
+
+
+
+
+
+
+// Java code for thread creation by implementing
+// the Runnable Interface
+class MultithreadingDemo implements Runnable extends A{
+	public void run()
+	{
+		try {
+			// Displaying the thread that is running
+			System.out.println(
+				"Thread " + Thread.currentThread().getId()
+				+ " is running");
+		}
+		catch (Exception e) {
+			// Throwing an exception
+			System.out.println("Exception is caught");
+		}
+	}
+}
+
+// Main Class
+class Multithread {
+	public static void main(String[] args)
+	{
+		int n = 8; // Number of threads
+		for (int i = 0; i < n; i++) {
+			Thread object
+				= new Thread(new MultithreadingDemo());
+			object.start();
+		}
+	}
+}
+
+class A{
+
+
+
+}
+
+
+
+Thread Class vs Runnable Interface :
+==========================
+
+1.If we extend the Thread class, our class cannot extend any other class because
+ Java doesn’t support multiple inheritance. 
+But, if we implement the Runnable interface, our class can still extend other base classes.
+
+2.We can achieve basic functionality of a thread by extending Thread class 
+because it provides some inbuilt methods like yield(), interrupt() etc. 
+that are not available in Runnable interface.
+
+3.Using runnable will give you an object that can be shared amongst multiple threads. 
+
+Synchronization:
+---------------------------
+
+It is a mechanism that allows to access a shared resource only one thread at a time.
+                                                                      
+                                                                           (or)
+Synchronization in Java is the capability to control the access of multiple threads to access any shared resource to make it thread-safe.
+
+There are two ways to synchronize the code:
+
+1) synchronizing a method
+2) synchronizing block of code
+
+
+
+1) synchronizing a method:
+
+Syntax:
+synchronized ReturnType MethodName(arg1, arg2, ......)
+{
+        ================
+        ================
+        ================
+}
+
+2) synchronizing a block of code:
+
+Syntax:
+ReturnType MethodName(arg1, arg2, ......)
+{
+        ================
+        ================
+        synchronized
+        {
+                ================  
+                ================
+        }
+        ================
+        ================
+}
+
+File Handling and IO Streams
+========================
+
+Java I/O (Input and Output) is used to process the input and produce the output.
+
+Java uses the concept of a stream to make I/O operation fast. The java.io package contains all the classes required for input and output operations.
+
+We can perform file handling in Java by Java I/O API.
+
+Stream
+======
+
+A stream is a sequence of data. In Java, a stream is composed of bytes. It's called a stream because it is like a stream of water that continues to flow.
+
+                                                                                                                    (or)
+
+A  Stream is  a logical connection between a java program and file through which we can transfer data for storing(writing) or retrieving(reading).
+
+In Java, 3 streams are created for us automatically. All these streams are attached with the console.
+
+1) System.out: standard output stream
+
+2) System.in: standard input stream
+
+3) System.err: standard error stream
+
+try{
+
+   d=1/0;
+}
+catch(Exception e)
+{
+   System.out.println(e);//saving exception into a file
+   e.printStackTrace();
+  System.err.println(e);//printing on the console is only possible
+}
+}
+
+
+
+Example :
+=======
+
+System.out.println("simple message");  
+System.err.println("error message");  
+
+So, Basically :
+
+How many types of streams are there in java ?
+================================
+Based on direction of flow :
+
+1.OutputStream
+
+2. InputStream
+
+Based on type of dataflow :
+
+1. Byte OutputStream
+
+2. Charater OutputStream
+
+What is OutputStream ?
+==================
+
+The stream which we send data from java application to File or console i.e., OutputStream.
+
+What is InputStream ?
+=================
+
+The stream which we retrieve or read data from a File or keyboard i.e., InputStream.
+
+So, in java we can send data in binary format or character format.
+
+Note : InputStrem and OutputStream are both classes in java.io package.
+
+Types of classes :
+===========
+
+1. Interface class
+
+2.Abstract class
+
+3.Concrete(normal class)
+
+4. Final 
+
+5. Annotatation
+
+Interface class : If all the methods, if we want to implement them in the subclass.
+
+Abstract class : If some of the methods, if we want to implement them in subclass.
+
+Concrete class : Already implemented methods, if i wanted to reuse them.
+
+InputStream and OutputStream classes are abstract classes.
+
+Reason : there were of total 9 methods, out of 9 methods 8 methods were common to all subclasses, only 1 method i.e. read() or write() is different for every subclass.
+
+
+Input Stream: reads data from the source. 
+
+Output Stream: writes data to a destination. 
+
+When to use Character Stream over Byte Stream?
+
+In Java, characters are stored using Unicode conventions. Character stream is useful when we want to process text files. These text files can be processed character by character. Character size is typically 16 bits.
+
+When to use Byte Stream over Character Stream?  
+
+Byte oriented reads byte by byte.  A byte stream is suitable for processing raw data like binary files.
+
+Key Note :
+=======
+
+Names of character streams typically end with Reader/Writer and names of byte streams end with InputStream/OutputStream.
+
+What were the subclasses that were there ?
+===========================
+
+--------see flowchart-------------------
+
+->InputStream class is an implementation class of Closable interface
+
+-> In this closable interface, there is a special method called close() and this close() method is implemented in InputStream class and OutputStream class and is available to all its subclasses.
+
+-> In order to call close() method automatically, we need to use try with resource.
+
+try
+{
+    InputStream io = new FileInputStream();
+   io.close();
+
+}
+finally{
+
+}
+
+
+try( InputStream io = new FileInputStream(); OuputStream oo = new FileOnputStream() )
+{
+
+
+}
+
+-> To support try with resource, they have created a special interface called Autoclosable in JDK 1.7.
+
+-> Autoclosable interface is present in java.lang package.
+
+InputStream and OutputStream class methods :
+===============================
+
+In order to develop program, we should be knowing of what are the methods that are available inside InputStream and OutputStream classes.
+
+-----------see flowachart-------------------------
+
+Need of IO Streams :
+==============
+
+* How to store data inside a file permanently.
+
+*How to read from a file.
+
+* How to a read data from keyboard.
+
+* How to write data into a console.
+
+Without learning this chapter can i develop the project ?
+
+Once, the program is compiled, executed, all the values that are stored will go off in RAM.
+
+-> To store them permanently, we need a file.
+
+-> Using IO Streams chapter, we can perform persistance operations on a file.
+
+-> IO Streams in the project we will not use much, because File also has security issues, file data organisation is not good, if data increases file size also increases, we dont have searching algorithms in the file.
+
+-> So in business we are not going file system, instead of that we are going to use databases.
+
+-> To interact with database, we have jdbc api in java.
+
+-> To interact with data on remote files, i will use networking concept in java.
+
+-> working with xml, csv, i will be using streams chapter.
+
+-> storing small amounts of data -> IO Streams
+
+-> storing large amounts of data -> database
+
+File Handling :
+===========
+
+In this concept, we are going to work with files or file system.
+
+                                                 (or)
+We are going to perform read and write operations or copy operation from one file to another file on the file sytem.
+      
+
+Using Streams, we are doing file handling.
+
+There were some predefined steps which to be performed while reading or writing on a file.
+
+Steps to write and read from a file :
+===========================
+ write data into a file :
+===================
+
+1. Add import java.io.* package statement.
+
+2. Create OutputStream class object.( this is not possible because this class is abstract)
+ So, we have to create objects for subclasses based on the source => we will create object for FileOutputStream .
+
+ FileOutputStream fos = new FileOutputStream("f.txt");
+
+3. invoke fos.write(data) ; to store data into the file
+
+4. invoke fos.flush(); to flush data into the file.
+
+5. invoke fos.close(); to close the connection or stream object.
+
+6. Handle the exceptions => IOException, FileNotFoundException.
+
+import java.io.FileOutputStream;  
+
+public class FileOutputStreamExample {  
+    public static void main(String args[]) { 
+           
+           try{    
+            OutputStream fout=new FileOutputStream("C:\\testout.txt");    
+             fout.write(65); 
+             fout.flush();   
+             fout.close();    
+             System.out.println("success...");    
+            }
+          catch(Exception e){System.out.println(e);}    
+      }    
+}  
+
+
+import java.io.FileOutputStream;  
+public class FileOutputStreamExample {  
+    public static void main(String args[]){    
+           try{    
+             FileOutputStream fout=new FileOutputStream("D:\\testout.txt");    
+             String s="Welcome to java";    
+             byte b[]=s.getBytes();//converting string into byte array    
+             fout.write(b);    
+             fout.close();    
+             System.out.println("success...");    
+            }catch(Exception e){System.out.println(e);}    
+      }    
+}  
+
+Assignment : Write a program to write string data appended into a file.
+previous version : Are you ready?
+Updated version of file : Are you ready? WelcomeToJava 
+
+
+Steps to read data from a file :
+========================
+
+1. Add import java.io.* ;
+
+2. create FileInputStream object.
+
+    FileInputStream fis = new FileInputStream(f.txt);
+
+3. Invoke fis.read(); for reading data.
+
+4. Invoke fis.close();
+
+5. Handling the exceptions FileNotFoundException and IOException.
+
+read single character
+==================
+import java.io.FileInputStream;  
+public class DataStreamExample {  
+     public static void main(String args[]){    
+          try{    
+            FileInputStream fin=new FileInputStream("D:\\testout.txt");    
+            int i=fin.read();  
+            System.out.print((char)i);    
+            fin.close();    
+          }catch(Exception e){System.out.println(e);}    
+         }    
+        }  
+
+read all characters
+================
+  
+import java.io.FileInputStream;  
+public class DataStreamExample {  
+     public static void main(String args[]){    
+          try{    
+            FileInputStream fin=new FileInputStream("D:\\testout.txt"); 
+            ByteInputStream bi = new ByteInputStream(fin);   
+            int i=0;    
+            while((i=fin.read())!=-1){    
+             System.out.print((char)i);    
+            }    
+            fin.close();    
+          }catch(Exception e){System.out.println(e);}    
+         }    
+        }  
+
+Note :
+========
+
+ Using IOStreams chapter , we are not developing any business logic i.e., validations and calculations on data.
+
+ -> Whenever you want to work with any class, you have to know two points :
+
+  1. What are the constructors available in the class for creating objects.
+
+  2. What are the methods that are avilable inside the class to work with them to perform operations.
+
+Java Writer
+==========
+
+It is an abstract class for writing to character streams. The methods that a subclass must implement are write(char[], int, int), flush(), and close(). Most subclasses will override some of the methods defined here to provide higher efficiency, functionality or both.
+
+import java.io.*;  
+public class WriterExample {  
+    public static void main(String[] args) {  
+        try {  
+            Writer w = new FileWriter("output.txt");  
+            String content = "I love my country";  
+            w.write(content);  
+            w.close();  
+            System.out.println("Done");  
+        } catch (IOException e) {  
+            e.printStackTrace();  
+        }  
+    }  
+}  
+
+Java Reader
+==============
+
+Java Reader is an abstract class for reading character streams. The only methods that a subclass must implement are read(char[], int, int) and close(). Most subclasses, however, will override some of the methods to provide higher efficiency, additional functionality, or both.
+
+Some of the implementation class are BufferedReader, CharArrayReader, FilterReader, InputStreamReader, PipedReader, StringReader
+
+import java.io.*;  
+public class ReaderExample {  
+    public static void main(String[] args) {  
+        try {  
+            Reader reader = new FileReader("file.txt");  
+            int data = reader.read();  
+            while (data != -1) {  
+                System.out.print((char) data);  
+                data = reader.read();  
+            }  
+            reader.close();  
+        } catch (Exception ex) {  
+            System.out.println(ex.getMessage());  
+        }  
+    }  
+}
+
+Program to read and write image into a file:
+=====================================
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) {
+        String inputFilePath = "C:\\Users\\HI\\Downloads\\download.png";
+        String outputFilePath = "C:\\Users\\HI\\Downloads\\cop.png"; 
+
+        FileInputStream fis = null;
+        FileOutputStream fos = null;
+
+        try {
+            // Create FileInputStream to read the image
+            File inputFile = new File(inputFilePath);
+            fis = new FileInputStream(inputFile);
+
+            // Create FileOutputStream to write the image
+            File outputFile = new File(outputFilePath);
+            fos = new FileOutputStream(outputFile);
+
+            // Buffer for reading and writing the image
+            byte[] buffer = new byte[1024];
+            int bytesRead;
+
+            // Read from input file and write to output file
+            while ((bytesRead = fis.read(buffer)) != -1) {
+                fos.write(buffer, 0, bytesRead);
+            }
+
+            System.out.println("Image has been copied successfully!");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (fis != null) {
+                    fis.close();
+                }
+                if (fos != null) {
+                    fos.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+Collection of data -> Database
+
+1. Data Organsiation will be good
+
+2. Permanant Storage
+
+3. Easy access and from anywhere I can access if you were working server/cloud databases
+
+4.Secure 
+
+
+ SQL :( Structured Query Language) => Declarative -> You just mention what you want and language will take care of everything.
+
+  Operations that can be performed on databases:
+
+  C -> create
+
+  R -> read 
+
+  U  -> update
+
+  D  -> delete
+
+   DBMS -> Database Management Systems
+==========
+
+ DBMS is a software where we interact to manage my database operations
+
+Example:
+
+  ORACLE, MYSQL, POSTGRESSQL,MS SQL SERVER e.t.c.,
+
+  IDE : MYSQL
+
+
+Types of Databases:
+======================
+
+1. Relational/SQL Db
+
+The data will be stored in the form of Tables(Rows and columns)
+Ex:   ORACLE, MYSQL, POSTGRESSQL,MS SQL SERVER e.t.c.,
+
+2. Non-Relational/ NOSql Db -> in the form of JSON/Scripting format
+Ex: Mongodb, Cassandradb....e.tc.,
+
+{
+  {
+    id:23,
+    name: 'rtyu',
+    skill: 'java',
+    posts : [
+
+    ],
+   comments: [     ]
+   },
+  {
+     id:
+ 
+
+}
+
+SQL Commands:
+==============
+
+DDL
+
+DML
+
+DQL
+
+DCL
+
+TCL
+
+
+   DDL( Data definition language) -> When you want work with structure of the table/schema :
+========================================
+   1. create database
+      create table
+ 
+   2. alter table
+      
+   3. drop table
+      drop database
+  
+   4. truncate table
+
+
+   sl : read differences between drop and truncate, delete?
+         Work with ddl commands ?         
+
+   DML( Data Manipulation Language) -> When you wanted to change the data in the table
+-=====================================
+
+   1. insert 
+   
+   2. Update
+
+   3. delete   
+   
+  DCL( Data control Language) -> When you wanted to give or revoke permissions to data
+========================================
+
+  1. grant
+  
+  2. revoke
+
+ TCL ( Transaction Control Language) -> When you wanted to work with Transactions 
+=====================================
+
+  1. commit
+
+  2. rollback
+
+ DQL ( Data Query Language) -> When you wanted to fetch the data
+==============================
+
+  1. select
+
+
+  We will be mainly concentrating on : DDL, DML, DQL 
+ 
+
+
+  create, alter, drop , truncate - DDL
+
+  insert, update, delete - DML
+
+  select - DQL
+
+
+
+create database peters; // for creating database
+ 
+show databases; //for showing all the databases
+
+use peters; //for using the database
+
+create table Student(stud_id int,stud_name varchar(20), marks int); //for creating the table inside the database
+
+insert into Student(stud_id,stud_name) values(1,'Roshith'); //for insertion of values into only some of the columns
+
+insert into Student values(2,"Varshini",100); //for insertion of values in all the columns
+
+insert into Student values (3,"Jaya Prakash",70),(4,"Navin",80); //insertion of multiple values in the same query.
+
+select skill from Student; //if ib wanted to get only marks column
+
+select * from Student; //fetching all the rows from the table
+
+Aggregate functions :
+================
+
+select min(marks) from Student;
+
+select avg(marks) from Student;
+
+select max(marks) from Student;
+
+select count(stud_id) from Student;
+
+select sum(marks) from Student;
+
+select marks from Student where stud_id=101;
+
+
+select stud_name from Student where marks = (select max(marks) from Student); //Nested Query
+
+Update Student set marks = 90 where stud_id = 1; // Updating a specific column
+
+select * from Student;
+
+alter table Student add column skill varchar(20); //adding another column
+
+select * from Student;
+
+update Student set skill = "java"; //updating all the colulmns at the same time
+
+select * from Student;
+
+delete from Student where stud_id=1; //delete a specific row
+
+select * from Student;
+
+drop table Student; //delete whole table
+
+select * from Student;
+
+show tables; //to show all the tables that were there in the database
+
+
+insert -> into
+update -> set
+delete -> fro
+
+MySQL Constraints
+====================
+The constraint in MySQL is used to specify the rule that allows or restricts what values/data will be stored in the table.
+
+It helps to limit the type of data that will be inserted inside the table.
+
+Types of MySQL Constraints
+==========================
+Constraints in MySQL is classified into two types:
+
+Column Level Constraints: These constraints are applied only to the single column that limits the type of particular column data.
+
+Table Level Constraints: These constraints are applied to the entire table that limits the type of data for the whole table.
+
+CREATE TABLE new_table_name (  
+    col_name1 datatype constraint,  
+    col_name2 datatype constraint,  
+    col_name3 datatype constraint,  
+    .........  
+);  
+
+The following are the most common constraints used in the MySQL:
+
+NOT NULL
+CHECK
+DEFAULT
+PRIMARY KEY
+AUTO_INCREMENT
+UNIQUE
+INDEX
+ENUM
+FOREIGN KEY
+
+
+Self: learn Sql joins
+
+
+NOT NULL Constraint
+=========================
+This constraint specifies that the column cannot have NULL or empty values. The below statement creates a table with NOT NULL constraint.
+
+mysql> CREATE TABLE Student(Id INTEGER, LastName TEXT NOT NULL, FirstName TEXT NOT NULL, City VARCHAR(35));  
+Execute the queries listed below to understand how it works:
+
+mysql> INSERT INTO Student VALUES(1, 'Hanks', 'Peter', 'New York');  
+  
+mysql> INSERT INTO Student VALUES(2, NULL, 'Amanda', 'Florida');   
+
+
+how to install mysql   ?
+=================
+
+    
+Firstly go to control panel through your desktop search and uninstall if any mysql is already there.
+
+  1. Go to google and type mysql
+
+   2. go to official website of mysql and go to downloads
+
+   3. Go below and click on mysql community(GPL) downloads
+
+   4. Click on mysql installer for windows
+
+    5. click download for 2nd one which works for both 32 bit and 64 bit  (i.e., with 437 MB)
+
+    6. Click on no thanks, just start my download.
+
+    7.Once it is download, double click on it to install, Once its loaded select  setup type as custom.
+
+   8.Click next and go to available products and select mysql version by clicking on + symbol and drag it into side window using green     arrow.
+
+   9. Then, in applications do the same and select mysql workbench version and drag it into side window using green arrow.
+
+  10. Do the same for selecting shell and click on next.
+
+  11. Now, on the next page click on execute and click on next until password setup page with default settings.
+
+  12. put password for mysql as root123 and then keep the default settings and click on next and then execute, next, finish. 
+
+Setting up environmental variables for mysql :
+================================
+
+ 1. In program files, go to mysql folder > mysql server > bin
+
+ 2. Copy the path same like we did for java.
+
+ 3. Now open enviromental variables dialog box and go to Path section and Paste the bin path there and click on ok, before that see if there is any old mysql bin path is there, if it is there already, delete that and place the new one.
+
+no go to cmd and type the following commands :
+
+mysql --version
+
+mysql -u root -p
+
+enter password : root123
+
+now the server of mysql is started in cmd.
+
+Agenda :
+==========
+
+What is JDBC ?
+
+Why is it used ?
+
+steps to develop java and database connectivity application.
+
+Then we will code the jdbc application.
+
+
+JDBC 
+==========
+
+JDBC stands for java database connectivity.
+
+As the name only indicates it provides connection between java application and relational database.
+
+Jdbc is a technology used to communicate with database from java application.
+
+ It is a part of JavaSE (Java Standard Edition). 
+
+   Java SE => core java, JDBC -> console-based apps
+  Java EE => Servlets, JSP,Spring,Springboot - web apps.
+  Java ME => Android, kotlin -> Mobile applications
+
+  Jdbc API is a java API, that can access any kind of tabular data especially stored in RDBMS
+
+  1. java.sql package
+
+  2.javax.sql package
+
+
+JDBC API uses JDBC drivers to connect with the database
+
+(show diagram)
+
+   javap java.sql.DriverManager
+
+   javap java.sql.Connection
+
+  Driver :
+  ======
+
+   A driver is a software and it is used to connect application and database.
+
+Drivers are basically divided into 2 categories :
+
+1. Open Database Connectivity Drivers
+
+2. JDBC Drivers
+
+ODBC drivers are used to connect non java applications(C,C#,.Net,python) and databases.
+
+ODBC cannot understand java instructions because ODBC developed before java technology.
+
+To solve the above situation, JDBC drivers are introduced :
+
+
+There are four types of JDBC drivers:
+
+ 1. JDBC-ODBC Bridge Driver (or) Type-1 driver
+  2. JDBC Native API Driver (or) Type-2 driver 
+  3. Network Protocol Driver (or) Type-3 driver and
+  4. Thin Driver (or) JDBC 100 % Pure Java Driver (or) Type-4 driver.
+
+There are 2 ways to connect java application and database :
+
+1. By using JDBC and ODBC drivers.
+
+2.By using only JDBC drivers.
+
+
+Mostly, we will use Type-2 or Type-4 drivers as many drivers are there for each variety of database.
+
+With Type-1, since it acts as translator, communication becomes very slow.
+
+1.) Jdbc- Odbc Bridge Driver :
+=========================
+
+Communication becomes very slow.
+
+So, at JDK 1.8 only, it is removed.
+
+Driver class name :
+==============
+sun.jdbc.odbc.JdbcOdbcDriver
+
+Driver location :
+================
+rt.jar file in JDK 1.7 and below versions
+
+Note :   This driver removed from JDK 1.7 and below versions.
+=====
+
+JAR file location :
+=================
+
+C:/Program files/ Java/ JDK 1.7/jre/lib
+
+Driver vendor :
+================
+Sun microsystems
+
+url to access the driver :
+=====================
+jdbc : odbc : dsn( data source name)
+
+Note: Type-1 drivers are outdated in 2014 itself since they are developed in C language.
+
+Type-1 driver architecture :
+====================
+
+(show diagram)
+
+Type - 1 driver functionality :
+====================
+
+It converts java instructions to odbc understandable format.(Translator)
+
+Advantages of Type-1 driver :
+=====================
+
+1. It is very easy to connect.
+
+2. Only one driver, that supports all odbc enabled databases.
+
+Disadvantages of Type-1 driver :
+======================
+
+1. Performance overhead since java calls should go through via jdbc and odbc drivers.
+
+2. DSN creation required.
+
+3.Database client software needs to be installed on local machine.
+
+4. It is not suitable for applets(GUI) because applets has the following security restrictions :
+
+a). Applets cannot read from local disk( DSN will be in hard disk)
+
+b). Applets cannot write data to local dcisk.
+
+c.) Applets cannot open new network connection other than the server from which it is loaded.
+
+Odbc tool is common for all the databases.
+
+2. Type - 2 Driver (JDBC Native API Driver)
+===================================
+Type- 2 driver is also called as Partial java driver (or) partly java native driver.
+
+Type-2 driver are developed in java language and native languages.
+
+Type - 2 driver class name for oracle database :
+=================================
+
+oracle.jdbc.driver.OracleDriver
+
+Driver vendor :
+===============
+
+oracle corporation.
+
+Driver location :
+=================
+
+ojdbc14.jar file in oracle log express edition.
+
+ojdbc6_g.jar file in oracle 11g express edition.
+
+URL to access Type-2 driver :
+======================
+
+jdbc : oracle : oci8 : @service_id [ Jdbc -> protocol , oracle -> subprotocol)
+
+To get the service_id use the following sql query :
+===============================
+
+SQL > select * from global_name;
+
+Type-2 Driver architecture :
+=====================
+
+( show diagram )
+
+Type-2 Driver functionality :
+=====================
+
+It converts java calls into native calls.
+
+Advantages :
+=============
+1. It is lilltle bit fast as compared to Type-1 driver.
+
+2.DSN creation is not required.
+
+Disadvantages :
+=================
+
+1. Seperate driver required for every database.
+
+2. All databases are not having Type-2 drivers( Like MS_ACCESS).
+
+3. Database software needs to be installed on same system.
+
+4. It is also not suitable for applets.
+
+5. It is only suitable for stand-alone applications not internet applications.
+
+Note :
+=====
+Type - 1 (Outdated)
+Type - 2 ( Rear usage)
+
+Native calls : Database understandable calls.
+
+
+Type - 3 Driver ( JDBC Network protocol driver) :
+===================================
+
+TYPE - 3 driver is also called as Middleware driver or JDBC Net Pure Java Driver.
+
+Type - 3 drivers are developed in java language only.
+
+It works based on connection pooling management.
+
+Example :
+=========
+Weblogic RMI Driver.
+
+RMI stands for remote method invocation.
+
+Connection Pooling Management (CPM) :
+==============================
+
+(show diagram)
+
+After the completion of task, again the object is placed in connection pool.
+
+The main advantage of this is is the objects(connection) are reusable.
+
+With server settings only, we can create the objects (Based on server hardware )
+
+After CPM concept, this driver became popular.
+
+Type-3 Driver Architecture :
+====================
+
+(show diagram)
+
+It passes java instructions to middleware system.
+
+Advantages :
+============
+
+1. Java instructions are database independent from local system to middleware system ( In Facebook which database is used, we dont know , but we load data from client local machine)
+
+2. DSN creation is not required in local machine.
+
+3.Database software not needed on local system.
+
+4. It is suitable for applets.
+
+Disadvantages :
+===============
+
+1. Extra layer added in architecture i.e., middleware system.
+
+2. Maintenance of Network Protocol driver becomes costly because it requires database-specific coding to be done in the middle tier.
+
+Type-4 Driver(JDBC 100 % Pure java driver)
+===============================
+
+It is also called as JDBC Native Protocol Driver (or) Thin Driver
+
+Type-4 Driver class Name for Oracle Database :
+================================
+oracle.jdbc.driver.OracleDriver
+
+URL to access driver :
+================
+
+jdbc : oracle : thin : @domain name : port-no : service_id ( thin -> logical name, domain_name -> computer name, port_number : it is used to identify the service)
+
+To get the service_id use the following sql query :
+===============================
+
+SQL > select * from global_name;
+
+Note :
+=======
+
+Type - 2 and Type-4 class name is same but differentiating in URL , oci8 or thin 
+
+Type- 2 : database must be installed on same system.
+
+Type-4 : database can be anywhere.
+
+Type-4 driver architecture :
+====================
+
+(show diagram)
+
+Type-4 driver functionality :
+======================
+
+It passes the java instructions directly to a database.
+
+Advantages :
+===============
+
+1. It is a highest performance driver as compared to all other drivers.
+
+2. DSN creation not required.
+
+3. Database not needed on same system.
+
+4. It is suitable for applets.
+
+Disadvantages :
+============
+
+1. Seperate driver required for every database.
+
+
+Note : 
+===
+If application requires more than one database then use type-3 driver otherwise use type-4 driver.
+
+Steps to develop database application using TYPE-4 driver :
+======================================
+
+1. Loading a specific JDBC Driver
+
+2.Establishing a connection.
+
+3.Performing the task.
+
+4. Closing the connection.
+
+JDBC API :
+=============
+
+  Jdbc API is a java API, that can access any kind of tabular data especially   stored in RDBMS
+
+  1. java.sql package
+
+  2.javax.sql package
+
+
+To connect java application with database there are 7 steps :
+============================================
+
+1. import the package.[java.sql.*]
+
+2. Load(mysql-connector) and register the driver (Class.forName(com.mysql.jdbc.driver))
+
+ 3. Establish the connection between java application and database -> instantiating the Connection interface
+
+  4. Create the statements -> Statement(execute the query),PreparedStatement(execute the query with dynamic values),CallableStatement(Stored Procedures)
+
+  5. send and execute the query
+
+  6.Process the results from ResultSet
+
+   7. Close the connections.
+
+
+coding example :
+============
+
+import java.sql.*;
+
+main()
+{
+
+   Class.forName(com.mysql.jdbc.driver);
+
+   Connection con = DriverManager.getConnection("URL", "UN", "PWD")[ URL -> in dbms you may have multiple db's, which database you wanted to work is specifierd here]
+
+   Statement stmt = con.createStatement();
+
+   ResultSet res = stmt.executeQuery("select * from student");
+
+   while(rs.next())    
+   {
+
+        S.O.P(rs.getInt(1)+" "+rs.getString(2));
+   }
+
+  stmt.close();
+  con.close();
+
+}
+
+1.DDL -> create, alter, drop, truncate
+
+2. DML -> inset, update , delete
+
+3. DQL -> select
+
+
+ Standard steps followed for developing JDBC Application :
+==========================================
+
+1. Import the java.sql.* package
+
+2. Load  and register the driver
+
+3.Establish the connection between java application and database
+
+public abstract Statement createStatement() throws java.sql.SQLException;
+
+4. Create a Statement Object.
+
+5. Send and execute the query
+
+1.executeQuery() ->  select command
+2.executeUpdate() -> insert, update delete commands
+3.execute() -> Mixed(Nested queries)
+
+6. Process the result from ResultSet
+
+7. Close the ResultSet,Statement,Connection Objects.
+
+
+
+
+
+
+
+
+
+sql commands :( in mysql workbench )
+============
+
+show databases;
+create database advanced_java;
+show databases;
+
+use advanced_java;
+
+
+create table Student(stud_id int, stud_name varchar(20), marks INT);
+
+insert into Student values(001,"Harish",65),(002,"Ravi",75),(003,"Manjunath",87);
+
+select * from Student;
+
+
+code :
+=====
+
+package com.practice.main;
+
+
+//rt.jar -> jdk s/w -> j2SE
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import com.mysql.cj.jdbc.Driver;
+
+ class TestApp2 {
+
+	public static void main(String[] args) throws SQLException {
+		// TODO Auto-generated method stub
+
+		 //1. Load and Register the Driver
+		
+		 Driver driver = new Driver();
+		
+	                     DriverManager.registerDriver(driver);
+		
+		
+		//2. Establish the connection b/w java app. and database
+		
+		String url ="jdbc:mysql://localhost:3306/peters";
+		String uname = "root";
+		String pwd = "root";
+		
+		Connection con = DriverManager.getConnection(url,uname,pwd);
+		
+		//3. Creating the statement object
+		Statement stmt = con.createStatement();
+		
+		//4. send and execute the Query
+		
+		  String sqlSelectQuery = "select stud_id,stud_name,marks from Student";
+		
+		  ResultSet rs =stmt.executeQuery(sqlSelectQuery);
+		    
+		  //5. Process the result from ResultSet
+		    
+		    System.out.println("sid \t sname\t marks");
+		    while(rs.next())
+		    {
+		    	int sid = rs.getInt("stud_id");
+		    	String sname = rs.getString("stud_name");
+		    	int marks = rs.getInt("marks");
+		    	
+		    	System.out.println(sid+"\t "+sname+"\t "+marks);	
+		    	
+		    }
+		    
+		    //6. Closing the ResultSet,Statement and Connection Objects.
+		    
+		    rs.close();
+		    stmt.close();
+		    con.close();
+		   		    
+		
+	}
+
+}
+
+
+Interface : collection of public static final variables and public abstract methods
+
+interface A
+{
+ void abc();
+}
+
+class B implements A
+{
+
+    void abc()
+   {
+       ====
+    }
+}
+
+my sql connector jar download -> https://dbschema.com/jdbc-driver/MySql.html
+
+
+for executing the Query there were 3 methods :
+====================================
+
+1. Select commands
+
+2. Non-select commands
+
+  public abstract java.sql.ResultSet executeQuery(java.lang.String) throws java.sql.SQLException;
+
+executeQuery(String) -> select Query
+
+executeUpdate(String) -> Non select Queries
+
+execute(String) -> Both select and non select Queries
+
+Autoloading in JDBC :
+===================
+
+2. Load and register the driver:
+==========================
+
+-> In earlier version of JDBC 3.x we were loading and registering the driver using the following approach,
+
+  import com.mysql.cj.jdbc.Driver;
+
+       Driver driver = new Driver();
+
+       DriverManager.registerDriver(driver);
+
+-> Alternate to this approach we can also load the driver as shown below :(From JDBC 3.x to JDBC 4.x)
+
+        Class.forName("com.mysql.cj.jdbc.Driver");
+
+
+ -> We say a class represents a Driver, if  and only if the class has implemented an interface called "java.sql.Driver(I)"
+
+    class Driver(c) implements Driver(I)
+   {
+
+
+   }
+  
+-> From JDBC 4.x onwards loading and registering would happen automatically depending upon the jar added in the classpath location of the project.
+
+ This feature of JDBC 4.x is called as "Autoloading"
+
+ jdbc application code in industry standard
+==============================
+
+package com.seven;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class TestApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String url = "jdbc:mysql://localhost:3306/advanced_java";
+		String uname = "root";
+		String pwd = "root";
+
+		Connection con = null;
+		Statement statement = null;
+		ResultSet rs = null;
+
+		try {
+			con = DriverManager.getConnection(url, uname, pwd);
+			if (con != null) {
+				statement = con.createStatement();
+				if (statement != null) {
+					rs = statement.executeQuery("select * from Student");
+					if (rs != null) {
+						System.out.println("sid \t sname\t marks");
+						while (rs.next()) {
+							int sid = rs.getInt("stud_id");
+							String sname = rs.getString("stud_name");
+							int marks = rs.getInt("marks");
+
+							System.out.println(sid + "\t " + sname + "\t " + marks);
+
+						}
+					}
+				}
+			}
+		} catch (SQLException se) {
+			se.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (rs != null) {
+				try {
+					rs.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			if (statement != null) {
+				try {
+					statement.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			if (con != null) {
+				try {
+					con.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+
+		}
+
+	}
+
+============================================================================================
+DML Queries Code :
+============
+
+package com.dev;
+
+
+import java.sql.*;
+
+import com.mysql.cj.jdbc.Driver;
+
+public class Test {
+
+	public static void main(String[] args) throws SQLException {
+		// TODO Auto-generated method stub
+		
+		String url = "jdbc:mysql://localhost:3306/advanced_java";
+		String username = "root";
+		String password = "root";
+		
+		
+
+		Driver driver = new Driver();
+		
+		DriverManager.registerDriver(driver);
+		
+		Connection con = DriverManager.getConnection(url,username,password);
+		
+		  Statement stmt = con.createStatement();
+		  
+		  
+		  String sqlInsertQuery = "insert into Student(stud_id,stud_name,marks) values(5,'sravan',89)";
+		  String sqlUpdateQuery = "update Student set marks=80 where stud_name='Manju'";
+		  String sqlDeleteQuery = "delete from Student where stud_name='Jeevan'";
+		  
+		  int rowsEffected = stmt.executeUpdate(sqlDeleteQuery);
+		  
+		  System.out.println("No of rows effected: "+rowsEffected);
+		
+		stmt.close();
+		con.close();
+		
+	}
+
+}
+
+============================================================================
+Dyamic Input Jdbc Application 
+=====================
+
+package com.dev.dynamicinput;
+
+
+import java.sql.*;
+import java.util.*;
+
+public class TestDynamicInput {
+
+	public static void main(String[] args) throws SQLException {
+		// TODO Auto-generated method stub
+
+		String url = "jdbc:mysql://localhost:3306/advanced_java";
+		String username = "root";
+		String password = "root";	
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the student id: ");
+		int stud_id = sc.nextInt();
+		System.out.println("Enter the student name: ");
+    	String stud_name = sc.next();
+		
+		 stud_name = " ' "+stud_name+" ' ";
+		
+		System.out.println("Enter the student marks: ");
+		int marks = sc.nextInt();
+		
+		
+	   Connection con = DriverManager.getConnection(url,username,password);	
+
+	   Statement stmt = con.createStatement();
+	   
+	   //"insert into Student(stud_id,stud_name,marks) values(5,'sravan',89)";
+	   
+	   String sqlInsertQuery = "insert into student(stud_id,stud_name,marks) values("+stud_id+",'"+stud_name+"',"+marks+")";
+	  
+	   
+	   String formattedInsertQuery = String.format("insert into Student(stud_id,stud_name,marks) values(%d,%s,%d)",stud_id,stud_name,marks);
+	   
+	   
+	   
+	   //System.out.println(formattedInsertQuery);
+	   
+	   int rowsEffected = stmt.executeUpdate(formattedInsertQuery);
+	   
+	   System.out.println("No of rows effected :"+rowsEffected);		
+		
+		
+	}
+
+}
+
+
+Mysql connector jar download link : https://jar-download.com/artifacts/mysql/mysql-connector-java
+
+
+Resetting password in mysql:
+====================
+Log on to your system as Administrator.
+
+Stop the MySQL server if it is running. For a server that is running as a Windows service, go to the Services manager: From the Start menu, select Control Panel, then Administrative Tools, then Services. Find the MySQL service in the list and stop it.
+
+If your server is not running as a service, you may need to use the Task Manager to force it to stop.
+
+Create a text file containing the password-assignment statement on a single line. Replace the password with the password that you want to use.
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass';
+
+Save the file. This example assumes that you name the file C:\mysql-init.txt.
+
+Open a console window to get to the command prompt: From the Start menu, select Run, then enter cmd as the command to be run.
+
+Start the MySQL server with the init_file system variable set to name the file (notice that the backslash in the option value is doubled):
+
+
+C:\> cd "C:\Program Files\MySQL\MySQL Server 8.3\bin"
+C:\> mysqld --init-file=C:\\mysql-init.txt
+If you installed MySQL to a different location, adjust the cd command accordingly.
+
+The server executes the contents of the file named by the init_file system variable at startup, changing the 'root'@'localhost' account password.
+
+To have server output to appear in the console window rather than in a log file, add the --console option to the mysqld command.
+
+If you installed MySQL using the MySQL Installation Wizard, you may need to specify a --defaults-file option. For example:
+
+C:\> mysqld
+         --defaults-file="C:\\ProgramData\\MySQL\\MySQL Server 8.3\\my.ini"
+         --init-file=C:\\mysql-init.txt
+The appropriate --defaults-file setting can be found using the Services Manager: From the Start menu, select Control Panel, then Administrative Tools, then Services. Find the MySQL service in the list, right-click it, and choose the Properties option. The Path to executable field contains the --defaults-file setting.
+
+After the server has started successfully, delete C:\mysql-init.txt.
+
+You should now be able to connect to the MySQL server as root using the new password. Stop the MySQL server and restart it normally. If you run the server as a service, start it from the Windows Services window. If you start the server manually, use whatever command you normally use.
+
+SET SQL_SAFE_UPDATES = 0;
+
+Servlets and JSP
+
+PrintWriter pw =res.getWriter();
+		pw.println(
+		"<body bgcolor='blue'> <h1>"
+		+ " Welcome to servlets</h1></body>");	
+
+<web-app>
+<servlet>
+  <servlet-class>servletapp.Main</servlet-class>
+  <servlet-name>Demo</servlet-name>
+</servlet>
+<servlet-mapping>
+
+  <servlet-name>Demo</servlet-name>
+  <url-pattern>/main</url-pattern>
+</servlet-mapping>
+
+</web-app>
+
+
+
+
+
