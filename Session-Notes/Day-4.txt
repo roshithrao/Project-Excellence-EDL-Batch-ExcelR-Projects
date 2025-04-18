@@ -1,0 +1,1855 @@
+Day-4 Agenda:
+================
+
+Database and SQL
+Jdbc
+Hibernate
+Servlets and JSP
+Spring, Springboot
+Ecommerce App -> Folder structure
+===================================================================
+
+Collection of data -> Database
+
+1. Data Organsiation will be good
+
+2. Permanant Storage
+
+3. Easy access and from anywhere I can access if you were working server/cloud databases
+
+4.Secure 
+
+
+ SQL :( Structured Query Language) => Declarative -> You just mention what you want and language will take care of everything.
+
+SQL/ Relational -> Tables -> rows and columns -> MySQL
+
+
+NOSQL/Non-Relational -> JSON Format -> Mongodb
+Students: {
+    {
+       id: "Lavanya",
+       marks: 100,
+       skill: Java
+      occupation: "Student"
+
+
+    },
+
+    {
+       id: "Swathi,
+       marks: 90,
+       skill: Java
+
+    }
+   
+
+
+}
+
+
+
+  Operations that can be performed on databases:
+
+  C -> create
+
+  R -> read 
+
+  U  -> update
+
+  D  -> delete
+
+   DBMS -> Database Management Systems
+==========
+
+ DBMS is a software where we interact to manage my database operations
+
+Example:
+
+  ORACLE, MYSQL, POSTGRESSQL,MS SQL SERVER e.t.c.,
+
+  IDE : MYSQL
+
+
+Types of Databases:
+======================
+
+1. Relational/SQL Db
+
+The data will be stored in the form of Tables(Rows and columns)
+Ex:   ORACLE, MYSQL, POSTGRESSQL,MS SQL SERVER e.t.c.,
+
+2. Non-Relational/ NOSql Db -> in the form of JSON/Scripting format
+Ex: Mongodb, Cassandradb....e.tc.,
+
+{
+  {
+    id:23,
+    name: 'rtyu',
+    skill: 'java',
+    posts : [
+
+    ],
+   comments: [     ]
+   },
+  {
+     id:
+ 
+
+}
+
+SQL Commands:
+==============
+
+DDL
+
+DML
+
+DQL
+
+DCL
+
+TCL
+
+
+   DDL( Data definition language) -> When you want work with structure of the table/schema :
+========================================
+   1. create database
+      create table
+ 
+   2. alter table
+      
+   3. drop table
+      drop database
+  
+   4. truncate table
+
+
+   sl : read differences between drop and truncate, delete?
+         Work with ddl commands ?         
+
+   DML( Data Manipulation Language) -> When you wanted to change the data in the table
+-=====================================
+
+   1. insert 
+   
+   2. Update
+
+   3. delete   
+   
+  DCL( Data control Language) -> When you wanted to give or revoke permissions to data
+========================================
+
+  1. grant
+  
+  2. revoke
+
+ TCL ( Transaction Control Language) -> When you wanted to work with Transactions 
+=====================================
+
+  1. commit
+
+  2. rollback
+
+ DQL ( Data Query Language) -> When you wanted to fetch the data
+==============================
+
+  1. select
+
+
+  We will be mainly concentrating on : DDL, DML, DQL 
+ 
+
+
+  create, alter, drop , truncate - DDL
+
+  insert, update, delete - DML
+
+  select - DQL
+
+
+
+create database excelr_projects; // for creating database
+ 
+show databases; //for showing all the databases
+
+use excelr; //for using the database
+
+create table Student(stud_id int,stud_name varchar(20), marks int); //for creating the table inside the database
+
+insert into Student(stud_id,stud_name) values(1,'Roshith'); //for insertion of values into only some of the columns
+
+insert into Student values(2,"Varshini",100); //for insertion of values in all the columns
+
+insert into Student values (3,"Jaya Prakash",70),(4,"Navin",80); //insertion of multiple values in the same query.
+
+select skill from Student; //if ib wanted to get only marks column
+
+select * from Student; //fetching all the rows from the table
+
+Aggregate functions :
+================
+
+select min(marks) from Student;
+
+select avg(marks) from Student;
+
+select max(marks) from Student;
+
+select count(stud_id) from Student;
+
+select sum(marks) from Student;
+
+select marks from Student where stud_id=101;
+
+
+select stud_name from Student where marks = (select max(marks) from Student); //Nested Query
+
+Update Student set marks = 90 where stud_id = 1; // Updating a specific column
+
+select * from Student;
+
+alter table Student add column skill varchar(20); //adding another column
+
+select * from Student;
+
+update Student set skill = "java"; //updating all the colulmns at the same time
+
+select * from Student;
+
+delete from Student where stud_id=1; //delete a specific row
+
+select * from Student;
+
+drop table Student; //delete whole table
+
+select * from Student;
+
+show tables; //to show all the tables that were there in the database
+
+
+insert -> into
+update -> set
+delete -> fro
+
+MySQL Constraints
+====================
+The constraint in MySQL is used to specify the rule that allows or restricts what values/data will be stored in the table.
+
+It helps to limit the type of data that will be inserted inside the table.
+
+Types of MySQL Constraints
+==========================
+Constraints in MySQL is classified into two types:
+
+Column Level Constraints: These constraints are applied only to the single column that limits the type of particular column data.
+
+Table Level Constraints: These constraints are applied to the entire table that limits the type of data for the whole table.
+
+CREATE TABLE new_table_name (  
+    col_name1 datatype constraint,  
+    col_name2 datatype constraint,  
+    col_name3 datatype constraint,  
+    .........  
+);  
+
+The following are the most common constraints used in the MySQL:
+
+NOT NULL
+CHECK
+DEFAULT
+PRIMARY KEY
+AUTO_INCREMENT
+UNIQUE
+INDEX
+ENUM
+FOREIGN KEY
+
+
+Self: learn Sql joins
+
+
+NOT NULL Constraint
+=========================
+This constraint specifies that the column cannot have NULL or empty values. The below statement creates a table with NOT NULL constraint.
+
+mysql> CREATE TABLE Student(Id INTEGER, LastName TEXT NOT NULL, FirstName TEXT NOT NULL, City VARCHAR(35));  
+Execute the queries listed below to understand how it works:
+
+mysql> INSERT INTO Student VALUES(1, 'Hanks', 'Peter', 'New York');  
+  
+mysql> INSERT INTO Student VALUES(2, NULL, 'Amanda', 'Florida');   
+
+
+how to install mysql   ?
+=================
+
+    
+Firstly go to control panel through your desktop search and uninstall if any mysql is already there.
+
+  1. Go to google and type mysql
+
+   2. go to official website of mysql and go to downloads
+
+   3. Go below and click on mysql community(GPL) downloads
+
+   4. Click on mysql installer for windows
+
+    5. click download for 2nd one which works for both 32 bit and 64 bit  (i.e., with 437 MB)
+
+    6. Click on no thanks, just start my download.
+
+    7.Once it is download, double click on it to install, Once its loaded select  setup type as custom.
+
+   8.Click next and go to available products and select mysql version by clicking on + symbol and drag it into side window using green     arrow.
+
+   9. Then, in applications do the same and select mysql workbench version and drag it into side window using green arrow.
+
+  10. Do the same for selecting shell and click on next.
+
+  11. Now, on the next page click on execute and click on next until password setup page with default settings.
+
+  12. put password for mysql as root123 and then keep the default settings and click on next and then execute, next, finish. 
+
+Setting up environmental variables for mysql :
+================================
+
+ 1. In program files, go to mysql folder > mysql server > bin
+
+ 2. Copy the path same like we did for java.
+
+ 3. Now open enviromental variables dialog box and go to Path section and Paste the bin path there and click on ok, before that see if there is any old mysql bin path is there, if it is there already, delete that and place the new one.
+
+no go to cmd and type the following commands :
+
+mysql --version
+
+mysql -u root -p
+
+enter password : root123
+
+now the server of mysql is started in cmd.
+
+Agenda :
+==========
+
+What is JDBC ?
+
+Why is it used ?
+
+steps to develop java and database connectivity application.
+
+Then we will code the jdbc application.
+
+
+JDBC 
+==========
+
+JDBC stands for java database connectivity.
+
+As the name only indicates it provides connection between java application and relational database.
+
+Jdbc is a technology used to communicate with database from java application.
+
+ It is a part of JavaSE (Java Standard Edition). 
+
+   Java SE => core java, JDBC -> console-based apps
+  Java EE => Servlets, JSP,Spring,Springboot - web apps.
+  Java ME => Android, kotlin -> Mobile applications
+
+  Jdbc API is a java API, that can access any kind of tabular data especially stored in RDBMS
+
+  1. java.sql package
+
+  2.javax.sql package
+
+
+JDBC API uses JDBC drivers to connect with the database
+
+(show diagram)
+
+   javap java.sql.DriverManager
+
+   javap java.sql.Connection
+
+  Driver :
+  ======
+
+   A driver is a software and it is used to connect application and database.
+
+Drivers are basically divided into 2 categories :
+
+1. Open Database Connectivity Drivers
+
+2. JDBC Drivers
+
+ODBC drivers are used to connect non java applications(C,C#,.Net,python) and databases.
+
+ODBC cannot understand java instructions because ODBC developed before java technology.
+
+To solve the above situation, JDBC drivers are introduced :
+
+
+There are four types of JDBC drivers:
+
+ 1. JDBC-ODBC Bridge Driver (or) Type-1 driver
+  2. JDBC Native API Driver (or) Type-2 driver 
+  3. Network Protocol Driver (or) Type-3 driver and
+  4. Thin Driver (or) JDBC 100 % Pure Java Driver (or) Type-4 driver.
+
+There are 2 ways to connect java application and database :
+
+1. By using JDBC and ODBC drivers.
+
+2.By using only JDBC drivers.
+
+
+Mostly, we will use Type-2 or Type-4 drivers as many drivers are there for each variety of database.
+
+With Type-1, since it acts as translator, communication becomes very slow.
+
+1.) Jdbc- Odbc Bridge Driver :
+=========================
+
+Communication becomes very slow.
+
+So, at JDK 1.8 only, it is removed.
+
+Driver class name :
+==============
+sun.jdbc.odbc.JdbcOdbcDriver
+
+Driver location :
+================
+rt.jar file in JDK 1.7 and below versions
+
+Note :   This driver removed from JDK 1.7 and below versions.
+=====
+
+JAR file location :
+=================
+
+C:/Program files/ Java/ JDK 1.7/jre/lib
+
+Driver vendor :
+================
+Sun microsystems
+
+url to access the driver :
+=====================
+jdbc : odbc : dsn( data source name)
+
+Note: Type-1 drivers are outdated in 2014 itself since they are developed in C language.
+
+Type-1 driver architecture :
+====================
+
+(show diagram)
+
+Type - 1 driver functionality :
+====================
+
+It converts java instructions to odbc understandable format.(Translator)
+
+Advantages of Type-1 driver :
+=====================
+
+1. It is very easy to connect.
+
+2. Only one driver, that supports all odbc enabled databases.
+
+Disadvantages of Type-1 driver :
+======================
+
+1. Performance overhead since java calls should go through via jdbc and odbc drivers.
+
+2. DSN creation required.
+
+3.Database client software needs to be installed on local machine.
+
+4. It is not suitable for applets(GUI) because applets has the following security restrictions :
+
+a). Applets cannot read from local disk( DSN will be in hard disk)
+
+b). Applets cannot write data to local dcisk.
+
+c.) Applets cannot open new network connection other than the server from which it is loaded.
+
+Odbc tool is common for all the databases.
+
+2. Type - 2 Driver (JDBC Native API Driver)
+===================================
+Type- 2 driver is also called as Partial java driver (or) partly java native driver.
+
+Type-2 driver are developed in java language and native languages.
+
+Type - 2 driver class name for oracle database :
+=================================
+
+oracle.jdbc.driver.OracleDriver
+
+Driver vendor :
+===============
+
+oracle corporation.
+
+Driver location :
+=================
+
+ojdbc14.jar file in oracle log express edition.
+
+ojdbc6_g.jar file in oracle 11g express edition.
+
+URL to access Type-2 driver :
+======================
+
+jdbc : oracle : oci8 : @service_id [ Jdbc -> protocol , oracle -> subprotocol)
+
+To get the service_id use the following sql query :
+===============================
+
+SQL > select * from global_name;
+
+Type-2 Driver architecture :
+=====================
+
+( show diagram )
+
+Type-2 Driver functionality :
+=====================
+
+It converts java calls into native calls.
+
+Advantages :
+=============
+1. It is lilltle bit fast as compared to Type-1 driver.
+
+2.DSN creation is not required.
+
+Disadvantages :
+=================
+
+1. Seperate driver required for every database.
+
+2. All databases are not having Type-2 drivers( Like MS_ACCESS).
+
+3. Database software needs to be installed on same system.
+
+4. It is also not suitable for applets.
+
+5. It is only suitable for stand-alone applications not internet applications.
+
+Note :
+=====
+Type - 1 (Outdated)
+Type - 2 ( Rear usage)
+
+Native calls : Database understandable calls.
+
+
+Type - 3 Driver ( JDBC Network protocol driver) :
+===================================
+
+TYPE - 3 driver is also called as Middleware driver or JDBC Net Pure Java Driver.
+
+Type - 3 drivers are developed in java language only.
+
+It works based on connection pooling management.
+
+Example :
+=========
+Weblogic RMI Driver.
+
+RMI stands for remote method invocation.
+
+Connection Pooling Management (CPM) :
+==============================
+
+(show diagram)
+
+After the completion of task, again the object is placed in connection pool.
+
+The main advantage of this is is the objects(connection) are reusable.
+
+With server settings only, we can create the objects (Based on server hardware )
+
+After CPM concept, this driver became popular.
+
+Type-3 Driver Architecture :
+====================
+
+(show diagram)
+
+It passes java instructions to middleware system.
+
+Advantages :
+============
+
+1. Java instructions are database independent from local system to middleware system ( In Facebook which database is used, we dont know , but we load data from client local machine)
+
+2. DSN creation is not required in local machine.
+
+3.Database software not needed on local system.
+
+4. It is suitable for applets.
+
+Disadvantages :
+===============
+
+1. Extra layer added in architecture i.e., middleware system.
+
+2. Maintenance of Network Protocol driver becomes costly because it requires database-specific coding to be done in the middle tier.
+
+Type-4 Driver(JDBC 100 % Pure java driver)
+===============================
+
+It is also called as JDBC Native Protocol Driver (or) Thin Driver
+
+Type-4 Driver class Name for Oracle Database :
+================================
+oracle.jdbc.driver.OracleDriver
+
+URL to access driver :
+================
+
+jdbc : oracle : thin : @domain name : port-no : service_id ( thin -> logical name, domain_name -> computer name, port_number : it is used to identify the service)
+
+To get the service_id use the following sql query :
+===============================
+
+SQL > select * from global_name;
+
+Note :
+=======
+
+Type - 2 and Type-4 class name is same but differentiating in URL , oci8 or thin 
+
+Type- 2 : database must be installed on same system.
+
+Type-4 : database can be anywhere.
+
+Type-4 driver architecture :
+====================
+
+(show diagram)
+
+Type-4 driver functionality :
+======================
+
+It passes the java instructions directly to a database.
+
+Advantages :
+===============
+
+1. It is a highest performance driver as compared to all other drivers.
+
+2. DSN creation not required.
+
+3. Database not needed on same system.
+
+4. It is suitable for applets.
+
+Disadvantages :
+============
+
+1. Seperate driver required for every database.
+
+
+Note : 
+===
+If application requires more than one database then use type-3 driver otherwise use type-4 driver.
+
+Steps to develop database application using TYPE-4 driver :
+======================================
+
+1. Loading a specific JDBC Driver
+
+2.Establishing a connection.
+
+3.Performing the task.
+
+4. Closing the connection.
+
+JDBC API :
+=============
+
+  Jdbc API is a java API, that can access any kind of tabular data especially   stored in RDBMS
+
+  1. java.sql package
+
+  2.javax.sql package
+
+
+To connect java application with database there are 7 steps :
+============================================
+
+1. import the package.[java.sql.*]
+
+2. Load(mysql-connector) and register the driver (Class.forName(com.mysql.jdbc.driver))
+
+ 3. Establish the connection between java application and database -> instantiating the Connection interface
+
+  4. Create the statements -> Statement(execute the query),PreparedStatement(execute the query with dynamic values),CallableStatement(Stored Procedures)
+
+  5. send and execute the query
+
+  6.Process the results from ResultSet
+
+   7. Close the connections.
+
+
+coding example :
+============
+
+import java.sql.*;
+
+main()
+{
+
+   Class.forName(com.mysql.jdbc.driver);
+
+   Connection con = DriverManager.getConnection("URL", "UN", "PWD")[ URL -> in dbms you may have multiple db's, which database you wanted to work is specifierd here]
+
+   Statement stmt = con.createStatement();
+
+   ResultSet res = stmt.executeQuery("select * from student");
+
+   while(rs.next())    
+   {
+
+        S.O.P(rs.getInt(1)+" "+rs.getString(2));
+   }
+
+  stmt.close();
+  con.close();
+
+}
+
+1.DDL -> create, alter, drop, truncate
+
+2. DML -> inset, update , delete
+
+3. DQL -> select
+
+
+ Standard steps followed for developing JDBC Application :
+==========================================
+
+1. Import the java.sql.* package
+
+2. Load  and register the driver
+
+3.Establish the connection between java application and database
+
+public abstract Statement createStatement() throws java.sql.SQLException;
+
+4. Create a Statement Object.
+
+5. Send and execute the query
+
+1.executeQuery() ->  select command
+2.executeUpdate() -> insert, update delete commands
+3.execute() -> Mixed(Nested queries)
+
+6. Process the result from ResultSet
+
+7. Close the ResultSet,Statement,Connection Objects.
+
+
+
+
+
+
+
+
+
+sql commands :( in mysql workbench )
+============
+
+show databases;
+create database advanced_java;
+show databases;
+
+use advanced_java;
+
+
+create table Student(stud_id int, stud_name varchar(20), marks INT);
+
+insert into Student values(001,"Harish",65),(002,"Ravi",75),(003,"Manjunath",87);
+
+select * from Student;
+
+
+code :
+=====
+
+package com.practice.main;
+
+
+//rt.jar -> jdk s/w -> j2SE
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import com.mysql.cj.jdbc.Driver;
+
+ class TestApp2 {
+
+	public static void main(String[] args) throws SQLException {
+		// TODO Auto-generated method stub
+
+		 //1. Load and Register the Driver
+		
+		 Driver driver = new Driver();
+		
+	                     DriverManager.registerDriver(driver);
+		
+		
+		//2. Establish the connection b/w java app. and database
+		
+		String url ="jdbc:mysql://localhost:3306/peters";
+		String uname = "root";
+		String pwd = "root";
+		
+		Connection con = DriverManager.getConnection(url,uname,pwd);
+		
+		//3. Creating the statement object
+		Statement stmt = con.createStatement();
+		
+		//4. send and execute the Query
+		
+		  String sqlSelectQuery = "select stud_id,stud_name,marks from Student";
+		
+		  ResultSet rs =stmt.executeQuery(sqlSelectQuery);
+		    
+		  //5. Process the result from ResultSet
+		    
+		    System.out.println("sid \t sname\t marks");
+		    while(rs.next())
+		    {
+		    	int sid = rs.getInt("stud_id");
+		    	String sname = rs.getString("stud_name");
+		    	int marks = rs.getInt("marks");
+		    	
+		    	System.out.println(sid+"\t "+sname+"\t "+marks);	
+		    	
+		    }
+		    
+		    //6. Closing the ResultSet,Statement and Connection Objects.
+		    
+		    rs.close();
+		    stmt.close();
+		    con.close();
+		   		    
+		
+	}
+
+}
+
+
+Interface : collection of public static final variables and public abstract methods
+
+interface A
+{
+ void abc();
+}
+
+class B implements A
+{
+
+    void abc()
+   {
+       ====
+    }
+}
+
+my sql connector jar download -> https://dbschema.com/jdbc-driver/MySql.html
+
+
+for executing the Query there were 3 methods :
+====================================
+
+1. Select commands
+
+2. Non-select commands
+
+  public abstract java.sql.ResultSet executeQuery(java.lang.String) throws java.sql.SQLException;
+
+executeQuery(String) -> select Query
+
+executeUpdate(String) -> Non select Queries
+
+execute(String) -> Both select and non select Queries
+
+Autoloading in JDBC :
+===================
+
+2. Load and register the driver:
+==========================
+
+-> In earlier version of JDBC 3.x we were loading and registering the driver using the following approach,
+
+  import com.mysql.cj.jdbc.Driver;
+
+       Driver driver = new Driver();
+
+       DriverManager.registerDriver(driver);
+
+-> Alternate to this approach we can also load the driver as shown below :(From JDBC 3.x to JDBC 4.x)
+
+        Class.forName("com.mysql.cj.jdbc.Driver");
+
+
+ -> We say a class represents a Driver, if  and only if the class has implemented an interface called "java.sql.Driver(I)"
+
+    class Driver(c) implements Driver(I)
+   {
+
+
+   }
+  
+-> From JDBC 4.x onwards loading and registering would happen automatically depending upon the jar added in the classpath location of the project.
+
+ This feature of JDBC 4.x is called as "Autoloading"
+
+ jdbc application code in industry standard
+==============================
+
+package com.seven;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class TestApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String url = "jdbc:mysql://localhost:3306/advanced_java";
+		String uname = "root";
+		String pwd = "root";
+
+		Connection con = null;
+		Statement statement = null;
+		ResultSet rs = null;
+
+		try {
+			con = DriverManager.getConnection(url, uname, pwd);
+			if (con != null) {
+				statement = con.createStatement();
+				if (statement != null) {
+					rs = statement.executeQuery("select * from Student");
+					if (rs != null) {
+						System.out.println("sid \t sname\t marks");
+						while (rs.next()) {
+							int sid = rs.getInt("stud_id");
+							String sname = rs.getString("stud_name");
+							int marks = rs.getInt("marks");
+
+							System.out.println(sid + "\t " + sname + "\t " + marks);
+
+						}
+					}
+				}
+			}
+		} catch (SQLException se) {
+			se.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (rs != null) {
+				try {
+					rs.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			if (statement != null) {
+				try {
+					statement.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			if (con != null) {
+				try {
+					con.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+
+		}
+
+	}
+
+============================================================================================
+DML Queries Code :
+============
+
+package com.dev;
+
+
+import java.sql.*;
+
+import com.mysql.cj.jdbc.Driver;
+
+public class Test {
+
+	public static void main(String[] args) throws SQLException {
+		// TODO Auto-generated method stub
+		
+		String url = "jdbc:mysql://localhost:3306/advanced_java";
+		String username = "root";
+		String password = "root";
+		
+		
+
+		Driver driver = new Driver();
+		
+		DriverManager.registerDriver(driver);
+		
+		Connection con = DriverManager.getConnection(url,username,password);
+		
+		  Statement stmt = con.createStatement();
+		  
+		  
+		  String sqlInsertQuery = "insert into Student(stud_id,stud_name,marks) values(5,'sravan',89)";
+		  String sqlUpdateQuery = "update Student set marks=80 where stud_name='Manju'";
+		  String sqlDeleteQuery = "delete from Student where stud_name='Jeevan'";
+		  
+		  int rowsEffected = stmt.executeUpdate(sqlDeleteQuery);
+		  
+		  System.out.println("No of rows effected: "+rowsEffected);
+		
+		stmt.close();
+		con.close();
+		
+	}
+
+}
+
+============================================================================
+Dyamic Input Jdbc Application 
+=====================
+
+package com.dev.dynamicinput;
+
+
+import java.sql.*;
+import java.util.*;
+
+public class TestDynamicInput {
+
+	public static void main(String[] args) throws SQLException {
+		// TODO Auto-generated method stub
+
+		String url = "jdbc:mysql://localhost:3306/advanced_java";
+		String username = "root";
+		String password = "root";	
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the student id: ");
+		int stud_id = sc.nextInt();
+		System.out.println("Enter the student name: ");
+    	String stud_name = sc.next();
+		
+		 stud_name = " ' "+stud_name+" ' ";
+		
+		System.out.println("Enter the student marks: ");
+		int marks = sc.nextInt();
+		
+		
+	   Connection con = DriverManager.getConnection(url,username,password);	
+
+	   Statement stmt = con.createStatement();
+	   
+	   //"insert into Student(stud_id,stud_name,marks) values(5,'sravan',89)";
+	   
+	   String sqlInsertQuery = "insert into student(stud_id,stud_name,marks) values("+stud_id+",'"+stud_name+"',"+marks+")";
+	  
+	   
+	   String formattedInsertQuery = String.format("insert into Student(stud_id,stud_name,marks) values(%d,%s,%d)",stud_id,stud_name,marks);
+	   
+	   
+	   
+	   //System.out.println(formattedInsertQuery);
+	   
+	   int rowsEffected = stmt.executeUpdate(formattedInsertQuery);
+	   
+	   System.out.println("No of rows effected :"+rowsEffected);		
+		
+		
+	}
+
+}
+
+
+============================================================================================
+
+Mysql connector jar download link : https://jar-download.com/artifacts/mysql/mysql-connector-java
+
+
+Resetting password in mysql:
+====================
+Log on to your system as Administrator.
+
+Stop the MySQL server if it is running. For a server that is running as a Windows service, go to the Services manager: From the Start menu, select Control Panel, then Administrative Tools, then Services. Find the MySQL service in the list and stop it.
+
+If your server is not running as a service, you may need to use the Task Manager to force it to stop.
+
+Create a text file containing the password-assignment statement on a single line. Replace the password with the password that you want to use.
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass';
+
+Save the file. This example assumes that you name the file C:\mysql-init.txt.
+
+Open a console window to get to the command prompt: From the Start menu, select Run, then enter cmd as the command to be run.
+
+Start the MySQL server with the init_file system variable set to name the file (notice that the backslash in the option value is doubled):
+
+
+C:\> cd "C:\Program Files\MySQL\MySQL Server 8.3\bin"
+C:\> mysqld --init-file=C:\\mysql-init.txt
+If you installed MySQL to a different location, adjust the cd command accordingly.
+
+The server executes the contents of the file named by the init_file system variable at startup, changing the 'root'@'localhost' account password.
+
+To have server output to appear in the console window rather than in a log file, add the --console option to the mysqld command.
+
+If you installed MySQL using the MySQL Installation Wizard, you may need to specify a --defaults-file option. For example:
+
+C:\> mysqld
+         --defaults-file="C:\\ProgramData\\MySQL\\MySQL Server 8.3\\my.ini"
+         --init-file=C:\\mysql-init.txt
+The appropriate --defaults-file setting can be found using the Services Manager: From the Start menu, select Control Panel, then Administrative Tools, then Services. Find the MySQL service in the list, right-click it, and choose the Properties option. The Path to executable field contains the --defaults-file setting.
+
+After the server has started successfully, delete C:\mysql-init.txt.
+
+You should now be able to connect to the MySQL server as root using the new password. Stop the MySQL server and restart it normally. If you run the server as a service, start it from the Windows Services window. If you start the server manually, use whatever command you normally use.
+
+
+SET SQL_SAFE_UPDATES = 0;
+
+
+JPA and Hibernate:
+==================
+
+Drawbacks of using JDBC Technology :
+=============================
+
+1. JDBC code is not portable.
+
+2. Boiler plate code i.e., Duplication of code (common logic in all the applications).
+
+3.All Jdbc exceptions are checked exceptions.
+
+4. In Real-time application development, data will be available in the form of objects but here plain text is inserted into databsase using jdbc.
+
+5. Jdbc technology will not support for persisting the java object.
+
+6. Jdbc will not support caching mechanism( to reduce round trips from java appplication to database(repetitive data is placed in cacahe)) so performance will be low.
+
+7. Associations( building relationship between tables is very complex using jdbc).
+
+
+To get over of these diadvantages, we have ORM Technology.
+
+What is ORM
+=============
+ORM stands for object relational mapping.
+
+ The name only indicates that directly object is put into the database. i.e., we are persisting the objects here.
+
+An ORM Technology simplifies the data creation, data manipulation and data access. 
+
+ -> object name => table name
+  -> object properties or variables => table column names
+
+  class Student
+  {
+
+      int sId;
+      String sName;
+      String sAddr;
+
+ }
+
+->  So, to support this ORM Technology, third party vendors  have come up with different frameworks or tools like 
+
+hibernate, ibatis, toplink e.t.c.,
+
+The ORM Technology internally uses :
+
+1. JDBC API 
+
+2. JTA(Java Transaction API)
+
+3. JNDI (Java Naming Directory Interface) -> CPM
+
+to interact with the database.
+
+-> But here switching from one tool to another tool has become difficult because these tools dont have the same structure.
+
+-> So, Sun microsystem has introduced one specific standard or specification i.e., JPA.
+
+What is JPA?
+===============
+
+-> JPA stands for java persistance API.
+
+-> It is not a framework, it is a specification(rules and guidelines how a ORM should behave) to implement hibernate or ibatis or toplink e.t.c., i.e., different ORM tools.
+
+The javax.persistence package contains the JPA classes and interfaces. 
+
+Popular implementations are Hibernate, Ibatis, EclipseLink and Apache OpenJPA
+
+Hibernate is a tool/framework implemented for JPA specification given by SUNMS.
+
+
+        ORM(Technology) -> JPA(Specification) -> Hibernate(ORM Tool or Implementation of JPA)
+
+Note :
+====
+-> We should not say we are developing JPA application because JPA is just a specification and we definently need implementation tools like hibernate or ibatis or toplink to develop ORM applications.
+
+Hibernate Framework
+======================
+
+Hibernate is a Java framework that simplifies the development of Java application to interact with the database. 
+
+It is an open source, lightweight, ORM (Object Relational Mapping) tool. 
+
+Hibernate implements the specifications of JPA (Java Persistence API) for data persistence.
+
+What is a Framework?
+==================
+
+A Framework is a ready-made architecture that is built on the top of java technology that reduces the redundant or duplicate or boiler-plate code.
+
+Advantages of Hibernate Framework
+=============================
+
+1) Open Source and Lightweight
+
+2) Fast Performance : because cache is internally used in hibernate framework.
+
+3) Database Independent Query
+
+HQL (Hibernate Query Language) is the object-oriented version of SQL. It generates the database independent queries. So you don't need to write database specific queries. 
+
+Before Hibernate, if database is changed for the project, we need to change the SQL query as well that leads to the maintenance problem.
+
+4) Automatic Table Creation
+
+5) Simplifies Complex Join: Fetching data from multiple tables is easy in hibernate framework.
+
+6) Provides Query Statistics and Database Status: Hibernate supports Query cache and provide statistics about query and database status.
+
+Steps for creating a Hibernate Application:
+==================================
+
+1. Create the Persistent class(Model class)
+2. Create the mapping file for Persistent class
+3. Create the Configuration file
+4. Create the class that retrieves or stores the persistent object
+5. Load the jar file
+6. Run the first hibernate application by using command prompt
+
+SessionFactory : It will create a pool of  many objects that are required for us to start our application like objects related to JDBC, JTA, JNDI. It is heavy-weight.
+
+From that factory, you will get one session using openSession();
+
+To write one application we need to use 4 files as shown below
+a. Model class -> POJO -> Plain old java object -> Java bean
+b. Mapping code(xml/annotation)
+c. Configuration file(xml)
+d. Test class
+
+
+Model class
+=================
+It represent Model data, it can be also called as Entity/Pojo
+
+It is a class which follows rules given by Hibernate Framework
+a. class must have package statement
+b. class must be a public type
+c. No of tables = No of classes
+d. Class can have variables,must be private
+[No of columns = No of variables]
+e. class should have zero argument constructor and setter-getter
+methods.
+f. class can override toString(),hashcode(),equals() from Object
+class.
+g. class can have annotations given by JPA and also core library
+annotations.
+h. class can inherit(IS-A)[extends/implements] only hibernate api.
+
+Mapping Code
+============
+1. Annotations
+2. XML
+
+@Entity
+@Table(name="student_table")
+class Student{
+
+  @Id
+  @Column(name="stud_id")
+   int id;
+
+  String name;
+
+  int marks;
+
+}
+
+Using Annotations we can map java class to DBTables as shown below
+=========================================================
+1. @Entity
+It maps models class with DBTable and Variables with Column Names.
+2. @Id
+It indicates primary key, Every table must contain primary key column.
+3. @Table(optional)
+It indicates the tableName which is been mapped with Model class.
+4. @Column(optional)
+It indicates the columName of table which is been mapped with
+variableName of Model class.
+
+Note:
+if @Table,@Column are not provided then by default className has
+TableName,variableName has ColumnName(taken by hibernate)
+
+
+eg#1
+@Entity
+@Table(name="empTab")
+public class Employee
+{
+@Id
+@Column(name="eid")
+private int empId;
+@Column(name="ename")
+private String empName;
+@Column(name="esal")
+private double empSal;
+}
+
+eg#2.
+@Entity
+@Table(name="prodTab")
+public class Product
+{
+@Id
+@Column(name="pid")
+private int prodId;
+@Column(name="pcode")
+private String prodCode;
+@Column(name="pcost")
+private double prodCost;
+}
+
+
+Maping w.r.t XML
+==============
+Employee.hbm.xml
+================
+eg#1.
+<hibernate-mapping>
+<class name="in.tech.model.Employee" table="empTab">
+<id name="empId" column="eid"/>
+<property name="empName" column="ename" />
+<property name="empSal" column="esal" />
+</class>
+</hibernate-mapping>
+
+eg#2
+Product.hbm.xml
+==============
+<hibernate-mapping>
+<class name="in.tech.model.Product" table="prodTab">
+<id name="prodId" column="pid"/>
+<property name="prodCode" column="pcode" />
+<property name="prodCost" column="pcost" />
+</class>
+</hibernate-mapping>
+
+
+3. Configuration file
+
+-> For every new application, one configuration file should be given
+-> It is XML format.
+****configuration = Property + mapping class
+Property => It represents key-value pair data.
+
+hibernate.cfg.xml
+==============
+<hibernate-configuration>
+<session-factory>
+<!-- Database connection settings -->
+
+<property
+name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+
+<property
+name="connection.url">jdbc:mysql://localhost:3306/enterprisejavabatch</property>
+
+<property name="connection.username">root</property>
+
+<property name="connection.password">root123</property>
+
+<!-- JDBC connection pool (use the built-in) -->
+
+<property name="connection.pool_size">1</property>
+
+<!-- SQL dialect -->
+<property name="dialect">org.hibernate.dialect.MySQL55Dialect</property>
+
+<!-- Echo all executed SQL to stdout -->
+<property name="show_sql">true</property>
+
+<!-- Format SQLOuput to stdOut--->
+<property name ="format_sql">true</property>
+
+
+<!--Mapping information-->
+
+<mapping resource="Employee.hbm.xml"/>
+<mapping class = "in.tech.Model.Employee"/>
+</session-factory>
+</hibernate-configuration>
+
+
+<!-- SQL dialect -->
+<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+dialect => It is a class available inside package called
+org.hibernate.dialect,it will generate the SQLQuery when the
+programmer performs operation.
+
+For every database dialect is different.
+Oracle => nature of query
+MySQL => nature of query
+PostgreSQL => nature of query
+
+<!-- Echo all executed SQL to stdout -->
+<property name="show_sql">true</property>
+This property is used to see the Query generated by the dialect based
+on the datbase environment on the console.
+
+<!-- Echo all executed SQL to stdout -->
+<property name="format_sql">true</property>
+This property is used to fromat the Query generated by the dialect
+based on the datbase environment on the console.
+
+<property name =
+'hibernate.hbm2ddl.auto">
+
+[validate/create/update/create-drop]</property>
+
+validate =>hibernate creates no table, programmer should create or modify tables
+manually.
+this is considered as default value.
+
+create = > hibernate always creates new table,if table exists it will drop the table.
+
+update => hibernate creates new table,if table doesnot exists, otherwise it will reuse the same table.
+
+create-drop=>This option is used for testing purpose not in development creates a new table and perform operation,at last it will drop the table.
+
+
+4. Test class
+=============
+To perform any operation in hibernate we must write Test class.
+It is used to perform operation like select/nonselect.
+
+"Transaction" object is requried if we perform non-select operation
+"Transaction" object is not required if we perform select operation.
+
+Test class coding and its execution flow
+================================
+1. Create a configuration object
+2. Load .cfg.xml file into configuration object using configure().
+3. Build SessionFactory object using cfg which handles
+a. Loading driver class
+b. Creating connection
+c. Prepare statement objects.
+;;;;;;
+4. use SessionFactory and get Session object to perform Persistence operation.
+5. Begin Transaction, if the operation in Non-Select.
+6. Now perform operation using Session object.
+7. Commit or rollback if transaction has started.
+8. close the session at the end.
+
+Note: To specify the configuration details and mapping details we need to write xml file.
+if the filename is hibernate.cfg.xml then it promotes automatic loading,otherwise we need to read those data from "FileInputStream".
+
+   [1,2,5,6,7]
+    s = 6
+   4th position
+   s=8
+   not found
+
+
+TestApp.java
+=============
+
+import java.io.Serializable;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import in.Model.Employee;
+
+public class TestApp {
+
+	public static void main(String[] args) {
+
+		// Step 1. Creating a configuration object
+		Configuration cfg = new Configuration();
+
+		// Step2. configure hibernate.cfg.xml file to Configuration object
+		cfg.configure();
+
+		// Step3. Create SessionFactory Object
+		SessionFactory sessionFactory = cfg.buildSessionFactory();
+
+		// Step4. Get the Session Object from SessionFactory
+		Session session = sessionFactory.openSession();
+
+		// Step5. Begin the Transaction within a session
+		Transaction transaction = session.beginTransaction();
+
+		Employee employee = new Employee();
+		employee.setEmpId(10);
+		employee.setEmpName("sachin");
+		employee.setEmpSal(54556.7);
+
+		// Step6. Perform operations
+		Serializable object = session.save(employee);
+		System.out.println(object);
+
+		// Step7. Performing Transaction operations
+		transaction.commit();
+
+		// Step8. Close the session
+		session.close();
+
+	}
+}
+
+
+ jar: https://jar-download.com/artifacts/org.hibernate/hibernate-core
+
+
+Spring Data JPA -> save, fetch
+
+Employee DB
+Products DB
+
+CRUD -> JDBC, Hibernate
+
+ECommerce -> Flipkart -> Spring and springboot -> MVC Industry project
+
+===============================================================================
+Servlets and JSP:
+
+Servlets is a technology in java which is used to create web applications. 
+
+Java Servlet is a Java program that runs on a Java-enabled web server or application server. 
+
+It handles client requests, processes them, and generates responses dynamically. 
+
+Servlets are the backbone of many server-side Java applications due to their efficiency and scalability.
+
+Key Features:
+===================
+Servlets work on the server side.
+Servlets are capable of handling complex requests obtained from the web server.
+Generate dynamic responses efficiently.
+
+Java Servlet LifeCycle Methods
+1. init(): This method itializes the Servlet instance.
+
+
+@Override
+public void init() throws ServletException {
+    
+    // Initialization: Called once when the servlet is loaded into memory
+    System.out.println("Servlet initialized");
+}
+
+
+2. service(): This method Processes requests and invokes either doGet() and doPost() based on the request type.
+
+
+@Override
+protected void service(HttpServletRequest request, HttpServletResponse response) 
+throws ServletException, IOException {
+    
+    // Request handling: Called each time a request is made
+    String method = request.getMethod();
+    
+    if ("GET".equalsIgnoreCase(method)) {
+        doGet(request, response);
+    } else if ("POST".equalsIgnoreCase(method)) {
+        doPost(request, response);
+    }
+}
+
+
+3. destroy(): This method cleans up resources when the servlet is terminated.
+
+@Override
+public void destroy() {
+    
+    // Cleanup: Called once when the servlet is being destroyed
+    System.out.println("Servlet destroyed");
+}
+
+
+PrintWriter pw =res.getWriter();
+		pw.println(
+		"<body bgcolor='blue'> <h1>"
+		+ " Welcome to servlets</h1></body>");	
+
+web.xml:
+============
+
+<web-app>
+<servlet>
+  <servlet-class>servletapp.Main</servlet-class>
+  <servlet-name>Demo</servlet-name>
+</servlet>
+<servlet-mapping>
+
+  <servlet-name>Demo</servlet-name>
+  <url-pattern>/main</url-pattern>
+</servlet-mapping>
+</web-app>
+
+JSP:
+==========
+JavaServer Pages (JSP) is a server-side technology that creates dynamic web applications. It allows developers to embed Java code directly into HTML or XML pages, and it makes web development more efficient.
+
+JSP is an advanced version of Servlets. It provides enhanced capabilities for building scalable and platform-independent web pages.
+
+============================================================================
+
+Java Learning is all about 3 things:
+
+
+a. Java Language(Core java course) -Java SE
+
+b. Java Technology(JDBC,Servlet,JSP,JSTL,EJB's,JMS,....)
+EJB-> Enterprise Java Bean
+JMS-> Java messaging Service
+
+c. Framework(Hibernate,Spring,SpringBoot,MicroServices,RestApi's,....)
+
+-> Framework is not a new technology, rather it is an abstraction provided on top of technology.
+
+-> Thirdparty team would give apis in the form of jars which would generate boiler plate code based on the inputs we give to the internal containers of the framework.
+
+
+eg: hibernate -----> based on configuration details supplied, it will create JDBC environment
+
+
+Spring -----> based on configuration  will create an object and maintains the object and peforms dependancy injection.
+
+Different types of Framework to build application
+=================================================
+a. Web application based framework
+b. ORM Framework
+c. Application Framework
+d. BigData Framework
+e. Distrubuted Application Development framework
+etc....
+
+Webapplication Framework
+========================
+These frameworks provides abstraction on top of Servlet,JSP and simplifies MVC architecture based development.
+eg: Struts(Apache foundation)
+
+SpringMVC(part of Spring)----> interface21(pivotal team)
+
+JSF(Java Server Faces) -----> from SUNMS/OracleCorporation
+
+WebWork -------> symphony
+
+ORM Framework
+===================
+These frameworks provides abstraction on top of JDBC and simplifies to develop object based DBS/w independent persitence logic
+eg: Hibernate ------> redhat
+TopLink ------> oracle
+Ibatis ------> apache
+
+Application Framework
+===================
+It is an allrounder framework that provides abstraction on top of mulitple jee technologies and even on some frameworks to develop all kinds of logic and different type of app's.
+Ex: Spring,Springboot
+
+eg: Distrubuted application
+
+eg: myntra application
+flipkart application
+amazon application....
+facebook application(webapplications)
+
+SpringFramework is not good in developing Distrubuted applications, so we prefer using "WebServices".
+
+Distrubuted App development Framework
+===============================
+It simplfies the process of developing Distrubuted App's/Remoting Apps.
+
+Ex:
+SOAP(outdated),Rest/RestfulServices/Restful WebServices(latest) :: jersy,RestEasy,....
+
+Based on the mode of development we do, we have 2 types of framework
+a. Invasive Framework
+b. Non-Invasive Framework
+
+Invasive Framework
+================
+=> Devleoper class will extend or implement an interface given by framework api.
+class A extend Struts
+{
+
+
+
+}
+
+=> Because of exends and implements the devloper code would be tightly coupled with framework api.
+=> It won't promote portablity(moving the classes to new framework would not execute).
+eg: Servlet,Struts(1.X)
+
+Note: working for a company with a bond.
+
+Non-Invasive Framework
+====================
+=> Devloper class will not extend or implement any interface given by
+framework api.
+=> No extends and implements keyword, the devloper code would be loosely coupled with framework api.
+=> It promotes portablity(moving the classes to new framework would execute).
+eg: Spring,Hibernate,......
+
+Note: working for a company wihthout a bond.
+
+How Spring evolved?
+=======================
+1995 --->Applet(Good for gaming)
+1996 --->Java Bean[Technology used earlier]
+(Started developing by using java classes + java beans)
+
+Applet Limitations
+============
+a. Doesn't allow remote clients,it works only with local
+clients.
+b. Not suitable for large scale application
+c. Programmer should handle Middelware webservices along
+with primarylogic of the application.
+
+1998 ---> EJB(Enterprise java Bean) for building Distrubuted application
+Advantages
+============
+a. It can handle both remote and local clients.
+b. Gives built in middleware services
+Disadvantages
+=============
+a. It runs only in server mode(heavy weight
+containers)
+b. It is very complex to learn and use.
+
+2002/2003---> Spring Framework --------> RodJhonson(interface21)
+|===> Provides abstraction over
+technology/frameworks
+
+Advantages
+============
+a. All kinds of development is possible
+b. Applicationd development is non-invasive
+programming.
+c. Built in middle-ware
+services[Transactionservice,connectionpoolservice,....)
+d. Light weight application development
+e. Easy to learn and easy to use.
+
+Is Spring alternative to EJB,Struts,Hibernate,JEE technology?
+
+Spring vs EJB
+Answer. No , Spring framework is used to develop all kinds of app.
+WebServices are alternative to EJB's.
+
+Spring Vs Struts
+
+Answer. No, Struts will be used to build only webbased application
+Spring can be used to build any type of application.
+SpringMVC is an alternative to Struts.
+
+Spring vs Hibernate
+
+Answer. NO, hibernate is orm framework to build peristence logic
+Spring has its own orm module through which it promotes
+abstraction
+SpringORM,SpringDataJPA is an alternative to hibernate.
+
+Spring vs JEE(Java Enterprise Edition)
+Answer. No, JEE is a technology which gives api for persistence logic
+and buildding webapps
+Where as Spring provides an abstraction on top of JEE
+api's
+SpringJDBC-> JDBC,SpringMVC-> Servlet,JSP
+
+
+SpringCore
+==========
+=> It is base module for other modules
+=> This module is given to supply Springcontainers to perform Dependancy management.
+
+
+class A
+{
+
+    public static void main(String[] args)
+    {
+             A obj = new A();
+              A  obj1   = obj.clone();
+   }
+}
+ 
+
+=> This module gives 2 spring containers/IOC[Inversion Of Control] containers/springbean container
+called
+a. BeanFactory
+b. ApplicationContext(Latest one) -> Extended version of BeanFactory
+
+Choose BeanFactory if...	
+You need lazy loading (low memory usage)	
+You have a small, simple project	
+You don’t need advanced Spring features	
+
+Choose ApplicationContext if...
+You need better performance (preloaded beans) -Eager loading [ use @Lazy or lazy-init=true in xml for Lazy loading of beans explicitly ]
+You use Spring Boot or a large application
+You need AOP, Transactions, Event Handling
+
+Functionailty of Spring Core Module:
+========================
+
+1. To invoke your spring container/IOC container.
+2.Load your classes and create objects(Spring Bean) for your classes
+3.Spring Bean Life cycle.
+4.Dependency Management.
+      a. Dependancy LookUp
+      b. Depenancy Injection[commonly used]
+
+
+

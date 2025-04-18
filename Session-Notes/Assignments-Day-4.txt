@@ -1,0 +1,12 @@
+   Assignment-1 :
+===============
+  Perform crud operations of database using jdbc statement and hibernate
+ 1. insert 2.update 3.delete 4.select   
+
+Assignment-2:
+================
+Develop library management system using servlets and jsp by following student mamagement system code
+
+Assignment-3:
+=============
+Practice Binary search and Sorting(Bubble sort, Insertion sort, Selection sort) Algorithms.
