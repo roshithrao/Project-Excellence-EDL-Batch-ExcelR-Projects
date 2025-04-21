@@ -1,0 +1,980 @@
+
+Java Learning is all about 3 things
+a. Java Language(Core java course) -Java SE
+
+b. Java Technology(JDBC,Servlet,JSP,JSTL,EJB's,JMS,....)
+EJB-> Enterprise Java Bean
+JMS-> Java messaging Service
+
+c. Framework(Hibernate,Spring,SpringBoot,MicroServices,RestApi's,....)
+
+-> Framework is not a new technology, rather it is an abstraction provided on top of technology.
+
+-> Thirdparty team would give apis in the form of jars which would generate boiler plate code based on the inputs we give to the internal containers of the framework.
+
+
+eg: hibernate -----> based on configuration details supplied, it will create JDBC environment
+
+
+Spring -----> based on configuration  will create an object and maintains the object and peforms dependancy injection.
+
+Different types of Framework to build application
+=================================================
+a. Web application based framework
+b. ORM Framework
+c. Application Framework
+d. BigData Framework
+e. Distrubuted Application Development framework
+etc....
+
+Webapplication Framework
+========================
+These frameworks provides abstraction on top of Servlet,JSP and simplifies MVC architecture based development.
+eg: Struts(Apache foundation)
+
+SpringMVC(part of Spring)----> interface21(pivotal team)
+
+JSF(Java Server Faces) -----> from SUNMS/OracleCorporation
+
+WebWork -------> symphony
+
+ORM Framework
+===================
+These frameworks provides abstraction on top of JDBC and simplifies to develop object based DBS/w independent persitence logic
+eg: Hibernate ------> redhat
+TopLink ------> oracle
+Ibatis ------> apache
+
+Application Framework
+===================
+It is an allrounder framework that provides abstraction on top of mulitple jee technologies and even on some frameworks to develop all kinds of logic and different type of app's.
+Ex: Spring,Springboot
+
+eg: Distrubuted application
+
+eg: myntra application
+flipkart application
+amazon application....
+facebook application(webapplications)
+
+SpringFramework is not good in developing Distrubuted applications, so we prefer using "WebServices".
+
+Distrubuted App development Framework
+===============================
+It simplfies the process of developing Distrubuted App's/Remoting Apps.
+
+Ex:
+SOAP(outdated),Rest/RestfulServices/Restful WebServices(latest) :: jersy,RestEasy,....
+
+Based on the mode of development we do, we have 2 types of framework
+a. Invasive Framework
+b. Non-Invasive Framework
+
+Invasive Framework
+================
+=> Devleoper class will extend or implement an interface given by framework api.
+class A extend Struts
+{
+
+
+
+}
+
+=> Because of exends and implements the devloper code would be tightly coupled with framework api.
+=> It won't promote portablity(moving the classes to new framework would not execute).
+eg: Servlet,Struts(1.X)
+
+Note: working for a company with a bond.
+
+Non-Invasive Framework
+====================
+=> Devloper class will not extend or implement any interface given by
+framework api.
+=> No extends and implements keyword, the devloper code would be loosely coupled with framework api.
+=> It promotes portablity(moving the classes to new framework would execute).
+eg: Spring,Hibernate,......
+
+Note: working for a company wihthout a bond.
+
+How Spring evolved?
+=======================
+1995 --->Applet(Good for gaming)
+1996 --->Java Bean[Technology used earlier]
+(Started developing by using java classes + java beans)
+
+Applet Limitations
+============
+a. Doesn't allow remote clients,it works only with local
+clients.
+b. Not suitable for large scale application
+c. Programmer should handle Middelware webservices along
+with primarylogic of the application.
+
+1998 ---> EJB(Enterprise java Bean) for building Distrubuted application
+Advantages
+============
+a. It can handle both remote and local clients.
+b. Gives built in middleware services
+Disadvantages
+=============
+a. It runs only in server mode(heavy weight
+containers)
+b. It is very complex to learn and use.
+
+2002/2003---> Spring Framework --------> RodJhonson(interface21)
+|===> Provides abstraction over
+technology/frameworks
+
+Advantages
+============
+a. All kinds of development is possible
+b. Applicationd development is non-invasive
+programming.
+c. Built in middle-ware
+services[Transactionservice,connectionpoolservice,....)
+d. Light weight application development
+e. Easy to learn and easy to use.
+
+Is Spring alternative to EJB,Struts,Hibernate,JEE technology?
+
+Spring vs EJB
+Answer. No , Spring framework is used to develop all kinds of app.
+WebServices are alternative to EJB's.
+
+Spring Vs Struts
+
+Answer. No, Struts will be used to build only webbased application
+Spring can be used to build any type of application.
+SpringMVC is an alternative to Struts.
+
+Spring vs Hibernate
+
+Answer. NO, hibernate is orm framework to build peristence logic
+Spring has its own orm module through which it promotes
+abstraction
+SpringORM,SpringDataJPA is an alternative to hibernate.
+
+Spring vs JEE(Java Enterprise Edition)
+Answer. No, JEE is a technology which gives api for persistence logic
+and buildding webapps
+Where as Spring provides an abstraction on top of JEE
+api's
+SpringJDBC-> JDBC,SpringMVC-> Servlet,JSP
+
+
+SpringCore
+==========
+=> It is base module for other modules
+=> This module is given to supply Springcontainers to perform Dependancy management.
+
+
+class A
+{
+
+    public static void main(String[] args)
+    {
+             A obj = new A();
+              A  obj1   = obj.clone();
+   }
+}
+ 
+
+=> This module gives 2 spring containers/IOC[Inversion Of Control] containers/springbean container
+called
+a. BeanFactory
+b. ApplicationContext(Latest one) -> Extended version of BeanFactory
+
+Choose BeanFactory if...	
+You need lazy loading (low memory usage)	
+You have a small, simple project	
+You don’t need advanced Spring features	
+
+Choose ApplicationContext if...
+You need better performance (preloaded beans) -Eager loading [ use @Lazy or lazy-init=true in xml for Lazy loading of beans explicitly ]
+You use Spring Boot or a large application
+You need AOP, Transactions, Event Handling
+
+
+Functionailty of Spring Core Module:
+========================
+
+1. To invoke your spring container/IOC container.
+2.Load your classes and create objects(Spring Bean) for your classes
+3.Spring Bean Life cycle.
+4.Dependency Management.
+      a. Dependancy LookUp
+      b. Depenancy Injection[commonly used]
+
+
+=> These 2 containers perform the following operations&
+a. It manages the SpringBean life cycle
+b. It performs Dependancy Management
+      a. Dependancy LookUp
+      b. Depenancy Injection[commonly used]
+
+Dependancy Management or Dependency Injection
+===============================================
+=> It is the process of assigning dependant object to Target object by loading both the classes and by creating the objects for both the classes.
+
+=> The classes/objects which uses the other class services is called "Target class".
+
+=> The classes that acts like helper class to main/target class is called
+"Dependant class".
+
+eg:: Target class => Flipkart, Vehicle,
+Student , Mobile
+Dependant class => DTDC , Engine ,
+CourseMaterial, SIM
+
+class CourseMaterial
+{
+     
+    void show()
+     {
+
+          Sysout("hi")
+     }
+
+}
+
+class Student  //Target class
+{
+     CourseMaterial course; //Dependent class
+   pscm(String[] args)
+   {
+          Student stud = new Student();
+  
+         CourseMaterial c = new CourseMaterial();
+
+            stud.course = c;
+
+
+          new B().a = obj1;
+         a.show();
+
+}
+
+
+SpringApp can be developed in 4 approaches:
+
+a. XML approach(only used in maintainence project).
+b. using Annotation driven configuration.
+c. using java code configuration.
+d. using Spring boot autodriven configuration-> RAD(Rapid Application Development)
+
+
+class A
+{
+
+    int a= 12;
+    void abc()
+    {
+            System.out.println("abc");
+   }
+}
+class B //target class
+{   
+       A a;    
+      C  c;
+       D d;
+       E e;         //Dependent class
+    void show()
+   {
+        a.abc();
+        System.out.println("show");
+   }
+  public static void main(String[] args)
+   {
+    B obj = new B();
+  new B().a = new A();
+         obj.show();
+      
+   }
+}
+             
+
+Different modes of DependancyInjection
+=====================================
+1. Setter Injection.
+2. Constructor injection.
+3. Field injection.
+4. MethodInjection/Method replacer.
+5. LookUp Method Injection.
+6. Dependancy LookUp Injection.
+
+Self laerning :
+============
+#1:	
+   Learn what is singleTon Design pattern ? and create a java program to implement singleton design pattern ?
+
+#2:
+  Learn what is factory design pattern ? and create a java program to implement factory design pattern ?
+
+#3:
+What is inversion of control (IOC) ? How it is used in a framework ?
+ 
+
+Note:
+========
+Bean id should be unique w.r.t IOC container
+We can configure 2 spring beans having same class names but we should take different bean id.
+=============================================
+
+Setter Injection
+=================
+1. use setter method to inject the dependant values/objects to target class object.
+2. <property name='' value=''/> and <property name='' ref=''/>
+3. supports cylic dependancy injection
+4. bit slow becoz injection happens after creating the Target class object.
+5. First Target object and later Dependant object will be created.
+6. It is best suited when we want to involve our choice no of properties in dependancy injection.
+7. If we configure spring bean in setter injection style,then container will create the bean using "zero-arg" constructor.
+
+
+Constructor Injection
+=====================
+1. use constructor to inject the dependant values/objects to target class object.
+2. <constructor-arg name='' value=''/> and <constructor-arg name='' ref=''/>
+3. Doesn't supports cylic dependancy injection
+4. It is Fast becoz injection happens while instantiating the dependant class object.
+5. First Dependant object and later Target object will be created.
+6. It is not best suited when we want to involve our choice no of properties in dependancy injection,for this we need n! overloaded constructor.
+7. If we configure spring bean in constructor injection style,then container will create the bean using "n-param" constructor.
+
+Usage of index/type/name attribute in the <constructor-arg>
+-----------------------------------------------------------
+If there are mulitple params in constructor and if they have same datatype,then to
+resolve the parameter binding from the container we need to go either index/name(recomended)
+
+private Integer eno;
+private String ename;
+private float esalary;
+private String eaddress;
+public Employee(Integer eno, String ename, float esalary, String eaddress) {
+this.eno = eno;
+this.ename = ename;
+this.esalary = esalary;
+this.eaddress = eaddress;
+}
+<constructor-arg value="MI" type='java.lang.String'/>
+<constructor-arg value="sachin" type='java.lang.String'/>
+<constructor-arg value="3500.05F" type='float'/>
+<constructor-arg value="10" type='java.lang.Integer'/>
+Injection from container
+Employee [eno=10, ename=MI, esalary=3500.05, eaddress=sachin]
+
+resolving the mismatch through index
+------------------------------------
+private Integer eno;
+private String ename;
+private float esalary;
+private String eaddress;
+public Employee(Integer eno, String ename, float esalary, String eaddress) {
+this.eno = eno;
+this.ename = ename;
+this.esalary = esalary;
+this.eaddress = eaddress;
+}
+<constructor-arg value="MI" index='3'/>
+<constructor-arg value="sachin" index='1'/>
+<constructor-arg value="3500.05F" index='2'/>
+<constructor-arg value="10" index='0'/>
+Employee [eno=10, ename=sachin, esalary=3500.05, eaddress=MI]
+
+
+Resolving through name attribute
+--------------------------------
+private Integer eno;
+private String ename;
+private float esalary;
+private String eaddress;
+public Employee(Integer eno, String ename, float esalary, String eaddress) {
+this.eno = eno;
+this.ename = ename;
+this.esalary = esalary;
+this.eaddress = eaddress;
+}
+<constructor-arg value="MI" name='eaddress'/>
+<constructor-arg value="sachin" name='ename'/>
+<constructor-arg value="3500.05F" name='esalary'/>
+<constructor-arg value="10" name='eno'/>
+Employee [eno=10, ename=sachin, esalary=3500.05, eaddress=MI]
+
+
+practice #1:
+==========
+
+Develop  a dependency injection program, perform setter injection and constructor injection in the same bean at a time and observe what is happening ?
+
+Ans
+====== 
+Since setter method is called after the constructor execution, we say setter  injection overrides the value injected by the constructor
+injection.
+
+Values/Object injected by the Setter injection will become final values.
+
+practice #2:
+===========
+Perform field injection using setter injection ?
+
+practice #3:
+=========
+
+Develop employee application and perform field injection using setter or constructor ?
+
+practice #4 :
+-==========
+
+Practic Binary search and Linear search problems
+
+
+Collection injection
+=================
+=> It is all about injecting values to array,collection type bean properties through Dependancy injection.
+
+Property type tag/attribute
+=================================================
+simple/primitive ====> <value>
+object ====> <ref>
+array ====> <array>
+List ====> <list>
+Set ====> <set>
+Map ====> <map>
+Properties ====> <props>
+Annotation driven injection
+
+Collection injection in realtime
+================================
+DriverManagerDataSource
+|-> driverClassName
+|-> url
+|-> connectionProperties(java.util.Properties object with fixed key called
+"user" and "password")
+|-> user
+|-> password
+
+applicationcontex.xml
+---------------------
+<bean id="mysqlDataSource"
+class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+<property name="driverClassName" value='com.mysql.cj.jdbc.Driver' />
+<property name="url" value='jdbc:mysql:///enterprisejavabatch' />
+<property name="connectionProperties"><!-- java.util.Properties-->
+<props>
+<prop key="user">root</prop>
+<prop key="password">root123</prop>
+</props>
+</property>
+</bean>
+
+Autowiring
+==============
+
+Assigning the dependant class object to target class object is called "Dependancy injection"/"AutoWiring".
+
+=> Autowiring can be done in 2 ways
+
+a. Explicit Autowiring/Manual Injection
+a. <property name='' ref=''/>
+b. <constructor-arg name='' ref=''/>
+
+b. Autowiring/AutoInjection
+<bean id ='' class='' autowire="byNane''/>
+Autowiring
+----------
+Assigning the dependant class object to target class object is called "Dependancy injection"/"AutoWiring".
+
+=> Autowiring can be done in 2 ways
+
+a. Explicit Autowiring/Manual Injection
+a. <property name='' ref=''/>
+b. <constructor-arg name='' ref=''/>
+
+b. Autowiring/AutoInjection
+<bean id ='' class='' autowire="byNane''/>
+
+autowiring will be done in 3 ways and will take 3 values
+a. byName
+b. byType
+c. constructor
+
+Note: Autowiring is very useful becoz it helps in RAD(Rapid Application Development).
+
+limitations of Autowiring
+=========================
+1. It is possible only on Object-type/reference-type bean properties.
+2. There is a possiblity of getting Ambiguity problem.
+3. It will also kill readability of Spring bean configuration file.
+
+
+autowire = byName
+=================
+=> Performs Setter Injection
+=> Container detects/finds dependent spring bean class object based on id that is matching with target class property
+name(Courier courier; <bean id ='courier' class='in.springcore.bean.BlueDart'/>)
+=> There is no possiblity of ambiguity problem becoz the bean id in IOC container are unique id's.
+
+
+autowire = byType
+=================
+=> Perform Setter Injection
+=> Container detects/finds dependant spring bean class object based on the property type/class type in the Target
+class(Courier courier;=> It is Courier type)
+=> There is a possiblity of Ambiguity problem and we solve this problem by using "primary=true" in one of the dependent spring bean configuration.
+
+
+autowire = constructor
+======================
+=> Performs constuctor injection using paramatereized constructor
+=> Here constructor param name should match with Dependant class bean id for the autowiring to happen.
+=> There is no possiblity of ambiguity problem becoz the bean id in IOC container are unique id's.
+
+
+2. @Autowired
+====================
+
+=> Performs byType,byName,Constructor mode of autowiring(detecting the dependent bean dynamically without using <property> and <constructor-arg> tags)
+
+=> Can be applied on field level(instance variables), constructor, setter methods.
+
+=> It cannot be used to inject values to simple properties, can be used to injection values only to Object type/ref type.
+
+=> Through annotation support, without setter/constructor still injection can be done through "instance variables", where spring uses "Reflection API" to access private properties of a class.
+
+=> Default Autowiring is based on byType.
+
+Case1::
+
+applicationContext.xml
+----------------------
+<!-- CONFIGURING THE DEPENDANT BEAN -->
+<bean id='fFlight' class='in.springcore.bean.FirstFlight' />
+<bean id='dtdc' class='in.springcore.bean.DTDC' />
+<bean id='courier' class='in.springcore.bean.BlueDart' />
+
+<!-- CONFIGURING THE TARGET BEAN -->
+<bean id='fpkt' class='in.springcore.bean.Flipkart' />
+
+<context:annotation-config />
+
+Flipkart.java
+-------------
+//Target Object
+public class Flipkart {
+// Dependent Object
+
+@Autowired
+@Qualifier(value="dtdc")
+private Courier courier;
+
+}
+Default :: Injection is happening based on "byName".
+
+
+Case2::
+applicationContext.xml
+----------------------
+<!-- CONFIGURING THE DEPENDANT BEAN -->
+<bean id='fFlight' class='in.springcore.bean.FirstFlight' />
+<bean id='dtdc' class='in.springcore.bean.DTDC' />
+<bean id='bDart' class='in.springcore.bean.BlueDart' />
+
+<!-- CONFIGURING THE TARGET BEAN -->
+<bean id='fpkt' class='in.springcore.bean.Flipkart' />
+Flipkart.java
+-------------
+//Target Object
+public class Flipkart {
+// Dependent Object
+@Autowired
+private Courier courier;
+}
+
+It results in Exception, to resolve the problem we need to use "@Qualifier".
+
+
+Case3::
+
+applicationContext.xml
+----------------------
+<!-- CONFIGURING THE DEPENDANT BEAN -->
+<bean id='fFlight' class='in.springcore.bean.FirstFlight' />
+<bean id='dtdc' class='in.springcore.bean.DTDC' />
+<bean id='bDart' class='in.springcore.bean.BlueDart' />
+
+<!-- CONFIGURING THE TARGET BEAN -->
+<bean id='fpkt' class='in.springcore.bean.Flipkart' />
+
+
+Flipkart.java
+-------------
+//Target Object
+public class Flipkart {
+// Dependent Object
+@Autowired
+@Qualifier("dtdc")
+private Courier courier;
+}
+
+
+Case4:
+applicationContext.xml
+----------------------
+<!-- CONFIGURING THE DEPENDANT BEAN -->
+<bean id='fFlight' class='in.springcore.bean.FirstFlight' />
+<bean id='dtdc' class='in.springcore.bean.DTDC' primary='true'/>
+<bean id='bDart' class='in.springcore.bean.BlueDart' />
+
+<!-- CONFIGURING THE TARGET BEAN -->
+<bean id='fpkt' class='in.springcore.bean.Flipkart' />
+
+Flipkart.java
+-------------
+//Target Object
+public class Flipkart {
+// Dependent Object
+@Autowired
+@Qualifier("bDart")
+private Courier courier;
+}
+Output:: Qualifer is having high priority than primary, so bDart object will be injected to Flipkart class.
+
+Performing consturctor injection using @Autowired
+=================================================
+
+It can be applied at the constructor level also.
+applicationContext.xml
+----------------------
+<!-- CONFIGURING THE DEPENDANT BEAN -->
+<bean id='fFlight' class='in.springcore.bean.FirstFlight' />
+<bean id='dtdc' class='in.springcore.bean.DTDC'/>
+<bean id='bDart' class='in.springcore.bean.BlueDart' />
+
+<!-- CONFIGURING THE TARGET BEAN -->
+<bean id='fpkt' class='in.springcore.bean.Flipkart' />
+
+Flipkart.java
+-------------
+//Target Object
+public class Flipkart {
+@Autowired |=>Dependant Object
+Courier courier;
+
+public Flipkart(@Qualifier("fFlight") Courier courier) 
+{
+this.courier = courier;
+System.out.println("Flipkart:: One Param constructor...");
+}
+
+}
+
+Performing Setter injection using @Autowired
+============================================
+
+Performing autowiring using Setter injection
+
+applicationContext.xml
+----------------------
+<!-- CONFIGURING THE DEPENDANT BEAN -->
+<bean id='fFlight' class='in.springcore.bean.FirstFlight' />
+<bean id='dtdc' class='in.springcore.bean.DTDC'/>
+<bean id='bDart' class='in.springcore.bean.BlueDart' />
+<!-- CONFIGURING THE TARGET BEAN -->
+<bean id='fpkt' class='in.springcore.bean.Flipkart' />
+
+Flipkart.java
+-------------
+//Target Object
+public class Flipkart{
+@Autowired |=> Dependant Object
+Courier courier;
+
+public void setCourier(@Qualifier("bDart") Courier courier) {
+this.courier = courier;
+System.out.println("Flipkart.setCourier():: Setter Injection");
+}
+}
+
+Java Based Configuration:
+========================
+
+@Configuration
+public class AppConfig {
+
+    @Bean
+    public Delivery ekart() { 
+        return new Ekart();
+    }
+
+    @Bean
+    public Delivery blueDart() { 
+        return new BlueDart();
+    }
+
+    @Bean
+    public Flipkart flipkart() { 
+        return new Flipkart(ekart()); // Or change to blueDart() if needed
+    }
+}
+
+-> In this case, XML file is not required since, spring consider the java class(AppConfig) as the configuration file.
+
+Scope attribute in Spring
+-------------------------
+
+singleton(default)
+===============
+
+=> It is the default scope for a particular bean in spring.
+=> IOC container will never make spring bean class as singleton java class, but it creates only one object, keeps that object in internal cache and returns that object every time we make a call to factory.getBean().
+
+application.xml
+--------------
+<bean id="wmg" class="in.springcore.bean.WishMessgeGenerator" scope="singleton">
+<property name="date" ref='dt'/>
+</bean>
+
+ClientApp.java
+--------------
+WishMessageGenerator generator1= factory.getBean("wmg", WishMessgeGenerator.class);
+WishMessageGenerator generator2= factory.getBean("wmg", WishMessgeGenerator.class);
+System.out.println("Generator1 class object reference :: "+generator1.hashCode());
+System.out.println("Generator2 class object reference :: "+generator2.hashCode());
+output
+Generator1 class object reference :: 1442045361
+Generator2 class object reference :: 1442045361
+
+prototype
+===========
+=>IOC container creates a new object for Spring bean class for every
+factory.getBean() method.
+=>IOC container doesn't keep this scope spring bean class objects in "internal cache" of IOC container.
+
+application.xml
+--------------
+<bean id="wmg" class="in.springcore.bean.WishMessgeGenerator" scope="prototype">
+<property name="date" ref='dt'/>
+</bean>
+
+ClientApp.java
+--------------
+WishMessageGenerator generator1= factory.getBean("wmg", WishMessgeGenerator.class);
+WishMessageGenerator generator2= factory.getBean("wmg", WishMessgeGenerator.class);
+System.out.println("Generator1 class object reference :: "+generator1.hashCode());
+System.out.println("Generator2 class object reference :: "+generator2.hashCode());
+output
+Generator1 class object reference :: 214074868
+Generator2 class object reference :: 1442045361
+
+SteroType Annotation
+--------------------------
+
+=> We have multiple annotations with similar behaviour.. having minor differences so they are called as "Stereotype annotations".
+
+@Component ====> To configure java class as Spring bean
+(bean will be created and it is managed by IOC  container)
+
+@Service =====> @Component + also makes the service class by giving
+Transaction management support(Sprign AOP)
+
+@Repository =====> @Component + also makes the DAO class by Exception propogation facilities(SQLException to Spring specific Exception)
+
+@Controller =====> @Component + also makes the Controller class getting the facility of handling HttpRequests.
+
+Note: 
+===========
+To make IOC container going to different specified packages and their
+subpackages to search and recognize steroannotations classes
+as SpringBean we need to place 
+<context:component-scan package =""/> 
+in xml file.
+=> These stereo-annotations should be applied only at the class level.
+
+applicationContext.xml
+----------------------
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+<context:component-scan base-package="in.springcore"/>
+
+</beans>
+
+BlueDart.java
+--------------
+@Component(value="bDart")
+public class BlueDart implements Courier {
+}
+
+DTDC.java
+----------
+@Component(value = "dtdc")
+public class DTDC implements Courier {
+}
+
+FirstFlight.java
+---------------
+@Component(value="fFlight")
+public class FirstFlight implements Courier {
+}
+
+Flipkart.java
+-------------
+@Component(value = "fpkt")
+public class Flipkart {
+
+// Dependent Object
+@Autowired
+@Qualifier(value = "bDart")
+private Courier courier;
+
+}
+
+SpringBean LifeCycle
+====================
+
+
+1. Java class Life cycle
+=======================
+     a. static block
+     b. instance block
+{
+
+}
+     c. constructor
+     d. setter
+     e. using the created object,make a call to methods and execute Buisness
+      logic.
+     f. Destroy the Object. -> Garbage Collector
+
+
+2. Spring bean life cycle
+=====================
+      ***Start the container*******
+      a. static block
+       
+      b. object instantiation
+       
+       c. custom init method(@PostConstruct) if successful then step d,e will
+         be executed or else it won't execute.
+       
+        d. Business logic method
+      
+      e. custom destroy method(@PreDestroy)
+     
+    f.   ***Stop the container********
+
+Building application using SpringBoot
+=====================================
+1.Downloading STS Ide
+
+2. start.spring.io > generate the project using spring web module and import in your eclipse as existing maven project and right click on project, go to mave and update project once the import is done.
+
+3. Installing plugin sts from eclipse marketplace.
+
+
+Step1:: Keep the following software ready
+=> Eclipse IDE with STS plugin(SpringToolSuite)
+To install sts plugin :: Help menu-> Eclipse market place -> search for sts(3.9.14)
+
+select all -> click on install->  accept terms and conditions -> restart IDE.
+
+=>Plugin is a patch software that provides additional features/functionalities to
+existing software.
+=>STS plugin makes eclipse to develop spring,spring boot apps very easily ... more
+over it brings STS IDE features to eclipse IDE.
+
+
+@SpringBootApplication
+
+=>@EnableAutoConfiguration(It enables AutoConfiguration)
+
+=>@ComponentScan(Scan for the stereo type annotations in the given package and subpackage)
+
+=>@Configuration(Marking the class as Configuration class)
+
+SpringApplication.run() internally uses AnnotationConfigApplicationContext class to
+create an IOC container by taking java class as @Configuration class(in fact it takes current class nothing but ClientApp cum ConfigurationClass)
+
+
+Note: By default all the components are of Singleton, we can explicitly make it as
+other scopes using the anotation called
+@Scope(value="")
+
+Difference b/w Spring vs SpringBoot
+===================================
+1. Spring
+============
+-> It is a framework for JEE technologies/Application framework
+-> The main feature is DependancyInjection and DependancyLookUp.
+-> It supports XML driven configuration as a inputs to the IOC-Container.
+-> Programmer creates IOC container explicitly.
+
+-> Allows to devleop spring apps using
+   a. XML
+   b. XML + Annotation
+   c. Pure Java(No XML) -> ApplicationContext container
+
+-> Doesn't give embeded server to use in webapplications.-> Doesn't give embeded database/inMemory Database
+-> It is light weight because no autoconfiguration.
+-> No support for "Microservices architecture" based application development.
+
+2. SpringBoot
+==================
+-> It provides abstraction for Spring framework and simplifies SpringApp
+development.
+
+-> The main feature is AutoConfiguration(giving common things automatically)
+
+-> Doesn't support XML driven configuration as a inputs to the IOC-Container.
+
+-> Programmer doesn't create IOC container explicitly it gets created automatically using SpringApplication.run().
+
+-> Supports only one style of configuration that is AutoConfiguration where inputs are supplied  through application.properties/.yml file.
+
+-> It gives embeded server(tomcat server,jetty server) to use in web applications.
+
+-> It gives embeded database/InMemory database called "H2". H2 is an in-memory or file-based lightweight database, ideal for testing and quick prototyping in Spring Boot applications.
+
+-> It is heavy weight because of AutoConfiguration.
+
+-> Support of Microservices architecture is extensively avilable.
+
+SpringRest ====> SpringMVC++
+
+
+WebApplication ====> Customer 2 Buisness
+DistrubutedApplication => Buisness 2 Buisness
+eg:: Flipkart,Myntra,Amazon,....
+
+Technologies available to build Distrubuted applications are
+a. CORBA
+b. RMI
+c. EJB
+d. Webservices
+e. RESTFul services(RepresentationStatefull Services)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+
+
+Recap :
+=========
+1. Database, SQL -> MySQL
+
+DDL-> Create, Alter, Drop, Truncate
+DML -> Insert, Update, Delete
+DQL -> Select -> Select * from Student;
+
+JDBC -> Java Database Connectivity
+-> 7 steps -> JPA -> Hibernate -> save() -> findAll()
+Servlets -> web application -> web.xml -> life cycle methods
+JSP -> We are writing html inside java
+
+ Java app -> Java
+ ->>> Driver -> s/w -> Type-4 -> MySQL Connector
+ Database -> sql  
+
+
+Framework:
+===============
+-> help developers build applications faster ?
+
+Spring core/Springboot
+MVC 
+Spring Data JPA
+Spring MVC/Spring REST
+Spring structure
+
+
+Maven -> Build tool -> maven repository -> pom.xml
+
+Springboot:
+
+-> Auto configuration -> No xml code
+-> Embedded Tomcat Server, need not to download-> Development code
+-> Embedded Database -> H2 database
+
+Assignment:
+==============
+1.Create the structure by following github ecommerce backend
+2. Explore on differences between BeanFactory and ApplicationContext containers
+3. Explore on spring core
+
+
+
+
+
+
+
+
+
+
+
+
+
+
