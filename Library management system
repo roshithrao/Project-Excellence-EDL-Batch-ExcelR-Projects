@@ -1,0 +1,36 @@
+class Book {
+    int id;
+    String title, author;
+
+    Book(int id, String title, String author) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+    }
+}
+
+class LMS {
+    ArrayList<Book> books = new ArrayList<>();
+
+    void addBook(Book b) { books.add(b); }
+
+    void removeBook(int id) {
+        books.removeIf(b -> b.id == id);
+    }
+
+    void displayBook() {
+        for (Book b : books) {
+            System.out.println(b.id + " " + b.title + " " + b.author);
+        }
+    }
+
+    void searchBook(String title) {
+        for (Book b : books) {
+            if (b.title.equalsIgnoreCase(title)) {
+                System.out.println("Found: " + b.title + " by " + b.author);
+                return;
+            }
+        }
+        System.out.println("Book not found.");
+    }
+}
