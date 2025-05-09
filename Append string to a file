@@ -1,0 +1,10 @@
+import java.io.*;
+
+public class AppendToFile {
+    public static void main(String[] args) throws IOException {
+        String data = "WelcomeToJava";
+        FileWriter writer = new FileWriter("output.txt", true);
+        writer.write(data);
+        writer.close();
+    }
+}
