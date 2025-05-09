@@ -1,0 +1,22 @@
+public class FrequencyEncoder {
+    public static String encode(String input) {
+        StringBuilder result = new StringBuilder();
+        int count = 1;
+
+        for (int i = 1; i <= input.length(); i++) {
+            if (i == input.length() || input.charAt(i) != input.charAt(i - 1)) {
+                result.append(count).append(input.charAt(i - 1));
+                count = 1;
+            } else {
+                count++;
+            }
+        }
+
+        return result.toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Encoded: " + encode("aaabbbbccd"));  // Output: 3a4b2c1d
+        System.out.println("Encoded: " + encode("aabbcd"));      // Output: 2a2b1c1d
+    }
+}
