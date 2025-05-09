@@ -1,0 +1,55 @@
+import java.util.*;
+
+class Book {
+    int id;
+    String title, author;
+
+    Book(int id, String title, String author) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+    }
+
+    public String toString() {
+        return id + ": " + title + " by " + author;
+    }
+}
+
+class Library {
+    List<Book> books = new ArrayList<>();
+
+    void addBook(Book b) {
+        books.add(b);
+    }
+
+    void removeBook(int id) {
+        books.removeIf(book -> book.id == id);
+    }
+
+    void displayBooks() {
+        for (Book b : books) System.out.println(b);
+    }
+
+    void searchBook(String title) {
+        for (Book b : books) {
+            if (b.title.equalsIgnoreCase(title)) {
+                System.out.println("Found: " + b);
+                return;
+            }
+        }
+        System.out.println("Book not found.");
+    }
+}
+
+public class LibrarySystem {
+    public static void main(String[] args) {
+        Library lib = new Library();
+        lib.addBook(new Book(1, "Java Basics", "Alice"));
+        lib.addBook(new Book(2, "Data Structures", "Bob"));
+
+        lib.displayBooks();
+        lib.searchBook("Java Basics");
+        lib.removeBook(2);
+        lib.displayBooks();
+    }
+}
