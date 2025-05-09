@@ -1,0 +1,39 @@
+class StudentApp {
+    int rollNo;
+    String name;
+    String branch;
+    String collegeName;
+
+    StudentApp(int rollNo, String name, String branch, String collegeName) {
+        this.rollNo = rollNo;
+        this.name = name;
+        this.branch = branch;
+        this.collegeName = collegeName;
+    }
+
+    void calculatePercentage(int... marks) {
+        int sum = 0;
+        for (int m : marks) sum += m;
+        float percent = sum / (float) marks.length;
+        System.out.println("Percentage: " + percent + "%");
+    }
+
+    void printDetails() {
+        System.out.println("RollNo: " + rollNo + ", Name: " + name + ", Branch: " + branch + ", College: " + collegeName);
+        if (branch.equalsIgnoreCase("CSE")) {
+            calculatePercentage(80, 75, 90);
+        } else if (branch.equalsIgnoreCase("ECE")) {
+            calculatePercentage(85, 88);
+        }
+    }
+
+    public static void main(String[] args) {
+        StudentApp[] students = {
+            new StudentApp(1, "Alice", "CSE", "GTU"),
+            new StudentApp(2, "Bob", "ECE", "GTU"),
+            new StudentApp(3, "Charlie", "CSE", "GTU"),
+            new StudentApp(4, "David", "ECE", "GTU")
+        };
+        for (StudentApp s : students) s.printDetails();
+    }
+}
