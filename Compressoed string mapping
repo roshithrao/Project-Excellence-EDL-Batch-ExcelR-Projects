@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class LogicalDSA1 {
+    public static void main(String[] args) {
+        String input = "aaabbbcccd";
+        Map<Character, Integer> freq = new LinkedHashMap<>();
+
+        for (char c : input.toCharArray()) {
+            freq.put(c, freq.getOrDefault(c, 0) + 1);
+        }
+
+        StringBuilder sb = new StringBuilder();
+        for (Map.Entry<Character, Integer> e : freq.entrySet()) {
+            sb.append(Integer.toHexString(e.getValue())).append(e.getKey());
+        }
+
+        System.out.println("Output: " + sb.toString());
+    }
+}
