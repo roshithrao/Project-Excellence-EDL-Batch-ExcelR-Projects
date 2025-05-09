@@ -1,0 +1,16 @@
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileAppend {
+    public static void main(String[] args) {
+        try {
+            FileWriter writer = new FileWriter("output.txt", true); // 'true' enables append mode
+            writer.write("WelcomeToJava\n");
+            writer.close();
+            System.out.println("Data successfully appended to file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+}
