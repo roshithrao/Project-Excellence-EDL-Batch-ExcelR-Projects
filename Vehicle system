@@ -1,0 +1,41 @@
+abstract class Vehicle {
+    abstract void start();
+    abstract void stop();
+    abstract void displayDetails();
+}
+
+interface ElectricVehicle {
+    void charge();
+    void showBatteryLevel();
+}
+
+class Car extends Vehicle implements ElectricVehicle {
+    public void start() { System.out.println("Car started."); }
+    public void stop() { System.out.println("Car stopped."); }
+    public void displayDetails() { System.out.println("Car details displayed."); }
+    public void charge() { System.out.println("Car charging..."); }
+    public void showBatteryLevel() { System.out.println("Battery: 80%"); }
+}
+
+class Bike extends Vehicle {
+    public void start() { System.out.println("Bike started."); }
+    public void stop() { System.out.println("Bike stopped."); }
+    public void displayDetails() { System.out.println("Bike details displayed."); }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car();
+        Bike bike = new Bike();
+
+        car.start();
+        car.charge();
+        car.displayDetails();
+        car.showBatteryLevel();
+        car.stop();
+
+        bike.start();
+        bike.displayDetails();
+        bike.stop();
+    }
+}
